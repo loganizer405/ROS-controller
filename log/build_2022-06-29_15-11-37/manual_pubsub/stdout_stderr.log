@@ -1,0 +1,27 @@
+[35m[1mScanning dependencies of target talker[0m
+[ 50%] Built target listener
+[ 75%] [32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o[0m
+[01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:[m[K In constructor ‘[01m[KMinimalPublisher::MinimalPublisher()[m[K’:
+[01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:52:22:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++2a[m[K’ or ‘[01m[K-std=gnu++2a[m[K’ [[01;35m[K-Wpedantic[m[K]
+   52 |     manualMsg msg = {[01;35m[K.[m[Kx = 1000, .y = 500, .z = 500, .r = 0, .buttons = 0};
+      |                      [01;35m[K^[m[K
+[01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:52:33:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++2a[m[K’ or ‘[01m[K-std=gnu++2a[m[K’ [[01;35m[K-Wpedantic[m[K]
+   52 |     manualMsg msg = {.x = 1000, [01;35m[K.[m[Ky = 500, .z = 500, .r = 0, .buttons = 0};
+      |                                 [01;35m[K^[m[K
+[01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:52:43:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++2a[m[K’ or ‘[01m[K-std=gnu++2a[m[K’ [[01;35m[K-Wpedantic[m[K]
+   52 |     manualMsg msg = {.x = 1000, .y = 500, [01;35m[K.[m[Kz = 500, .r = 0, .buttons = 0};
+      |                                           [01;35m[K^[m[K
+[01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:52:53:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++2a[m[K’ or ‘[01m[K-std=gnu++2a[m[K’ [[01;35m[K-Wpedantic[m[K]
+   52 |     manualMsg msg = {.x = 1000, .y = 500, .z = 500, [01;35m[K.[m[Kr = 0, .buttons = 0};
+      |                                                     [01;35m[K^[m[K
+[01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:52:61:[m[K [01;35m[Kwarning: [m[KC++ designated initializers only available with ‘[01m[K-std=c++2a[m[K’ or ‘[01m[K-std=gnu++2a[m[K’ [[01;35m[K-Wpedantic[m[K]
+   52 |     manualMsg msg = {.x = 1000, .y = 500, .z = 500, .r = 0, [01;35m[K.[m[Kbuttons = 0};
+      |                                                             [01;35m[K^[m[K
+[01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:52:73:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K{1000, 500, 500, 0, 0}[m[K’ from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[KmanualMsg[m[K’ {aka ‘[01m[Kmavros_msgs::msg::ManualControl_<std::allocator<void> >[m[K’}
+   52 |     manualMsg msg = {.x = 1000, .y = 500, .z = 500, .r = 0, .buttons = 0[01;31m[K}[m[K;
+      |                                                                         [01;31m[K^[m[K
+      |                                                                         [01;31m[K|[m[K
+      |                                                                         [01;31m[K<brace-enclosed initializer list>[m[K
+make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/publisher_member_function.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/talker.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

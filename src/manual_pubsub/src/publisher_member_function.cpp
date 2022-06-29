@@ -16,7 +16,9 @@
 #include <memory>
 
 #include "rclcpp/rclcpp.hpp"
+#include "rclcpp/qos.hpp"
 #include "std_msgs/msg/string.hpp"
+#include "std_msgs/msg/header.hpp"
 #include "mavros_msgs/msg/manual_control.hpp"
 
 using namespace std::chrono_literals;
@@ -40,14 +42,21 @@ using namespace std::chrono_literals;
  *   uint16_t buttons;
  * } mavros_msgs__msg__ManualControl;
  */
+typedef mavros_msgs::msg::ManualControl manualMsg;
 class MinimalPublisher : public rclcpp::Node
 {
 public:
   MinimalPublisher()
   : Node("minimal_publisher"), count_(0)
   {
-    publisher_ = this->create_publisher<std_msgs::msg::String>("/mavros/manual_control/control", 10);
-    //    publisher_ = this->create_publisher<mavros_msgs::msg::manual_control>(...);
+    //    publisher_ = this->create_publisher<std_msgs::msg::String>("/mavros/manual_control/control", 10);
+    //define message
+    //define header
+    std_msgs::msg::Header head;
+    manualMsg msg;
+    msg.x = 1000; msg.y = 500; msg.z = 500;
+    msg.r = 0; msg.buttons = 0;
+    publisher_ = this->create_publisher<mavros_msgs::msg::ManualControl>("/mavros/manual_control/send", 10);
     timer_ = this->create_wall_timer(
       500ms, std::bind(&MinimalPublisher::timer_callback, this));
   }
@@ -55,13 +64,16 @@ public:
 private:
   void timer_callback()
   {
+    manualMsg msg;
+    msg.x = 1000; msg.y = 500; msg.z = 500;
+    msg.r = 0; msg.buttons = 0;
     auto message = std_msgs::msg::String();
-    message.data = "Hello, world! " + std::to_string(count_++);
+    message.data = "Message " + std::to_string(count_++);// + " (x,y,z,r,b): (" + msg.x + "," + msg.y + "," + msg.z + "," + msg.r + "," + msg.buttons + ")";
     RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", message.data.c_str());
-    publisher_->publish(message);
+    publisher_->publish(msg);
   }
   rclcpp::TimerBase::SharedPtr timer_;
-  rclcpp::Publisher<std_msgs::msg::String>::SharedPtr publisher_;
+  rclcpp::Publisher<manualMsg>::SharedPtr publisher_;
   size_t count_;
 };
 

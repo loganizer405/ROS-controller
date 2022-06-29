@@ -1,0 +1,14 @@
+[0.063s] Invoking command in '/home/lur/controller/build/manual_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/manual_pubsub -- -j4 -l4
+[0.219s] [35m[1mScanning dependencies of target talker[0m
+[0.290s] [ 50%] Built target listener
+[0.328s] [ 75%] [32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o[0m
+[4.501s] [01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:[m[K In constructor ‘[01m[KMinimalPublisher::MinimalPublisher()[m[K’:
+[4.502s] [01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:58:5:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K{1000, 500, 500, 0, 0}[m[K’ from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[KmanualMsg[m[K’ {aka ‘[01m[Kmavros_msgs::msg::ManualControl_<std::allocator<void> >[m[K’}
+[4.502s]    58 |     [01;31m[K}[m[K;
+[4.502s]       |     [01;31m[K^[m[K
+[4.502s]       |     [01;31m[K|[m[K
+[4.503s]       |     [01;31m[K<brace-enclosed initializer list>[m[K
+[7.308s] make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/publisher_member_function.cpp.o] Error 1
+[7.309s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/talker.dir/all] Error 2
+[7.310s] make: *** [Makefile:141: all] Error 2
+[7.319s] Invoked command in '/home/lur/controller/build/manual_pubsub' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/manual_pubsub -- -j4 -l4

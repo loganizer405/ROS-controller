@@ -1,0 +1,344 @@
+[0.000000] (-) TimerEvent: {}
+[0.003009] (-) JobUnselected: {'identifier': 'cpp_pubsub'}
+[0.003310] (-) JobUnselected: {'identifier': 'examples_rclcpp_async_client'}
+[0.003474] (-) JobUnselected: {'identifier': 'examples_rclcpp_cbg_executor'}
+[0.003646] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_action_client'}
+[0.003753] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_action_server'}
+[0.003892] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_client'}
+[0.006425] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_composition'}
+[0.006821] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_publisher'}
+[0.006933] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_service'}
+[0.007118] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_subscriber'}
+[0.007258] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_timer'}
+[0.007670] (-) JobUnselected: {'identifier': 'examples_rclcpp_multithreaded_executor'}
+[0.007803] (-) JobUnselected: {'identifier': 'examples_rclcpp_wait_set'}
+[0.007950] (-) JobUnselected: {'identifier': 'examples_rclpy_executors'}
+[0.008154] (-) JobUnselected: {'identifier': 'examples_rclpy_guard_conditions'}
+[0.008492] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_action_client'}
+[0.008617] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_action_server'}
+[0.008710] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_client'}
+[0.008808] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_publisher'}
+[0.008936] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_service'}
+[0.009021] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_subscriber'}
+[0.009102] (-) JobUnselected: {'identifier': 'examples_rclpy_pointcloud_publisher'}
+[0.009183] (-) JobUnselected: {'identifier': 'launch_testing_examples'}
+[0.009263] (-) JobUnselected: {'identifier': 'publisher_subscriber'}
+[0.009343] (-) JobUnselected: {'identifier': 'robosub'}
+[0.009503] (manual_pubsub) JobQueued: {'identifier': 'manual_pubsub', 'dependencies': OrderedDict()}
+[0.009630] (manual_pubsub) JobStarted: {'identifier': 'manual_pubsub'}
+[0.052281] (manual_pubsub) JobProgress: {'identifier': 'manual_pubsub', 'progress': 'cmake'}
+[0.056149] (manual_pubsub) JobProgress: {'identifier': 'manual_pubsub', 'progress': 'build'}
+[0.059791] (manual_pubsub) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lur/controller/build/manual_pubsub', '--', '-j4', '-l4'], 'cwd': '/home/lur/controller/build/manual_pubsub', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lur'), ('SSH_CLIENT', '192.168.55.100 55574 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/lur'), ('OLDPWD', '/home/lur'), ('SSH_TTY', '/dev/pts/4'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/lur/controller/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'lur'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '10'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:14.0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/lur/controller/install/robosub:/home/lur/controller/install/publisher_subscriber:/home/lur/controller/install/manual_pubsub:/home/lur/controller/install/cpp_pubsub:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/lur/controller/build/manual_pubsub'), ('SSH_CONNECTION', '192.168.55.100 55574 192.168.55.1 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/lur/controller/install/robosub:/home/lur/controller/install/publisher_subscriber:/home/lur/controller/install/manual_pubsub:/home/lur/controller/install/cpp_pubsub:/opt/ros/foxy')]), 'shell': False}
+[0.098407] (-) TimerEvent: {}
+[0.199502] (-) TimerEvent: {}
+[0.231859] (manual_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target talker\x1b[0m\n'}
+[0.299763] (-) TimerEvent: {}
+[0.302686] (manual_pubsub) StdoutLine: {'line': b'[ 50%] Built target listener\n'}
+[0.341445] (manual_pubsub) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o\x1b[0m\n'}
+[0.400001] (-) TimerEvent: {}
+[0.501685] (-) TimerEvent: {}
+[0.603433] (-) TimerEvent: {}
+[0.705174] (-) TimerEvent: {}
+[0.807039] (-) TimerEvent: {}
+[0.908029] (-) TimerEvent: {}
+[1.009062] (-) TimerEvent: {}
+[1.110107] (-) TimerEvent: {}
+[1.211167] (-) TimerEvent: {}
+[1.312168] (-) TimerEvent: {}
+[1.413297] (-) TimerEvent: {}
+[1.514529] (-) TimerEvent: {}
+[1.615568] (-) TimerEvent: {}
+[1.716705] (-) TimerEvent: {}
+[1.817808] (-) TimerEvent: {}
+[1.918932] (-) TimerEvent: {}
+[2.020107] (-) TimerEvent: {}
+[2.121451] (-) TimerEvent: {}
+[2.222454] (-) TimerEvent: {}
+[2.323409] (-) TimerEvent: {}
+[2.424393] (-) TimerEvent: {}
+[2.525361] (-) TimerEvent: {}
+[2.626330] (-) TimerEvent: {}
+[2.727378] (-) TimerEvent: {}
+[2.828334] (-) TimerEvent: {}
+[2.929313] (-) TimerEvent: {}
+[3.030865] (-) TimerEvent: {}
+[3.131803] (-) TimerEvent: {}
+[3.232760] (-) TimerEvent: {}
+[3.333692] (-) TimerEvent: {}
+[3.434681] (-) TimerEvent: {}
+[3.535631] (-) TimerEvent: {}
+[3.636541] (-) TimerEvent: {}
+[3.737420] (-) TimerEvent: {}
+[3.838444] (-) TimerEvent: {}
+[3.939356] (-) TimerEvent: {}
+[4.040355] (-) TimerEvent: {}
+[4.141360] (-) TimerEvent: {}
+[4.242325] (-) TimerEvent: {}
+[4.343321] (-) TimerEvent: {}
+[4.444287] (-) TimerEvent: {}
+[4.546315] (-) TimerEvent: {}
+[4.553484] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MinimalPublisher::timer_callback()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.554485] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:82:8:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Khead\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.555639] (manual_pubsub) StderrLine: {'line': b'   82 |        \x1b[01;31m\x1b[Khead\x1b[m\x1b[K,\n'}
+[4.556081] (manual_pubsub) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[4.556654] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:88:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kcould not convert \xe2\x80\x98\x1b[01m\x1b[K{<expression error>, 1000, 500, 500, 0, 0}\x1b[m\x1b[K\xe2\x80\x99 from \xe2\x80\x98\x1b[01m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[KmanualMsg\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kmavros_msgs::msg::ManualControl_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[4.557023] (manual_pubsub) StderrLine: {'line': b'   88 |     \x1b[01;31m\x1b[K}\x1b[m\x1b[K;\n'}
+[4.557631] (manual_pubsub) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[4.559108] (manual_pubsub) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K|\x1b[m\x1b[K\n'}
+[4.560027] (manual_pubsub) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K<brace-enclosed initializer list>\x1b[m\x1b[K\n'}
+[4.560338] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:90:78:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for \xe2\x80\x98\x1b[01m\x1b[Koperator+\x1b[m\x1b[K\xe2\x80\x99 (operand types are \xe2\x80\x98\x1b[01m\x1b[Kstd::__cxx11::basic_string<char>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kmavros_msgs::msg::ManualControl_<std::allocator<void> >::_x_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99})\n'}
+[4.560673] (manual_pubsub) StderrLine: {'line': b'   90 |     message.data = \x1b[32m\x1b[K"Message " + std::to_string(count_++) + " (x,y,z,r,b): ("\x1b[m\x1b[K \x1b[01;31m\x1b[K+\x1b[m\x1b[K \x1b[34m\x1b[Kmsg.x\x1b[m\x1b[K + "," + msg.y + "," + msg.z + "," + msg.r + "," + msg.buttons + ")";\n'}
+[4.560984] (manual_pubsub) StderrLine: {'line': b'      |                    \x1b[32m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K \x1b[01;31m\x1b[K^\x1b[m\x1b[K \x1b[34m\x1b[K~~~~~\x1b[m\x1b[K\n'}
+[4.561278] (manual_pubsub) StderrLine: {'line': b'      |                                                          \x1b[32m\x1b[K|\x1b[m\x1b[K                         \x1b[34m\x1b[K|\x1b[m\x1b[K\n'}
+[4.561536] (manual_pubsub) StderrLine: {'line': b'      |                                                          \x1b[32m\x1b[K|\x1b[m\x1b[K                         \x1b[34m\x1b[Kmavros_msgs::msg::ManualControl_<std::allocator<void> >::_x_type {aka float}\x1b[m\x1b[K\n'}
+[4.561804] (manual_pubsub) StderrLine: {'line': b'      |                                                          \x1b[32m\x1b[Kstd::__cxx11::basic_string<char>\x1b[m\x1b[K\n'}
+[4.562078] (manual_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/bits/stl_algobase.h:67\x1b[m\x1b[K,\n'}
+[4.562326] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/memory:62\x1b[m\x1b[K,\n'}
+[4.563857] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:16\x1b[m\x1b[K:\n'}
+[4.564171] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/stl_iterator.h:423:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.564467] (manual_pubsub) StderrLine: {'line': b'  423 |     \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K+(typename reverse_iterator<_Iterator>::difference_type __n,\n'}
+[4.564751] (manual_pubsub) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.564993] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/stl_iterator.h:423:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.565303] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:90:84:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst std::reverse_iterator<_Iterator>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kmavros_msgs::msg::ManualControl_<std::allocator<void> >::_x_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[4.565557] (manual_pubsub) StderrLine: {'line': b'   90 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + msg.\x1b[01;36m\x1b[Kx\x1b[m\x1b[K + "," + msg.y + "," + msg.z + "," + msg.r + "," + msg.buttons + ")";\n'}
+[4.565799] (manual_pubsub) StderrLine: {'line': b'      |                                                                                    \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[4.566075] (manual_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/bits/stl_algobase.h:67\x1b[m\x1b[K,\n'}
+[4.566416] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/memory:62\x1b[m\x1b[K,\n'}
+[4.566700] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:16\x1b[m\x1b[K:\n'}
+[4.566967] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/stl_iterator.h:1216:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Iterator> std::move_iterator<_IteratorL> std::operator+(typename std::move_iterator<_IteratorL>::difference_type, const std::move_iterator<_IteratorL>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.567267] (manual_pubsub) StderrLine: {'line': b' 1216 |     \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K+(typename move_iterator<_Iterator>::difference_type __n,\n'}
+[4.567534] (manual_pubsub) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.567767] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/stl_iterator.h:1216:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.568016] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:90:84:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst std::move_iterator<_IteratorL>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kmavros_msgs::msg::ManualControl_<std::allocator<void> >::_x_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[4.568273] (manual_pubsub) StderrLine: {'line': b'   90 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + msg.\x1b[01;36m\x1b[Kx\x1b[m\x1b[K + "," + msg.y + "," + msg.z + "," + msg.r + "," + msg.buttons + ")";\n'}
+[4.568538] (manual_pubsub) StderrLine: {'line': b'      |                                                                                    \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[4.568796] (manual_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/string:55\x1b[m\x1b[K,\n'}
+[4.569051] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/stdexcept:39\x1b[m\x1b[K,\n'}
+[4.569297] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/array:39\x1b[m\x1b[K,\n'}
+[4.569538] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/tuple:39\x1b[m\x1b[K,\n'}
+[4.569772] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/bits/unique_ptr.h:37\x1b[m\x1b[K,\n'}
+[4.570009] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/memory:80\x1b[m\x1b[K,\n'}
+[4.570249] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:16\x1b[m\x1b[K:\n'}
+[4.570605] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6023:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.570896] (manual_pubsub) StderrLine: {'line': b' 6023 |     \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,\n'}
+[4.571179] (manual_pubsub) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.571438] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6023:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.571684] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:90:84:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Alloc>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kmavros_msgs::msg::ManualControl_<std::allocator<void> >::_x_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[4.571943] (manual_pubsub) StderrLine: {'line': b'   90 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + msg.\x1b[01;36m\x1b[Kx\x1b[m\x1b[K + "," + msg.y + "," + msg.z + "," + msg.r + "," + msg.buttons + ")";\n'}
+[4.572184] (manual_pubsub) StderrLine: {'line': b'      |                                                                                    \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[4.572436] (manual_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/string:56\x1b[m\x1b[K,\n'}
+[4.572696] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/stdexcept:39\x1b[m\x1b[K,\n'}
+[4.572967] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/array:39\x1b[m\x1b[K,\n'}
+[4.573231] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/tuple:39\x1b[m\x1b[K,\n'}
+[4.573466] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/bits/unique_ptr.h:37\x1b[m\x1b[K,\n'}
+[4.573711] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/memory:80\x1b[m\x1b[K,\n'}
+[4.573942] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:16\x1b[m\x1b[K:\n'}
+[4.574175] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.tcc:1158:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.574503] (manual_pubsub) StderrLine: {'line': b' 1158 |     \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K+(const _CharT* __lhs,\n'}
+[4.574781] (manual_pubsub) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.575044] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.tcc:1158:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.575302] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:90:84:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst _CharT*\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::__cxx11::basic_string<char>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.575600] (manual_pubsub) StderrLine: {'line': b'   90 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + msg.\x1b[01;36m\x1b[Kx\x1b[m\x1b[K + "," + msg.y + "," + msg.z + "," + msg.r + "," + msg.buttons + ")";\n'}
+[4.575866] (manual_pubsub) StderrLine: {'line': b'      |                                                                                    \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[4.576124] (manual_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/string:56\x1b[m\x1b[K,\n'}
+[4.576374] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/stdexcept:39\x1b[m\x1b[K,\n'}
+[4.576609] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/array:39\x1b[m\x1b[K,\n'}
+[4.576857] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/tuple:39\x1b[m\x1b[K,\n'}
+[4.577113] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/bits/unique_ptr.h:37\x1b[m\x1b[K,\n'}
+[4.577364] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/memory:80\x1b[m\x1b[K,\n'}
+[4.577612] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:16\x1b[m\x1b[K:\n'}
+[4.577867] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.tcc:1174:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.578116] (manual_pubsub) StderrLine: {'line': b' 1174 |     \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K+(_CharT __lhs, const basic_string<_CharT, _Traits, _Alloc>& __rhs)\n'}
+[4.578382] (manual_pubsub) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.578636] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.tcc:1174:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.578884] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:90:84:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Alloc>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kmavros_msgs::msg::ManualControl_<std::allocator<void> >::_x_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[4.579151] (manual_pubsub) StderrLine: {'line': b'   90 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + msg.\x1b[01;36m\x1b[Kx\x1b[m\x1b[K + "," + msg.y + "," + msg.z + "," + msg.r + "," + msg.buttons + ")";\n'}
+[4.579409] (manual_pubsub) StderrLine: {'line': b'      |                                                                                    \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[4.579676] (manual_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/string:55\x1b[m\x1b[K,\n'}
+[4.579928] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/stdexcept:39\x1b[m\x1b[K,\n'}
+[4.580165] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/array:39\x1b[m\x1b[K,\n'}
+[4.580404] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/tuple:39\x1b[m\x1b[K,\n'}
+[4.580640] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/bits/unique_ptr.h:37\x1b[m\x1b[K,\n'}
+[4.580889] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/memory:80\x1b[m\x1b[K,\n'}
+[4.581121] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:16\x1b[m\x1b[K:\n'}
+[4.581454] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6060:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.581730] (manual_pubsub) StderrLine: {'line': b' 6060 |     \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,\n'}
+[4.581977] (manual_pubsub) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.582210] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6060:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.582496] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:90:84:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst _CharT*\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.582780] (manual_pubsub) StderrLine: {'line': b'   90 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + msg.\x1b[01;36m\x1b[Kx\x1b[m\x1b[K + "," + msg.y + "," + msg.z + "," + msg.r + "," + msg.buttons + ")";\n'}
+[4.583045] (manual_pubsub) StderrLine: {'line': b'      |                                                                                    \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[4.583281] (manual_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/string:55\x1b[m\x1b[K,\n'}
+[4.583534] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/stdexcept:39\x1b[m\x1b[K,\n'}
+[4.583789] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/array:39\x1b[m\x1b[K,\n'}
+[4.584063] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/tuple:39\x1b[m\x1b[K,\n'}
+[4.584295] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/bits/unique_ptr.h:37\x1b[m\x1b[K,\n'}
+[4.584525] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/memory:80\x1b[m\x1b[K,\n'}
+[4.584767] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:16\x1b[m\x1b[K:\n'}
+[4.585002] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6076:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, _CharT)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.585328] (manual_pubsub) StderrLine: {'line': b' 6076 |     \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K+(const basic_string<_CharT, _Traits, _Alloc>& __lhs, _CharT __rhs)\n'}
+[4.585582] (manual_pubsub) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.585836] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6076:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.586091] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:90:84:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  deduced conflicting types for parameter \xe2\x80\x98\x1b[01m\x1b[K_CharT\x1b[m\x1b[K\xe2\x80\x99 (\xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99)\n'}
+[4.586430] (manual_pubsub) StderrLine: {'line': b'   90 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + msg.\x1b[01;36m\x1b[Kx\x1b[m\x1b[K + "," + msg.y + "," + msg.z + "," + msg.r + "," + msg.buttons + ")";\n'}
+[4.586708] (manual_pubsub) StderrLine: {'line': b'      |                                                                                    \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[4.586943] (manual_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/string:55\x1b[m\x1b[K,\n'}
+[4.587175] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/stdexcept:39\x1b[m\x1b[K,\n'}
+[4.587418] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/array:39\x1b[m\x1b[K,\n'}
+[4.587650] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/tuple:39\x1b[m\x1b[K,\n'}
+[4.587907] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/bits/unique_ptr.h:37\x1b[m\x1b[K,\n'}
+[4.588168] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/memory:80\x1b[m\x1b[K,\n'}
+[4.588453] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:16\x1b[m\x1b[K:\n'}
+[4.588693] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6088:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.588945] (manual_pubsub) StderrLine: {'line': b' 6088 |     \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,\n'}
+[4.589184] (manual_pubsub) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.589434] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6088:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.589682] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:90:84:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Alloc>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kmavros_msgs::msg::ManualControl_<std::allocator<void> >::_x_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[4.589935] (manual_pubsub) StderrLine: {'line': b'   90 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + msg.\x1b[01;36m\x1b[Kx\x1b[m\x1b[K + "," + msg.y + "," + msg.z + "," + msg.r + "," + msg.buttons + ")";\n'}
+[4.590213] (manual_pubsub) StderrLine: {'line': b'      |                                                                                    \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[4.590709] (manual_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/string:55\x1b[m\x1b[K,\n'}
+[4.590968] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/stdexcept:39\x1b[m\x1b[K,\n'}
+[4.591212] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/array:39\x1b[m\x1b[K,\n'}
+[4.591479] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/tuple:39\x1b[m\x1b[K,\n'}
+[4.591726] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/bits/unique_ptr.h:37\x1b[m\x1b[K,\n'}
+[4.591965] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/memory:80\x1b[m\x1b[K,\n'}
+[4.592202] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:16\x1b[m\x1b[K:\n'}
+[4.592482] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6094:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.592829] (manual_pubsub) StderrLine: {'line': b' 6094 |     \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K+(const basic_string<_CharT, _Traits, _Alloc>& __lhs,\n'}
+[4.593103] (manual_pubsub) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.593349] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6094:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.593606] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:90:84:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::__cxx11::basic_string<_CharT, _Traits, _Alloc>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kmavros_msgs::msg::ManualControl_<std::allocator<void> >::_x_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[4.593911] (manual_pubsub) StderrLine: {'line': b'   90 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + msg.\x1b[01;36m\x1b[Kx\x1b[m\x1b[K + "," + msg.y + "," + msg.z + "," + msg.r + "," + msg.buttons + ")";\n'}
+[4.594158] (manual_pubsub) StderrLine: {'line': b'      |                                                                                    \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[4.594438] (manual_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/string:55\x1b[m\x1b[K,\n'}
+[4.594705] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/stdexcept:39\x1b[m\x1b[K,\n'}
+[4.594979] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/array:39\x1b[m\x1b[K,\n'}
+[4.595240] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/tuple:39\x1b[m\x1b[K,\n'}
+[4.595496] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/bits/unique_ptr.h:37\x1b[m\x1b[K,\n'}
+[4.595749] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/memory:80\x1b[m\x1b[K,\n'}
+[4.595984] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:16\x1b[m\x1b[K:\n'}
+[4.596216] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6100:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.596472] (manual_pubsub) StderrLine: {'line': b' 6100 |     \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,\n'}
+[4.596712] (manual_pubsub) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.596943] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6100:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.597198] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:90:84:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::__cxx11::basic_string<_CharT, _Traits, _Alloc>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kmavros_msgs::msg::ManualControl_<std::allocator<void> >::_x_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[4.597520] (manual_pubsub) StderrLine: {'line': b'   90 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + msg.\x1b[01;36m\x1b[Kx\x1b[m\x1b[K + "," + msg.y + "," + msg.z + "," + msg.r + "," + msg.buttons + ")";\n'}
+[4.597793] (manual_pubsub) StderrLine: {'line': b'      |                                                                                    \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[4.598031] (manual_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/string:55\x1b[m\x1b[K,\n'}
+[4.598267] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/stdexcept:39\x1b[m\x1b[K,\n'}
+[4.598551] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/array:39\x1b[m\x1b[K,\n'}
+[4.598801] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/tuple:39\x1b[m\x1b[K,\n'}
+[4.599035] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/bits/unique_ptr.h:37\x1b[m\x1b[K,\n'}
+[4.599290] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/memory:80\x1b[m\x1b[K,\n'}
+[4.599550] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:16\x1b[m\x1b[K:\n'}
+[4.599831] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6112:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.600114] (manual_pubsub) StderrLine: {'line': b' 6112 |     \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K+(const _CharT* __lhs,\n'}
+[4.600360] (manual_pubsub) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.600602] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6112:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.600840] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:90:84:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst _CharT*\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::__cxx11::basic_string<char>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.601092] (manual_pubsub) StderrLine: {'line': b'   90 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + msg.\x1b[01;36m\x1b[Kx\x1b[m\x1b[K + "," + msg.y + "," + msg.z + "," + msg.r + "," + msg.buttons + ")";\n'}
+[4.601335] (manual_pubsub) StderrLine: {'line': b'      |                                                                                    \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[4.601583] (manual_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/string:55\x1b[m\x1b[K,\n'}
+[4.601822] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/stdexcept:39\x1b[m\x1b[K,\n'}
+[4.602082] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/array:39\x1b[m\x1b[K,\n'}
+[4.602381] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/tuple:39\x1b[m\x1b[K,\n'}
+[4.602653] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/bits/unique_ptr.h:37\x1b[m\x1b[K,\n'}
+[4.602983] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/memory:80\x1b[m\x1b[K,\n'}
+[4.603253] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:16\x1b[m\x1b[K:\n'}
+[4.603518] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6118:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.603767] (manual_pubsub) StderrLine: {'line': b' 6118 |     \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K+(_CharT __lhs,\n'}
+[4.604016] (manual_pubsub) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.604249] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6118:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.604480] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:90:84:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kstd::__cxx11::basic_string<_CharT, _Traits, _Alloc>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kmavros_msgs::msg::ManualControl_<std::allocator<void> >::_x_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[4.604782] (manual_pubsub) StderrLine: {'line': b'   90 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + msg.\x1b[01;36m\x1b[Kx\x1b[m\x1b[K + "," + msg.y + "," + msg.z + "," + msg.r + "," + msg.buttons + ")";\n'}
+[4.605050] (manual_pubsub) StderrLine: {'line': b'      |                                                                                    \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[4.605296] (manual_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/string:55\x1b[m\x1b[K,\n'}
+[4.605527] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/stdexcept:39\x1b[m\x1b[K,\n'}
+[4.605759] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/array:39\x1b[m\x1b[K,\n'}
+[4.605989] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/tuple:39\x1b[m\x1b[K,\n'}
+[4.606234] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/bits/unique_ptr.h:37\x1b[m\x1b[K,\n'}
+[4.606547] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/memory:80\x1b[m\x1b[K,\n'}
+[4.606806] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:16\x1b[m\x1b[K:\n'}
+[4.607064] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6124:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&, const _CharT*)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.607349] (manual_pubsub) StderrLine: {'line': b' 6124 |     \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,\n'}
+[4.607607] (manual_pubsub) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.607838] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6124:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.608077] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:90:84:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst _CharT*\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.608362] (manual_pubsub) StderrLine: {'line': b'   90 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + msg.\x1b[01;36m\x1b[Kx\x1b[m\x1b[K + "," + msg.y + "," + msg.z + "," + msg.r + "," + msg.buttons + ")";\n'}
+[4.608597] (manual_pubsub) StderrLine: {'line': b'      |                                                                                    \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[4.608828] (manual_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/string:55\x1b[m\x1b[K,\n'}
+[4.609077] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/stdexcept:39\x1b[m\x1b[K,\n'}
+[4.609332] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/array:39\x1b[m\x1b[K,\n'}
+[4.609583] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/tuple:39\x1b[m\x1b[K,\n'}
+[4.609823] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/bits/unique_ptr.h:37\x1b[m\x1b[K,\n'}
+[4.610059] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/memory:80\x1b[m\x1b[K,\n'}
+[4.610296] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:16\x1b[m\x1b[K:\n'}
+[4.610596] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6130:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _CharT, class _Traits, class _Alloc> std::__cxx11::basic_string<_CharT, _Traits, _Alloc> std::operator+(std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&&, _CharT)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.610850] (manual_pubsub) StderrLine: {'line': b' 6130 |     \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K+(basic_string<_CharT, _Traits, _Alloc>&& __lhs,\n'}
+[4.611085] (manual_pubsub) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.611316] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/basic_string.h:6130:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.611604] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:90:84:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  deduced conflicting types for parameter \xe2\x80\x98\x1b[01m\x1b[K_CharT\x1b[m\x1b[K\xe2\x80\x99 (\xe2\x80\x98\x1b[01m\x1b[Kchar\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99)\n'}
+[4.611930] (manual_pubsub) StderrLine: {'line': b'   90 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + msg.\x1b[01;36m\x1b[Kx\x1b[m\x1b[K + "," + msg.y + "," + msg.z + "," + msg.r + "," + msg.buttons + ")";\n'}
+[4.612196] (manual_pubsub) StderrLine: {'line': b'      |                                                                                    \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[4.612440] (manual_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/vector:68\x1b[m\x1b[K,\n'}
+[4.612672] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:27\x1b[m\x1b[K,\n'}
+[4.612907] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[4.613151] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[4.613388] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[4.613645] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:18\x1b[m\x1b[K:\n'}
+[4.613952] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/stl_bvector.h:303:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.614215] (manual_pubsub) StderrLine: {'line': b'  303 |   \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K+(ptrdiff_t __n, const _Bit_iterator& __x)\n'}
+[4.614490] (manual_pubsub) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.614742] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/stl_bvector.h:303:23:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::__cxx11::basic_string<char>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::ptrdiff_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong int\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[4.615026] (manual_pubsub) StderrLine: {'line': b'  303 |   operator+(\x1b[01;36m\x1b[Kptrdiff_t __n\x1b[m\x1b[K, const _Bit_iterator& __x)\n'}
+[4.615258] (manual_pubsub) StderrLine: {'line': b'      |             \x1b[01;36m\x1b[K~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[4.615490] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/stl_bvector.h:393:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.615749] (manual_pubsub) StderrLine: {'line': b'  393 |   \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K+(ptrdiff_t __n, const _Bit_const_iterator& __x)\n'}
+[4.616003] (manual_pubsub) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.616257] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/stl_bvector.h:393:23:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::__cxx11::basic_string<char>\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::ptrdiff_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong int\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[4.616556] (manual_pubsub) StderrLine: {'line': b'  393 |   operator+(\x1b[01;36m\x1b[Kptrdiff_t __n\x1b[m\x1b[K, const _Bit_const_iterator& __x)\n'}
+[4.616810] (manual_pubsub) StderrLine: {'line': b'      |             \x1b[01;36m\x1b[K~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[4.617042] (manual_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/bits/stl_algobase.h:67\x1b[m\x1b[K,\n'}
+[4.617273] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/9/memory:62\x1b[m\x1b[K,\n'}
+[4.617504] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:16\x1b[m\x1b[K:\n'}
+[4.617744] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/stl_iterator.h:993:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.617987] (manual_pubsub) StderrLine: {'line': b'  993 |     \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K+(typename __normal_iterator<_Iterator, _Container>::difference_type\n'}
+[4.618231] (manual_pubsub) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.618527] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/stl_iterator.h:993:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.618802] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:90:84:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  mismatched types \xe2\x80\x98\x1b[01m\x1b[Kconst __gnu_cxx::__normal_iterator<_Iterator, _Container>\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kmavros_msgs::msg::ManualControl_<std::allocator<void> >::_x_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kfloat\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[4.619098] (manual_pubsub) StderrLine: {'line': b'   90 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + msg.\x1b[01;36m\x1b[Kx\x1b[m\x1b[K + "," + msg.y + "," + msg.z + "," + msg.r + "," + msg.buttons + ")";\n'}
+[4.619332] (manual_pubsub) StderrLine: {'line': b'      |                                                                                    \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[4.646527] (-) TimerEvent: {}
+[4.747338] (-) TimerEvent: {}
+[4.848243] (-) TimerEvent: {}
+[4.949199] (-) TimerEvent: {}
+[5.050165] (-) TimerEvent: {}
+[5.151217] (-) TimerEvent: {}
+[5.252177] (-) TimerEvent: {}
+[5.353129] (-) TimerEvent: {}
+[5.454068] (-) TimerEvent: {}
+[5.555054] (-) TimerEvent: {}
+[5.655938] (-) TimerEvent: {}
+[5.756820] (-) TimerEvent: {}
+[5.857680] (-) TimerEvent: {}
+[5.958645] (-) TimerEvent: {}
+[6.059560] (-) TimerEvent: {}
+[6.160520] (-) TimerEvent: {}
+[6.261497] (-) TimerEvent: {}
+[6.362532] (-) TimerEvent: {}
+[6.463467] (-) TimerEvent: {}
+[6.564391] (-) TimerEvent: {}
+[6.665262] (-) TimerEvent: {}
+[6.766158] (-) TimerEvent: {}
+[6.867114] (-) TimerEvent: {}
+[6.968021] (-) TimerEvent: {}
+[7.068955] (-) TimerEvent: {}
+[7.169915] (-) TimerEvent: {}
+[7.207310] (manual_pubsub) StderrLine: {'line': b'make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/publisher_member_function.cpp.o] Error 1\n'}
+[7.208482] (manual_pubsub) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/talker.dir/all] Error 2\n'}
+[7.209656] (manual_pubsub) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[7.218059] (manual_pubsub) CommandEnded: {'returncode': 2}
+[7.270286] (-) TimerEvent: {}
+[7.374329] (-) TimerEvent: {}
+[7.380285] (manual_pubsub) JobEnded: {'identifier': 'manual_pubsub', 'rc': 2}
+[7.392150] (-) EventReactorShutdown: {}

@@ -1,0 +1,24 @@
+[35m[1mScanning dependencies of target talker[0m
+[ 50%] Built target listener
+[ 75%] [32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o[0m
+[01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisher::timer_callback()[m[K’:
+[01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:82:8:[m[K [01;31m[Kerror: [m[K‘[01m[Khead[m[K’ was not declared in this scope
+   82 |        [01;31m[Khead[m[K,
+      |        [01;31m[K^~~~[m[K
+[01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:88:5:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K{<expression error>, 1000, 500, 500, 0, 0}[m[K’ from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[KmanualMsg[m[K’ {aka ‘[01m[Kmavros_msgs::msg::ManualControl_<std::allocator<void> >[m[K’}
+   88 |     [01;31m[K}[m[K;
+      |     [01;31m[K^[m[K
+      |     [01;31m[K|[m[K
+      |     [01;31m[K<brace-enclosed initializer list>[m[K
+[01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:90:84:[m[K [01;31m[Kerror: [m[K‘[01m[KmanualMsg[m[K’ {aka ‘[01m[Kstruct mavros_msgs::msg::ManualControl_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kmsg[m[K’
+   90 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + msg.[01;31m[Kmsg[m[K.x + "," + msg.msg.y + "," + msg.msg.z + "," + msg.r + "," + msg.buttons + ")";
+      |                                                                                    [01;31m[K^~~[m[K
+[01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:90:102:[m[K [01;31m[Kerror: [m[K‘[01m[KmanualMsg[m[K’ {aka ‘[01m[Kstruct mavros_msgs::msg::ManualControl_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kmsg[m[K’
+   90 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + msg.msg.x + "," + msg.[01;31m[Kmsg[m[K.y + "," + msg.msg.z + "," + msg.r + "," + msg.buttons + ")";
+      |                                                                                                      [01;31m[K^~~[m[K
+[01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:90:120:[m[K [01;31m[Kerror: [m[K‘[01m[KmanualMsg[m[K’ {aka ‘[01m[Kstruct mavros_msgs::msg::ManualControl_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kmsg[m[K’
+   90 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + msg.msg.x + "," + msg.msg.y + "," + msg.[01;31m[Kmsg[m[K.z + "," + msg.r + "," + msg.buttons + ")";
+      |                                                                                                                        [01;31m[K^~~[m[K
+make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/publisher_member_function.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/talker.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

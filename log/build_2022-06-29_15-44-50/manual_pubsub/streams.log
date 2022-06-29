@@ -1,0 +1,23 @@
+[0.065s] Invoking command in '/home/lur/controller/build/manual_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/manual_pubsub -- -j4 -l4
+[0.229s] [35m[1mScanning dependencies of target talker[0m
+[0.308s] [ 50%] Built target listener
+[0.339s] [ 75%] [32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o[0m
+[4.447s] [01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:[m[K In constructor ‘[01m[KMinimalPublisher::MinimalPublisher()[m[K’:
+[4.447s] [01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:67:84:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KMinimalPublisher::create_publisher<manualMsg>(const char [31])[m[K’
+[4.448s]    67 |     publisher_ = this->create_publisher<manualMsg>("/mavros/manual_control/control"[01;31m[K)[m[K;
+[4.448s]       |                                                                                    [01;31m[K^[m[K
+[4.448s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[4.449s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[4.449s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[4.449s]                  from [01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:18[m[K:
+[4.449s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:184:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[4.450s]   184 |   [01;36m[Kcreate_publisher[m[K(
+[4.450s]       |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[4.450s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:184:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.451s] [01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:67:84:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+[4.451s]    67 |     publisher_ = this->create_publisher<manualMsg>("/mavros/manual_control/control"[01;36m[K)[m[K;
+[4.451s]       |                                                                                    [01;36m[K^[m[K
+[6.628s] make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/publisher_member_function.cpp.o] Error 1
+[6.629s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/talker.dir/all] Error 2
+[6.630s] make: *** [Makefile:141: all] Error 2
+[6.639s] Invoked command in '/home/lur/controller/build/manual_pubsub' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/manual_pubsub -- -j4 -l4

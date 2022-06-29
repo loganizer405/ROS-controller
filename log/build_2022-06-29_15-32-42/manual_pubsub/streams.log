@@ -1,0 +1,39 @@
+[0.065s] Invoking command in '/home/lur/controller/build/manual_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/manual_pubsub -- -j4 -l4
+[0.224s] [35m[1mScanning dependencies of target talker[0m
+[0.295s] [ 50%] Built target listener
+[0.334s] [ 75%] [32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o[0m
+[4.454s] [01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:[m[K In constructor ‘[01m[KMinimalPublisher::MinimalPublisher()[m[K’:
+[4.455s] [01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:67:44:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KMinimalPublisher::create_publisher(manualMsg&)[m[K’
+[4.455s]    67 |     publisher_ = this->create_publisher(msg[01;31m[K)[m[K;
+[4.455s]       |                                            [01;31m[K^[m[K
+[4.456s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[4.456s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[4.456s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[4.457s]                  from [01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:18[m[K:
+[4.458s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:184:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[4.458s]   184 |   [01;36m[Kcreate_publisher[m[K(
+[4.458s]       |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[4.459s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:184:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.459s] [01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:67:44:[m[K [01;36m[Knote: [m[K  candidate expects 3 arguments, 1 provided
+[4.459s]    67 |     publisher_ = this->create_publisher(msg[01;36m[K)[m[K;
+[4.459s]       |                                            [01;36m[K^[m[K
+[4.495s] [01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:[m[K In member function ‘[01m[Kvoid MinimalPublisher::timer_callback()[m[K’:
+[4.495s] [01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:81:86:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass MinimalPublisher[m[K’ has no member named ‘[01m[Kmsg[m[K’
+[4.496s]    81 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + this->[01;31m[Kmsg[m[K.x + "," + this->msg.y + "," + this->msg.z + "," + this->r + "," + this->buttons + ")";
+[4.496s]       |                                                                                      [01;31m[K^~~[m[K
+[4.496s] [01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:81:106:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass MinimalPublisher[m[K’ has no member named ‘[01m[Kmsg[m[K’
+[4.496s]    81 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + this->msg.x + "," + this->[01;31m[Kmsg[m[K.y + "," + this->msg.z + "," + this->r + "," + this->buttons + ")";
+[4.497s]       |                                                                                                          [01;31m[K^~~[m[K
+[4.497s] [01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:81:126:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass MinimalPublisher[m[K’ has no member named ‘[01m[Kmsg[m[K’
+[4.497s]    81 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + this->msg.x + "," + this->msg.y + "," + this->[01;31m[Kmsg[m[K.z + "," + this->r + "," + this->buttons + ")";
+[4.498s]       |                                                                                                                              [01;31m[K^~~[m[K
+[4.498s] [01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:81:146:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass MinimalPublisher[m[K’ has no member named ‘[01m[Kr[m[K’
+[4.498s]    81 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + this->msg.x + "," + this->msg.y + "," + this->msg.z + "," + this->[01;31m[Kr[m[K + "," + this->buttons + ")";
+[4.499s]       |                                                                                                                                                  [01;31m[K^[m[K
+[4.499s] [01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:81:162:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass MinimalPublisher[m[K’ has no member named ‘[01m[Kbuttons[m[K’
+[4.499s]    81 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + this->msg.x + "," + this->msg.y + "," + this->msg.z + "," + this->r + "," + this->[01;31m[Kbuttons[m[K + ")";
+[4.499s]       |                                                                                                                                                                  [01;31m[K^~~~~~~[m[K
+[6.607s] make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/publisher_member_function.cpp.o] Error 1
+[6.608s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/talker.dir/all] Error 2
+[6.610s] make: *** [Makefile:141: all] Error 2
+[6.619s] Invoked command in '/home/lur/controller/build/manual_pubsub' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/manual_pubsub -- -j4 -l4

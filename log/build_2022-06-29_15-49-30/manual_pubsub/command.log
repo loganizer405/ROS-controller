@@ -1,0 +1,2 @@
+Invoking command in '/home/lur/controller/build/manual_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/manual_pubsub -- -j4 -l4
+Invoked command in '/home/lur/controller/build/manual_pubsub' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/manual_pubsub -- -j4 -l4

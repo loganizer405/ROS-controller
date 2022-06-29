@@ -1,0 +1,15 @@
+[0.062s] Invoking command in '/home/lur/controller/build/manual_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/manual_pubsub -- -j4 -l4
+[0.223s] [35m[1mScanning dependencies of target talker[0m
+[0.297s] [ 50%] Built target listener
+[0.331s] [ 75%] [32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o[0m
+[4.544s] [01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:43:9:[m[K [01;31m[Kerror: [m[K‘[01m[KmanualMsg[m[K’ does not name a type
+[4.544s]    43 | typedef [01;31m[KmanualMsg[m[K mavros_msgs::msg::manual_control;
+[4.545s]       |         [01;31m[K^~~~~~~~~[m[K
+[4.576s] [01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:[m[K In constructor ‘[01m[KMinimalPublisher::MinimalPublisher()[m[K’:
+[4.576s] [01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:52:5:[m[K [01;31m[Kerror: [m[K‘[01m[KmanualMsg[m[K’ was not declared in this scope
+[4.577s]    52 |     [01;31m[KmanualMsg[m[K msg;
+[4.577s]       |     [01;31m[K^~~~~~~~~[m[K
+[7.392s] make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/publisher_member_function.cpp.o] Error 1
+[7.393s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/talker.dir/all] Error 2
+[7.394s] make: *** [Makefile:141: all] Error 2
+[7.404s] Invoked command in '/home/lur/controller/build/manual_pubsub' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/manual_pubsub -- -j4 -l4

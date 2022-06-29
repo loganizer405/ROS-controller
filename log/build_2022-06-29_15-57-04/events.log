@@ -1,0 +1,169 @@
+[0.000000] (-) TimerEvent: {}
+[0.001165] (-) JobUnselected: {'identifier': 'cpp_pubsub'}
+[0.002054] (-) JobUnselected: {'identifier': 'examples_rclcpp_async_client'}
+[0.002150] (-) JobUnselected: {'identifier': 'examples_rclcpp_cbg_executor'}
+[0.002233] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_action_client'}
+[0.002314] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_action_server'}
+[0.002395] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_client'}
+[0.002474] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_composition'}
+[0.002552] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_publisher'}
+[0.002629] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_service'}
+[0.002710] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_subscriber'}
+[0.002818] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_timer'}
+[0.002897] (-) JobUnselected: {'identifier': 'examples_rclcpp_multithreaded_executor'}
+[0.002994] (-) JobUnselected: {'identifier': 'examples_rclcpp_wait_set'}
+[0.003093] (-) JobUnselected: {'identifier': 'examples_rclpy_executors'}
+[0.003197] (-) JobUnselected: {'identifier': 'examples_rclpy_guard_conditions'}
+[0.003275] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_action_client'}
+[0.003352] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_action_server'}
+[0.003427] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_client'}
+[0.003503] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_publisher'}
+[0.003583] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_service'}
+[0.003659] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_subscriber'}
+[0.003738] (-) JobUnselected: {'identifier': 'examples_rclpy_pointcloud_publisher'}
+[0.003814] (-) JobUnselected: {'identifier': 'launch_testing_examples'}
+[0.003891] (-) JobUnselected: {'identifier': 'publisher_subscriber'}
+[0.003961] (-) JobUnselected: {'identifier': 'robosub'}
+[0.004040] (manual_pubsub) JobQueued: {'identifier': 'manual_pubsub', 'dependencies': OrderedDict()}
+[0.004123] (manual_pubsub) JobStarted: {'identifier': 'manual_pubsub'}
+[0.049377] (manual_pubsub) JobProgress: {'identifier': 'manual_pubsub', 'progress': 'cmake'}
+[0.052543] (manual_pubsub) JobProgress: {'identifier': 'manual_pubsub', 'progress': 'build'}
+[0.055207] (manual_pubsub) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lur/controller/build/manual_pubsub', '--', '-j4', '-l4'], 'cwd': '/home/lur/controller/build/manual_pubsub', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lur'), ('SSH_CLIENT', '192.168.55.100 55574 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/lur'), ('OLDPWD', '/home/lur'), ('SSH_TTY', '/dev/pts/4'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/lur/controller/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'lur'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '10'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:14.0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/lur/controller/install/robosub:/home/lur/controller/install/publisher_subscriber:/home/lur/controller/install/manual_pubsub:/home/lur/controller/install/cpp_pubsub:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/lur/controller/build/manual_pubsub'), ('SSH_CONNECTION', '192.168.55.100 55574 192.168.55.1 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/lur/controller/install/robosub:/home/lur/controller/install/publisher_subscriber:/home/lur/controller/install/manual_pubsub:/home/lur/controller/install/cpp_pubsub:/opt/ros/foxy')]), 'shell': False}
+[0.099069] (-) TimerEvent: {}
+[0.200383] (-) TimerEvent: {}
+[0.228214] (manual_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target talker\x1b[0m\n'}
+[0.296701] (manual_pubsub) StdoutLine: {'line': b'[ 50%] Built target listener\n'}
+[0.300480] (-) TimerEvent: {}
+[0.337134] (manual_pubsub) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o\x1b[0m\n'}
+[0.400727] (-) TimerEvent: {}
+[0.501754] (-) TimerEvent: {}
+[0.602678] (-) TimerEvent: {}
+[0.703559] (-) TimerEvent: {}
+[0.804535] (-) TimerEvent: {}
+[0.905462] (-) TimerEvent: {}
+[1.006387] (-) TimerEvent: {}
+[1.107274] (-) TimerEvent: {}
+[1.208184] (-) TimerEvent: {}
+[1.309120] (-) TimerEvent: {}
+[1.410015] (-) TimerEvent: {}
+[1.510906] (-) TimerEvent: {}
+[1.611778] (-) TimerEvent: {}
+[1.712644] (-) TimerEvent: {}
+[1.813679] (-) TimerEvent: {}
+[1.914583] (-) TimerEvent: {}
+[2.015511] (-) TimerEvent: {}
+[2.116416] (-) TimerEvent: {}
+[2.217392] (-) TimerEvent: {}
+[2.318269] (-) TimerEvent: {}
+[2.419188] (-) TimerEvent: {}
+[2.520093] (-) TimerEvent: {}
+[2.620994] (-) TimerEvent: {}
+[2.721890] (-) TimerEvent: {}
+[2.822783] (-) TimerEvent: {}
+[2.923739] (-) TimerEvent: {}
+[3.024708] (-) TimerEvent: {}
+[3.125719] (-) TimerEvent: {}
+[3.226715] (-) TimerEvent: {}
+[3.327711] (-) TimerEvent: {}
+[3.428677] (-) TimerEvent: {}
+[3.529625] (-) TimerEvent: {}
+[3.630581] (-) TimerEvent: {}
+[3.731528] (-) TimerEvent: {}
+[3.832464] (-) TimerEvent: {}
+[3.933429] (-) TimerEvent: {}
+[4.034421] (-) TimerEvent: {}
+[4.135381] (-) TimerEvent: {}
+[4.236345] (-) TimerEvent: {}
+[4.337432] (-) TimerEvent: {}
+[4.438396] (-) TimerEvent: {}
+[4.505553] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KMinimalPublisher::MinimalPublisher()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.507743] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:68:101:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno match for \xe2\x80\x98\x1b[01m\x1b[Koperator=\x1b[m\x1b[K\xe2\x80\x99 (operand types are \xe2\x80\x98\x1b[01m\x1b[Krclcpp::Publisher<std_msgs::msg::String_<std::allocator<void> > >::SharedPtr\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp::Publisher<std_msgs::msg::String_<std::allocator<void> > > >\x1b[m\x1b[K\xe2\x80\x99} and \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp::Publisher<mavros_msgs::msg::ManualControl_<std::allocator<void> >, std::allocator<void> > >\x1b[m\x1b[K\xe2\x80\x99)\n'}
+[4.508282] (manual_pubsub) StderrLine: {'line': b'   68 |     publisher_ = this->create_publisher<manualMsg>("/mavros/manual_control/control", rclcpp::QoS(10)\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[4.508632] (manual_pubsub) StderrLine: {'line': b'      |                                                                                                     \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[4.508997] (manual_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/memory:81\x1b[m\x1b[K,\n'}
+[4.509279] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:16\x1b[m\x1b[K:\n'}
+[4.509580] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr.h:309:19:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = rclcpp::Publisher<std_msgs::msg::String_<std::allocator<void> > >]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.509856] (manual_pubsub) StderrLine: {'line': b'  309 |       shared_ptr& \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const shared_ptr&) noexcept = default;\n'}
+[4.510111] (manual_pubsub) StderrLine: {'line': b'      |                   \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.510419] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr.h:309:29:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp::Publisher<mavros_msgs::msg::ManualControl_<std::allocator<void> >, std::allocator<void> > >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst std::shared_ptr<rclcpp::Publisher<std_msgs::msg::String_<std::allocator<void> > > >&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.510741] (manual_pubsub) StderrLine: {'line': b'  309 |       shared_ptr& operator=(\x1b[01;36m\x1b[Kconst shared_ptr&\x1b[m\x1b[K) noexcept = default;\n'}
+[4.511021] (manual_pubsub) StderrLine: {'line': b'      |                             \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.511267] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr.h:313:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Yp = _Yp; _Tp = rclcpp::Publisher<std_msgs::msg::String_<std::allocator<void> > >]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.511524] (manual_pubsub) StderrLine: {'line': b'  313 |  \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(const shared_ptr<_Yp>& __r) noexcept\n'}
+[4.511775] (manual_pubsub) StderrLine: {'line': b'      |  \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.512033] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr.h:313:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.512281] (manual_pubsub) StderrLine: {'line': b'/usr/include/c++/9/bits/shared_ptr.h: In substitution of \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp> template<class _Arg> using _Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = const std::shared_ptr<rclcpp::Publisher<mavros_msgs::msg::ManualControl_<std::allocator<void> >, std::allocator<void> > >&; _Tp = rclcpp::Publisher<std_msgs::msg::String_<std::allocator<void> > >]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.512565] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr.h:313:2:\x1b[m\x1b[K   required by substitution of \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Yp> std::shared_ptr<rclcpp::Publisher<std_msgs::msg::String_<std::allocator<void> > > >::_Assignable<const std::shared_ptr<_Tp>&> std::shared_ptr<rclcpp::Publisher<std_msgs::msg::String_<std::allocator<void> > > >::operator=<_Yp>(const std::shared_ptr<_Tp>&) [with _Yp = rclcpp::Publisher<mavros_msgs::msg::ManualControl_<std::allocator<void> >, std::allocator<void> >]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.513034] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:68:101:\x1b[m\x1b[K   required from here\n'}
+[4.513288] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr.h:111:8:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, std::shared_ptr<rclcpp::Publisher<std_msgs::msg::String_<std::allocator<void> > > >&>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.513572] (manual_pubsub) StderrLine: {'line': b'  111 |  using \x1b[01;31m\x1b[K_Assignable\x1b[m\x1b[K = typename enable_if<\n'}
+[4.513879] (manual_pubsub) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.514169] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr.h:324:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Yp = _Yp; _Tp = rclcpp::Publisher<std_msgs::msg::String_<std::allocator<void> > >]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.514437] (manual_pubsub) StderrLine: {'line': b'  324 |  \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(auto_ptr<_Yp>&& __r)\n'}
+[4.514688] (manual_pubsub) StderrLine: {'line': b'      |  \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.514984] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr.h:324:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.515257] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:68:101:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp::Publisher<mavros_msgs::msg::ManualControl_<std::allocator<void> >, std::allocator<void> > >\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kstd::auto_ptr<_Up>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.515545] (manual_pubsub) StderrLine: {'line': b'   68 |     publisher_ = this->create_publisher<manualMsg>("/mavros/manual_control/control", rclcpp::QoS(10)\x1b[01;36m\x1b[K)\x1b[m\x1b[K;\n'}
+[4.515792] (manual_pubsub) StderrLine: {'line': b'      |                                                                                                     \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[4.516046] (manual_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/9/memory:81\x1b[m\x1b[K,\n'}
+[4.516288] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:16\x1b[m\x1b[K:\n'}
+[4.516529] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr.h:333:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = rclcpp::Publisher<std_msgs::msg::String_<std::allocator<void> > >]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.516821] (manual_pubsub) StderrLine: {'line': b'  333 |       \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(shared_ptr&& __r) noexcept\n'}
+[4.517124] (manual_pubsub) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.517393] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr.h:333:30:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp::Publisher<mavros_msgs::msg::ManualControl_<std::allocator<void> >, std::allocator<void> > >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp::Publisher<std_msgs::msg::String_<std::allocator<void> > > >&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.517706] (manual_pubsub) StderrLine: {'line': b'  333 |       operator=(\x1b[01;36m\x1b[Kshared_ptr&& __r\x1b[m\x1b[K) noexcept\n'}
+[4.517989] (manual_pubsub) StderrLine: {'line': b'      |                 \x1b[01;36m\x1b[K~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[4.518231] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr.h:341:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Yp = _Yp; _Tp = rclcpp::Publisher<std_msgs::msg::String_<std::allocator<void> > >]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.518482] (manual_pubsub) StderrLine: {'line': b'  341 |  \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(shared_ptr<_Yp>&& __r) noexcept\n'}
+[4.518728] (manual_pubsub) StderrLine: {'line': b'      |  \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.518970] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr.h:341:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.519220] (manual_pubsub) StderrLine: {'line': b'/usr/include/c++/9/bits/shared_ptr.h: In substitution of \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Tp> template<class _Arg> using _Assignable = typename std::enable_if<std::is_assignable<std::__shared_ptr<_Tp>&, _Arg>::value, std::shared_ptr<_Tp>&>::type [with _Arg = std::shared_ptr<rclcpp::Publisher<mavros_msgs::msg::ManualControl_<std::allocator<void> >, std::allocator<void> > >; _Tp = rclcpp::Publisher<std_msgs::msg::String_<std::allocator<void> > >]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.519524] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr.h:341:2:\x1b[m\x1b[K   required by substitution of \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Yp> std::shared_ptr<rclcpp::Publisher<std_msgs::msg::String_<std::allocator<void> > > >::_Assignable<std::shared_ptr<_Tp> > std::shared_ptr<rclcpp::Publisher<std_msgs::msg::String_<std::allocator<void> > > >::operator=<_Yp>(std::shared_ptr<_Tp>&&) [with _Yp = rclcpp::Publisher<mavros_msgs::msg::ManualControl_<std::allocator<void> >, std::allocator<void> >]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.519851] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:68:101:\x1b[m\x1b[K   required from here\n'}
+[4.520100] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr.h:111:8:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, std::shared_ptr<rclcpp::Publisher<std_msgs::msg::String_<std::allocator<void> > > >&>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.520382] (manual_pubsub) StderrLine: {'line': b'  111 |  using \x1b[01;31m\x1b[K_Assignable\x1b[m\x1b[K = typename enable_if<\n'}
+[4.520653] (manual_pubsub) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.520953] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr.h:349:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Yp = _Yp; _Del = _Del; _Tp = rclcpp::Publisher<std_msgs::msg::String_<std::allocator<void> > >]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.521223] (manual_pubsub) StderrLine: {'line': b'  349 |  \x1b[01;36m\x1b[Koperator\x1b[m\x1b[K=(unique_ptr<_Yp, _Del>&& __r)\n'}
+[4.521462] (manual_pubsub) StderrLine: {'line': b'      |  \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.521723] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/9/bits/shared_ptr.h:349:2:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.522018] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:68:101:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<rclcpp::Publisher<mavros_msgs::msg::ManualControl_<std::allocator<void> >, std::allocator<void> > >\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kstd::unique_ptr<_Tp, _Dp>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.522321] (manual_pubsub) StderrLine: {'line': b'   68 |     publisher_ = this->create_publisher<manualMsg>("/mavros/manual_control/control", rclcpp::QoS(10)\x1b[01;36m\x1b[K)\x1b[m\x1b[K;\n'}
+[4.522563] (manual_pubsub) StderrLine: {'line': b'      |                                                                                                     \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[4.538562] (-) TimerEvent: {}
+[4.639342] (-) TimerEvent: {}
+[4.740278] (-) TimerEvent: {}
+[4.841340] (-) TimerEvent: {}
+[4.942317] (-) TimerEvent: {}
+[5.043304] (-) TimerEvent: {}
+[5.144373] (-) TimerEvent: {}
+[5.245379] (-) TimerEvent: {}
+[5.346324] (-) TimerEvent: {}
+[5.447234] (-) TimerEvent: {}
+[5.548172] (-) TimerEvent: {}
+[5.649124] (-) TimerEvent: {}
+[5.750036] (-) TimerEvent: {}
+[5.851010] (-) TimerEvent: {}
+[5.952084] (-) TimerEvent: {}
+[6.053188] (-) TimerEvent: {}
+[6.154271] (-) TimerEvent: {}
+[6.255355] (-) TimerEvent: {}
+[6.356332] (-) TimerEvent: {}
+[6.457433] (-) TimerEvent: {}
+[6.558425] (-) TimerEvent: {}
+[6.659474] (-) TimerEvent: {}
+[6.760505] (-) TimerEvent: {}
+[6.861644] (-) TimerEvent: {}
+[6.962700] (-) TimerEvent: {}
+[7.063795] (-) TimerEvent: {}
+[7.164847] (-) TimerEvent: {}
+[7.265824] (-) TimerEvent: {}
+[7.367850] (-) TimerEvent: {}
+[7.395656] (manual_pubsub) StderrLine: {'line': b'make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/publisher_member_function.cpp.o] Error 1\n'}
+[7.396699] (manual_pubsub) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/talker.dir/all] Error 2\n'}
+[7.397860] (manual_pubsub) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[7.406362] (manual_pubsub) CommandEnded: {'returncode': 2}
+[7.468410] (-) TimerEvent: {}
+[7.570388] (manual_pubsub) JobEnded: {'identifier': 'manual_pubsub', 'rc': 2}
+[7.572905] (-) TimerEvent: {}
+[7.582511] (-) EventReactorShutdown: {}

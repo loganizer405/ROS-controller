@@ -1,0 +1,139 @@
+[0.000000] (-) TimerEvent: {}
+[0.001848] (-) JobUnselected: {'identifier': 'cpp_pubsub'}
+[0.002526] (-) JobUnselected: {'identifier': 'examples_rclcpp_async_client'}
+[0.003364] (-) JobUnselected: {'identifier': 'examples_rclcpp_cbg_executor'}
+[0.003590] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_action_client'}
+[0.003749] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_action_server'}
+[0.003938] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_client'}
+[0.004054] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_composition'}
+[0.004199] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_publisher'}
+[0.006288] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_service'}
+[0.006978] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_subscriber'}
+[0.007089] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_timer'}
+[0.007237] (-) JobUnselected: {'identifier': 'examples_rclcpp_multithreaded_executor'}
+[0.007415] (-) JobUnselected: {'identifier': 'examples_rclcpp_wait_set'}
+[0.007549] (-) JobUnselected: {'identifier': 'examples_rclpy_executors'}
+[0.007694] (-) JobUnselected: {'identifier': 'examples_rclpy_guard_conditions'}
+[0.008159] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_action_client'}
+[0.008295] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_action_server'}
+[0.008421] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_client'}
+[0.008844] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_publisher'}
+[0.008941] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_service'}
+[0.009026] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_subscriber'}
+[0.009107] (-) JobUnselected: {'identifier': 'examples_rclpy_pointcloud_publisher'}
+[0.009195] (-) JobUnselected: {'identifier': 'launch_testing_examples'}
+[0.009274] (-) JobUnselected: {'identifier': 'publisher_subscriber'}
+[0.009413] (-) JobUnselected: {'identifier': 'robosub'}
+[0.009542] (manual_pubsub) JobQueued: {'identifier': 'manual_pubsub', 'dependencies': OrderedDict()}
+[0.009669] (manual_pubsub) JobStarted: {'identifier': 'manual_pubsub'}
+[0.049480] (manual_pubsub) JobProgress: {'identifier': 'manual_pubsub', 'progress': 'cmake'}
+[0.053273] (manual_pubsub) JobProgress: {'identifier': 'manual_pubsub', 'progress': 'build'}
+[0.057709] (manual_pubsub) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lur/controller/build/manual_pubsub', '--', '-j4', '-l4'], 'cwd': '/home/lur/controller/build/manual_pubsub', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lur'), ('SSH_CLIENT', '192.168.55.100 55574 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/lur'), ('OLDPWD', '/home/lur'), ('SSH_TTY', '/dev/pts/4'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/lur/controller/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'lur'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '10'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:14.0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/lur/controller/install/robosub:/home/lur/controller/install/publisher_subscriber:/home/lur/controller/install/manual_pubsub:/home/lur/controller/install/cpp_pubsub:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/lur/controller/build/manual_pubsub'), ('SSH_CONNECTION', '192.168.55.100 55574 192.168.55.1 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/lur/controller/install/robosub:/home/lur/controller/install/publisher_subscriber:/home/lur/controller/install/manual_pubsub:/home/lur/controller/install/cpp_pubsub:/opt/ros/foxy')]), 'shell': False}
+[0.098808] (-) TimerEvent: {}
+[0.200015] (-) TimerEvent: {}
+[0.232299] (manual_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target talker\x1b[0m\n'}
+[0.300247] (-) TimerEvent: {}
+[0.304101] (manual_pubsub) StdoutLine: {'line': b'[ 50%] Built target listener\n'}
+[0.344628] (manual_pubsub) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o\x1b[0m\n'}
+[0.400501] (-) TimerEvent: {}
+[0.501647] (-) TimerEvent: {}
+[0.602654] (-) TimerEvent: {}
+[0.703759] (-) TimerEvent: {}
+[0.804968] (-) TimerEvent: {}
+[0.906264] (-) TimerEvent: {}
+[1.007462] (-) TimerEvent: {}
+[1.108455] (-) TimerEvent: {}
+[1.209420] (-) TimerEvent: {}
+[1.310499] (-) TimerEvent: {}
+[1.411526] (-) TimerEvent: {}
+[1.512534] (-) TimerEvent: {}
+[1.613563] (-) TimerEvent: {}
+[1.714618] (-) TimerEvent: {}
+[1.815613] (-) TimerEvent: {}
+[1.916568] (-) TimerEvent: {}
+[2.018180] (-) TimerEvent: {}
+[2.119203] (-) TimerEvent: {}
+[2.220207] (-) TimerEvent: {}
+[2.321173] (-) TimerEvent: {}
+[2.422168] (-) TimerEvent: {}
+[2.523205] (-) TimerEvent: {}
+[2.624187] (-) TimerEvent: {}
+[2.725203] (-) TimerEvent: {}
+[2.826240] (-) TimerEvent: {}
+[2.927300] (-) TimerEvent: {}
+[3.028294] (-) TimerEvent: {}
+[3.129286] (-) TimerEvent: {}
+[3.230240] (-) TimerEvent: {}
+[3.331301] (-) TimerEvent: {}
+[3.432399] (-) TimerEvent: {}
+[3.533516] (-) TimerEvent: {}
+[3.634580] (-) TimerEvent: {}
+[3.735648] (-) TimerEvent: {}
+[3.836684] (-) TimerEvent: {}
+[3.937647] (-) TimerEvent: {}
+[4.038691] (-) TimerEvent: {}
+[4.139683] (-) TimerEvent: {}
+[4.240637] (-) TimerEvent: {}
+[4.341618] (-) TimerEvent: {}
+[4.442642] (-) TimerEvent: {}
+[4.505733] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KMinimalPublisher::MinimalPublisher()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.506759] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:67:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[KMinimalPublisher::create_publisher(manualMsg&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.507227] (manual_pubsub) StderrLine: {'line': b'   67 |     publisher_ = this->create_publisher(msg\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[4.507580] (manual_pubsub) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[4.507857] (manual_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28\x1b[m\x1b[K,\n'}
+[4.508152] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:22\x1b[m\x1b[K,\n'}
+[4.508486] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[4.508784] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:18\x1b[m\x1b[K:\n'}
+[4.509051] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/node.hpp:184:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.509346] (manual_pubsub) StderrLine: {'line': b'  184 |   \x1b[01;36m\x1b[Kcreate_publisher\x1b[m\x1b[K(\n'}
+[4.509599] (manual_pubsub) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.509903] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/node.hpp:184:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[4.510188] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:67:44:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  candidate expects 3 arguments, 1 provided\n'}
+[4.510568] (manual_pubsub) StderrLine: {'line': b'   67 |     publisher_ = this->create_publisher(msg\x1b[01;36m\x1b[K)\x1b[m\x1b[K;\n'}
+[4.510830] (manual_pubsub) StderrLine: {'line': b'      |                                            \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[4.542861] (-) TimerEvent: {}
+[4.546515] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MinimalPublisher::timer_callback()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.547320] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:81:86:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MinimalPublisher\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kx\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.547660] (manual_pubsub) StderrLine: {'line': b'   81 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + this->\x1b[01;31m\x1b[Kx\x1b[m\x1b[K + "," + this->y + "," + this->z + "," + this->r + "," + this->buttons + ")";\n'}
+[4.547958] (manual_pubsub) StderrLine: {'line': b'      |                                                                                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[4.548263] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:81:102:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MinimalPublisher\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Ky\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.548565] (manual_pubsub) StderrLine: {'line': b'   81 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + this->x + "," + this->\x1b[01;31m\x1b[Ky\x1b[m\x1b[K + "," + this->z + "," + this->r + "," + this->buttons + ")";\n'}
+[4.548840] (manual_pubsub) StderrLine: {'line': b'      |                                                                                                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[4.549101] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:81:118:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MinimalPublisher\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kz\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.549437] (manual_pubsub) StderrLine: {'line': b'   81 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + this->x + "," + this->y + "," + this->\x1b[01;31m\x1b[Kz\x1b[m\x1b[K + "," + this->r + "," + this->buttons + ")";\n'}
+[4.549689] (manual_pubsub) StderrLine: {'line': b'      |                                                                                                                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[4.550066] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:81:134:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MinimalPublisher\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kr\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.550409] (manual_pubsub) StderrLine: {'line': b'   81 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + this->x + "," + this->y + "," + this->z + "," + this->\x1b[01;31m\x1b[Kr\x1b[m\x1b[K + "," + this->buttons + ")";\n'}
+[4.550687] (manual_pubsub) StderrLine: {'line': b'      |                                                                                                                                      \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[4.551012] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:81:150:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass MinimalPublisher\x1b[m\x1b[K\xe2\x80\x99 has no member named \xe2\x80\x98\x1b[01m\x1b[Kbuttons\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.551333] (manual_pubsub) StderrLine: {'line': b'   81 |     message.data = "Message " + std::to_string(count_++) + " (x,y,z,r,b): (" + this->x + "," + this->y + "," + this->z + "," + this->r + "," + this->\x1b[01;31m\x1b[Kbuttons\x1b[m\x1b[K + ")";\n'}
+[4.551582] (manual_pubsub) StderrLine: {'line': b'      |                                                                                                                                                      \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.643055] (-) TimerEvent: {}
+[4.744196] (-) TimerEvent: {}
+[4.845238] (-) TimerEvent: {}
+[4.946259] (-) TimerEvent: {}
+[5.053190] (-) TimerEvent: {}
+[5.154128] (-) TimerEvent: {}
+[5.255320] (-) TimerEvent: {}
+[5.356324] (-) TimerEvent: {}
+[5.457304] (-) TimerEvent: {}
+[5.558273] (-) TimerEvent: {}
+[5.659305] (-) TimerEvent: {}
+[5.760259] (-) TimerEvent: {}
+[5.861226] (-) TimerEvent: {}
+[5.962221] (-) TimerEvent: {}
+[6.063183] (-) TimerEvent: {}
+[6.164152] (-) TimerEvent: {}
+[6.265124] (-) TimerEvent: {}
+[6.366192] (-) TimerEvent: {}
+[6.467216] (-) TimerEvent: {}
+[6.568259] (-) TimerEvent: {}
+[6.669210] (-) TimerEvent: {}
+[6.707153] (manual_pubsub) StderrLine: {'line': b'make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/publisher_member_function.cpp.o] Error 1\n'}
+[6.708470] (manual_pubsub) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/talker.dir/all] Error 2\n'}
+[6.709334] (manual_pubsub) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[6.718696] (manual_pubsub) CommandEnded: {'returncode': 2}
+[6.769716] (-) TimerEvent: {}
+[6.874233] (-) TimerEvent: {}
+[6.883715] (manual_pubsub) JobEnded: {'identifier': 'manual_pubsub', 'rc': 2}
+[6.895690] (-) EventReactorShutdown: {}

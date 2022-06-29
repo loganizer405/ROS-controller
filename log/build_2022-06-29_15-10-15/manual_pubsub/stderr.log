@@ -1,0 +1,11 @@
+[01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:43:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kmanual_control[m[K’ in namespace ‘[01m[Kmavros_msgs::msg[m[K’ does not name a type; did you mean ‘[01m[KManualControl[m[K’?
+   43 | typedef mavros_msgs::msg::[01;31m[Kmanual_control[m[K manualMsg;
+      |                           [01;31m[K^~~~~~~~~~~~~~[m[K
+      |                           [32m[KManualControl[m[K
+[01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:[m[K In constructor ‘[01m[KMinimalPublisher::MinimalPublisher()[m[K’:
+[01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:52:5:[m[K [01;31m[Kerror: [m[K‘[01m[KmanualMsg[m[K’ was not declared in this scope
+   52 |     [01;31m[KmanualMsg[m[K msg;
+      |     [01;31m[K^~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/publisher_member_function.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/talker.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

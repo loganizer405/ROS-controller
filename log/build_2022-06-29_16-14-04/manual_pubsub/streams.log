@@ -1,0 +1,28 @@
+[0.065s] Invoking command in '/home/lur/controller/build/manual_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/manual_pubsub -- -j4 -l4
+[0.224s] [35m[1mScanning dependencies of target talker[0m
+[0.295s] [ 50%] Built target listener
+[0.331s] [ 75%] [32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o[0m
+[9.731s] [100%] [32m[1mLinking CXX executable talker[0m
+[10.272s] [100%] Built target talker
+[10.324s] Invoked command in '/home/lur/controller/build/manual_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/manual_pubsub -- -j4 -l4
+[10.475s] Invoking command in '/home/lur/controller/build/manual_pubsub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/lur/controller/build/manual_pubsub
+[10.505s] -- Install configuration: ""
+[10.506s] -- Installing: /home/lur/controller/install/manual_pubsub/lib/manual_pubsub/talker
+[10.513s] -- Set runtime path of "/home/lur/controller/install/manual_pubsub/lib/manual_pubsub/talker" to ""
+[10.514s] -- Up-to-date: /home/lur/controller/install/manual_pubsub/lib/manual_pubsub/listener
+[10.515s] -- Up-to-date: /home/lur/controller/install/manual_pubsub/share/ament_index/resource_index/package_run_dependencies/manual_pubsub
+[10.516s] -- Up-to-date: /home/lur/controller/install/manual_pubsub/share/ament_index/resource_index/parent_prefix_path/manual_pubsub
+[10.516s] -- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/environment/ament_prefix_path.sh
+[10.516s] -- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/environment/ament_prefix_path.dsv
+[10.517s] -- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/environment/path.sh
+[10.518s] -- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/environment/path.dsv
+[10.518s] -- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/local_setup.bash
+[10.518s] -- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/local_setup.sh
+[10.519s] -- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/local_setup.zsh
+[10.519s] -- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/local_setup.dsv
+[10.520s] -- Installing: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/package.dsv
+[10.520s] -- Up-to-date: /home/lur/controller/install/manual_pubsub/share/ament_index/resource_index/packages/manual_pubsub
+[10.520s] -- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/cmake/manual_pubsubConfig.cmake
+[10.520s] -- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/cmake/manual_pubsubConfig-version.cmake
+[10.521s] -- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/package.xml
+[10.532s] Invoked command in '/home/lur/controller/build/manual_pubsub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/lur/controller/build/manual_pubsub

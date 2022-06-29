@@ -1,0 +1,157 @@
+[0.000000] (-) TimerEvent: {}
+[0.001285] (-) JobUnselected: {'identifier': 'cpp_pubsub'}
+[0.002262] (-) JobUnselected: {'identifier': 'examples_rclcpp_async_client'}
+[0.002358] (-) JobUnselected: {'identifier': 'examples_rclcpp_cbg_executor'}
+[0.002440] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_action_client'}
+[0.002518] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_action_server'}
+[0.002599] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_client'}
+[0.002675] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_composition'}
+[0.002751] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_publisher'}
+[0.002834] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_service'}
+[0.002912] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_subscriber'}
+[0.002988] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_timer'}
+[0.003062] (-) JobUnselected: {'identifier': 'examples_rclcpp_multithreaded_executor'}
+[0.003162] (-) JobUnselected: {'identifier': 'examples_rclcpp_wait_set'}
+[0.003238] (-) JobUnselected: {'identifier': 'examples_rclpy_executors'}
+[0.003339] (-) JobUnselected: {'identifier': 'examples_rclpy_guard_conditions'}
+[0.003418] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_action_client'}
+[0.003517] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_action_server'}
+[0.003597] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_client'}
+[0.003673] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_publisher'}
+[0.003753] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_service'}
+[0.003848] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_subscriber'}
+[0.003925] (-) JobUnselected: {'identifier': 'examples_rclpy_pointcloud_publisher'}
+[0.004000] (-) JobUnselected: {'identifier': 'launch_testing_examples'}
+[0.004075] (-) JobUnselected: {'identifier': 'publisher_subscriber'}
+[0.004150] (-) JobUnselected: {'identifier': 'robosub'}
+[0.004233] (manual_pubsub) JobQueued: {'identifier': 'manual_pubsub', 'dependencies': OrderedDict()}
+[0.004322] (manual_pubsub) JobStarted: {'identifier': 'manual_pubsub'}
+[0.050357] (manual_pubsub) JobProgress: {'identifier': 'manual_pubsub', 'progress': 'cmake'}
+[0.053831] (manual_pubsub) JobProgress: {'identifier': 'manual_pubsub', 'progress': 'build'}
+[0.057274] (manual_pubsub) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lur/controller/build/manual_pubsub', '--', '-j4', '-l4'], 'cwd': '/home/lur/controller/build/manual_pubsub', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lur'), ('SSH_CLIENT', '192.168.55.100 55574 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/lur'), ('OLDPWD', '/home/lur'), ('SSH_TTY', '/dev/pts/4'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/lur/controller/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'lur'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '10'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:14.0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/lur/controller/install/robosub:/home/lur/controller/install/publisher_subscriber:/home/lur/controller/install/manual_pubsub:/home/lur/controller/install/cpp_pubsub:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/lur/controller/build/manual_pubsub'), ('SSH_CONNECTION', '192.168.55.100 55574 192.168.55.1 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/lur/controller/install/robosub:/home/lur/controller/install/publisher_subscriber:/home/lur/controller/install/manual_pubsub:/home/lur/controller/install/cpp_pubsub:/opt/ros/foxy')]), 'shell': False}
+[0.098780] (-) TimerEvent: {}
+[0.199978] (-) TimerEvent: {}
+[0.228078] (manual_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target talker\x1b[0m\n'}
+[0.298441] (manual_pubsub) StdoutLine: {'line': b'[ 50%] Built target listener\n'}
+[0.300107] (-) TimerEvent: {}
+[0.334904] (manual_pubsub) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o\x1b[0m\n'}
+[0.400364] (-) TimerEvent: {}
+[0.501345] (-) TimerEvent: {}
+[0.602274] (-) TimerEvent: {}
+[0.703178] (-) TimerEvent: {}
+[0.804095] (-) TimerEvent: {}
+[0.905154] (-) TimerEvent: {}
+[1.006153] (-) TimerEvent: {}
+[1.107158] (-) TimerEvent: {}
+[1.208156] (-) TimerEvent: {}
+[1.309212] (-) TimerEvent: {}
+[1.410159] (-) TimerEvent: {}
+[1.511128] (-) TimerEvent: {}
+[1.612751] (-) TimerEvent: {}
+[1.713756] (-) TimerEvent: {}
+[1.814779] (-) TimerEvent: {}
+[1.915772] (-) TimerEvent: {}
+[2.016812] (-) TimerEvent: {}
+[2.117813] (-) TimerEvent: {}
+[2.218802] (-) TimerEvent: {}
+[2.319736] (-) TimerEvent: {}
+[2.420730] (-) TimerEvent: {}
+[2.521719] (-) TimerEvent: {}
+[2.622710] (-) TimerEvent: {}
+[2.723699] (-) TimerEvent: {}
+[2.824749] (-) TimerEvent: {}
+[2.925702] (-) TimerEvent: {}
+[3.026693] (-) TimerEvent: {}
+[3.127671] (-) TimerEvent: {}
+[3.228716] (-) TimerEvent: {}
+[3.329650] (-) TimerEvent: {}
+[3.430634] (-) TimerEvent: {}
+[3.531568] (-) TimerEvent: {}
+[3.632552] (-) TimerEvent: {}
+[3.733629] (-) TimerEvent: {}
+[3.834636] (-) TimerEvent: {}
+[3.935621] (-) TimerEvent: {}
+[4.036595] (-) TimerEvent: {}
+[4.137646] (-) TimerEvent: {}
+[4.238638] (-) TimerEvent: {}
+[4.339599] (-) TimerEvent: {}
+[4.440609] (-) TimerEvent: {}
+[4.494043] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid MinimalPublisher::timer_callback()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.495731] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:83:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Krclcpp::Publisher<mavros_msgs::msg::ManualControl_<std::allocator<void> > >::publish(std_msgs::msg::String_<std::allocator<void> >&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.496125] (manual_pubsub) StderrLine: {'line': b'   83 |     publisher_->publish(message\x1b[01;31m\x1b[K)\x1b[m\x1b[K;\n'}
+[4.496478] (manual_pubsub) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[4.496792] (manual_pubsub) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/topic_statistics/subscription_topic_statistics.hpp:31\x1b[m\x1b[K,\n'}
+[4.497059] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/subscription.hpp:50\x1b[m\x1b[K,\n'}
+[4.497312] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[4.497646] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24\x1b[m\x1b[K,\n'}
+[4.497941] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[4.498200] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[4.498446] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executor.hpp:33\x1b[m\x1b[K,\n'}
+[4.498710] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26\x1b[m\x1b[K,\n'}
+[4.498952] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[4.499218] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146\x1b[m\x1b[K,\n'}
+[4.499524] (manual_pubsub) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:18\x1b[m\x1b[K:\n'}
+[4.499787] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/publisher.hpp:185:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kvoid rclcpp::Publisher<MessageT, AllocatorT>::publish(std::unique_ptr<MessageT, typename std::conditional<std::is_same<typename std::allocator_traits<typename std::allocator_traits<_Alloc>::rebind_traits<MessageT>::allocator_type>::rebind_alloc<MessageT>, typename std::allocator<void>::rebind<_Tp1>::other>::value, std::default_delete<_Tp>, rclcpp::allocator::AllocatorDeleter<typename std::allocator_traits<_Alloc>::rebind_traits<MessageT>::allocator_type> >::type>) [with MessageT = mavros_msgs::msg::ManualControl_<std::allocator<void> >; AllocatorT = std::allocator<void>; typename std::conditional<std::is_same<typename std::allocator_traits<typename std::allocator_traits<_Alloc>::rebind_traits<MessageT>::allocator_type>::rebind_alloc<MessageT>, typename std::allocator<void>::rebind<_Tp1>::other>::value, std::default_delete<_Tp>, rclcpp::allocator::AllocatorDeleter<typename std::allocator_traits<_Alloc>::rebind_traits<MessageT>::allocator_type> >::type = std::default_delete<mavros_msgs::msg::ManualControl_<std::allocator<void> > >]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.500095] (manual_pubsub) StderrLine: {'line': b'  185 |   \x1b[01;36m\x1b[Kpublish\x1b[m\x1b[K(std::unique_ptr<MessageT, MessageDeleter> msg)\n'}
+[4.500334] (manual_pubsub) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.500589] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/publisher.hpp:185:53:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg::String_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kstd::unique_ptr<mavros_msgs::msg::ManualControl_<std::allocator<void> >, std::default_delete<mavros_msgs::msg::ManualControl_<std::allocator<void> > > >\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.500942] (manual_pubsub) StderrLine: {'line': b'  185 |   publish(\x1b[01;36m\x1b[Kstd::unique_ptr<MessageT, MessageDeleter> msg\x1b[m\x1b[K)\n'}
+[4.501271] (manual_pubsub) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[4.501508] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/publisher.hpp:209:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kvoid rclcpp::Publisher<MessageT, AllocatorT>::publish(const MessageT&) [with MessageT = mavros_msgs::msg::ManualControl_<std::allocator<void> >; AllocatorT = std::allocator<void>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.501808] (manual_pubsub) StderrLine: {'line': b'  209 |   \x1b[01;36m\x1b[Kpublish\x1b[m\x1b[K(const MessageT & msg)\n'}
+[4.502047] (manual_pubsub) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.502280] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/publisher.hpp:209:28:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg::String_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst mavros_msgs::msg::ManualControl_<std::allocator<void> >&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.502613] (manual_pubsub) StderrLine: {'line': b'  209 |   publish(\x1b[01;36m\x1b[Kconst MessageT & msg\x1b[m\x1b[K)\n'}
+[4.502934] (manual_pubsub) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[4.503176] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/publisher.hpp:226:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kvoid rclcpp::Publisher<MessageT, AllocatorT>::publish(const rcl_serialized_message_t&) [with MessageT = mavros_msgs::msg::ManualControl_<std::allocator<void> >; AllocatorT = std::allocator<void>; rcl_serialized_message_t = rcutils_uint8_array_t]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.503430] (manual_pubsub) StderrLine: {'line': b'  226 |   \x1b[01;36m\x1b[Kpublish\x1b[m\x1b[K(const rcl_serialized_message_t & serialized_msg)\n'}
+[4.503669] (manual_pubsub) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.503921] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/publisher.hpp:226:44:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg::String_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst rcl_serialized_message_t&\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kconst rcutils_uint8_array_t&\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[4.504171] (manual_pubsub) StderrLine: {'line': b'  226 |   publish(\x1b[01;36m\x1b[Kconst rcl_serialized_message_t & serialized_msg\x1b[m\x1b[K)\n'}
+[4.504433] (manual_pubsub) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.504874] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/publisher.hpp:232:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kvoid rclcpp::Publisher<MessageT, AllocatorT>::publish(const rclcpp::SerializedMessage&) [with MessageT = mavros_msgs::msg::ManualControl_<std::allocator<void> >; AllocatorT = std::allocator<void>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.505170] (manual_pubsub) StderrLine: {'line': b'  232 |   \x1b[01;36m\x1b[Kpublish\x1b[m\x1b[K(const SerializedMessage & serialized_msg)\n'}
+[4.505412] (manual_pubsub) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.505649] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/publisher.hpp:232:37:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg::String_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst rclcpp::SerializedMessage&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.505914] (manual_pubsub) StderrLine: {'line': b'  232 |   publish(\x1b[01;36m\x1b[Kconst SerializedMessage & serialized_msg\x1b[m\x1b[K)\n'}
+[4.506194] (manual_pubsub) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.506433] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/publisher.hpp:246:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kvoid rclcpp::Publisher<MessageT, AllocatorT>::publish(rclcpp::LoanedMessage<MessageT, AllocatorT>&&) [with MessageT = mavros_msgs::msg::ManualControl_<std::allocator<void> >; AllocatorT = std::allocator<void>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.506737] (manual_pubsub) StderrLine: {'line': b'  246 |   \x1b[01;36m\x1b[Kpublish\x1b[m\x1b[K(rclcpp::LoanedMessage<MessageT, AllocatorT> && loaned_msg)\n'}
+[4.507009] (manual_pubsub) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.507248] (manual_pubsub) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/foxy/include/rclcpp/publisher.hpp:246:58:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg::String_<std::allocator<void> >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Krclcpp::LoanedMessage<mavros_msgs::msg::ManualControl_<std::allocator<void> >, std::allocator<void> >&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.507500] (manual_pubsub) StderrLine: {'line': b'  246 |   publish(\x1b[01;36m\x1b[Krclcpp::LoanedMessage<MessageT, AllocatorT> && loaned_msg\x1b[m\x1b[K)\n'}
+[4.507745] (manual_pubsub) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.540856] (-) TimerEvent: {}
+[4.641853] (-) TimerEvent: {}
+[4.742850] (-) TimerEvent: {}
+[4.843799] (-) TimerEvent: {}
+[4.944828] (-) TimerEvent: {}
+[5.045777] (-) TimerEvent: {}
+[5.146777] (-) TimerEvent: {}
+[5.247827] (-) TimerEvent: {}
+[5.348856] (-) TimerEvent: {}
+[5.449854] (-) TimerEvent: {}
+[5.551150] (-) TimerEvent: {}
+[5.652385] (-) TimerEvent: {}
+[5.753423] (-) TimerEvent: {}
+[5.854336] (-) TimerEvent: {}
+[5.955243] (-) TimerEvent: {}
+[6.056177] (-) TimerEvent: {}
+[6.157221] (-) TimerEvent: {}
+[6.258114] (-) TimerEvent: {}
+[6.359044] (-) TimerEvent: {}
+[6.460012] (-) TimerEvent: {}
+[6.561047] (-) TimerEvent: {}
+[6.661975] (-) TimerEvent: {}
+[6.762963] (-) TimerEvent: {}
+[6.863910] (-) TimerEvent: {}
+[6.965099] (-) TimerEvent: {}
+[7.066181] (-) TimerEvent: {}
+[7.150561] (manual_pubsub) StderrLine: {'line': b'make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/publisher_member_function.cpp.o] Error 1\n'}
+[7.151510] (manual_pubsub) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/talker.dir/all] Error 2\n'}
+[7.152215] (manual_pubsub) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[7.161003] (manual_pubsub) CommandEnded: {'returncode': 2}
+[7.168904] (-) TimerEvent: {}
+[7.273718] (-) TimerEvent: {}
+[7.319952] (manual_pubsub) JobEnded: {'identifier': 'manual_pubsub', 'rc': 2}
+[7.324320] (-) EventReactorShutdown: {}

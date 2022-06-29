@@ -1,0 +1,19 @@
+[35m[1mScanning dependencies of target talker[0m
+[ 50%] Built target listener
+[ 75%] [32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o[0m
+[01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:[m[K In constructor ‘[01m[KMinimalPublisher::MinimalPublisher()[m[K’:
+[01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:54:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kheader[m[K’ is not a member of ‘[01m[Kstd_msgs::msg[m[K’; did you mean ‘[01m[KHeader[m[K’?
+   54 |     std_msgs::msg::[01;31m[Kheader[m[K head;
+      |                    [01;31m[K^~~~~~[m[K
+      |                    [32m[KHeader[m[K
+[01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:56:8:[m[K [01;31m[Kerror: [m[K‘[01m[Khead[m[K’ was not declared in this scope
+   56 |        [01;31m[Khead[m[K,
+      |        [01;31m[K^~~~[m[K
+[01m[K/home/lur/controller/src/manual_pubsub/src/publisher_member_function.cpp:62:5:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K{<expression error>, 1000, 500, 500, 0, 0}[m[K’ from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[KmanualMsg[m[K’ {aka ‘[01m[Kmavros_msgs::msg::ManualControl_<std::allocator<void> >[m[K’}
+   62 |     [01;31m[K}[m[K;
+      |     [01;31m[K^[m[K
+      |     [01;31m[K|[m[K
+      |     [01;31m[K<brace-enclosed initializer list>[m[K
+make[2]: *** [CMakeFiles/talker.dir/build.make:63: CMakeFiles/talker.dir/src/publisher_member_function.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/talker.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
