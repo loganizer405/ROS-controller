@@ -20,6 +20,10 @@ CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /opt/ros/foxy/include
 CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /opt/ros/foxy/include/libstatistics_collector/topic_statistics_collector/received_message_period.hpp
 CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /opt/ros/foxy/include/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp
 CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /opt/ros/foxy/include/libstatistics_collector/visibility_control.hpp
+CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /opt/ros/foxy/include/mavros_msgs/msg/detail/manual_control__builder.hpp
+CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /opt/ros/foxy/include/mavros_msgs/msg/detail/manual_control__struct.hpp
+CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /opt/ros/foxy/include/mavros_msgs/msg/detail/manual_control__traits.hpp
+CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /opt/ros/foxy/include/mavros_msgs/msg/manual_control.hpp
 CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /opt/ros/foxy/include/rcl/allocator.h
 CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /opt/ros/foxy/include/rcl/arguments.h
 CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /opt/ros/foxy/include/rcl/client.h
@@ -273,6 +277,8 @@ CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /opt/ros/foxy/include
 CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /opt/ros/foxy/include/statistics_msgs/msg/detail/metrics_message__traits.hpp
 CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /opt/ros/foxy/include/statistics_msgs/msg/detail/statistic_data_point__struct.hpp
 CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /opt/ros/foxy/include/statistics_msgs/msg/metrics_message.hpp
+CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /opt/ros/foxy/include/std_msgs/msg/detail/header__struct.hpp
+CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /opt/ros/foxy/include/std_msgs/msg/detail/header__traits.hpp
 CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /opt/ros/foxy/include/std_msgs/msg/detail/string__builder.hpp
 CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /opt/ros/foxy/include/std_msgs/msg/detail/string__struct.hpp
 CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /opt/ros/foxy/include/std_msgs/msg/detail/string__traits.hpp

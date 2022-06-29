@@ -16,6 +16,8 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
+#include "mavros_msgs/msg/manual_control.hpp"
+
 using std::placeholders::_1;
 
 class MinimalSubscriber : public rclcpp::Node

@@ -17,12 +17,29 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
+#include "mavros_msgs/msg/manual_control.hpp"
 
 using namespace std::chrono_literals;
 
 /* This example creates a subclass of Node and uses std::bind() to register a
  * member function as a callback from the timer. */
-
+/* message structure for manual_control
+ * from mavros_msgs/msg/manual_control.hpp
+ * // Include directives for member types
+ * // Member 'header'
+ * #include "std_msgs/msg/detail/header__struct.h"
+ * 
+ * // Struct defined in msg/ManualControl in the package mavros_msgs.
+ * typedef struct mavros_msgs__msg__ManualControl
+ * {
+ *   std_msgs__msg__Header header;
+ *   float x;
+ *   float y;
+ *   float z;
+ *   float r;
+ *   uint16_t buttons;
+ * } mavros_msgs__msg__ManualControl;
+ */
 class MinimalPublisher : public rclcpp::Node
 {
 public:
@@ -30,7 +47,7 @@ public:
   : Node("minimal_publisher"), count_(0)
   {
     publisher_ = this->create_publisher<std_msgs::msg::String>("/mavros/manual_control/control", 10);
-    //    publisher_ = this->create_publisher<
+    //    publisher_ = this->create_publisher<mavros_msgs::msg::manual_control>(...);
     timer_ = this->create_wall_timer(
       500ms, std::bind(&MinimalPublisher::timer_callback, this));
   }
