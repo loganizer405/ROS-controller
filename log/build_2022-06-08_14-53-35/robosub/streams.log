@@ -1,0 +1,40 @@
+[0.074s] Invoking command in '/home/lur/controller/build/robosub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/robosub -- -j4 -l4
+[0.226s] [35m[1mScanning dependencies of target controller_node[0m
+[0.275s] [ 50%] [32mBuilding CXX object CMakeFiles/controller_node.dir/src/controller_node.cpp.o[0m
+[0.396s] [01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:4:28:[m[K [01;31m[Kerror: [m[K‘[01m[Ksensor_msgs[m[K’ does not name a type
+[0.397s]     4 | void chatterCallback(const [01;31m[Ksensor_msgs[m[K::msg::Imu::ConstPtr& msg){
+[0.397s]       |                            [01;31m[K^~~~~~~~~~~[m[K
+[0.398s] [01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:4:44:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K::[m[K’ token
+[0.398s]     4 | void chatterCallback(const sensor_msgs::msg[01;31m[K::[m[KImu::ConstPtr& msg){
+[0.399s]       |                                            [01;31m[K^~[m[K
+[0.399s] [01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:4:44:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K::[m[K’ token
+[0.399s]     4 | void chatterCallback[34m[K([m[Kconst sensor_msgs::msg[01;31m[K:[m[K[32m[K:[m[KImu::ConstPtr& msg){
+[0.399s]       |                     [34m[K~[m[K                      [01;31m[K^[m[K[32m[K~[m[K
+[0.400s]       |                                            [32m[K)[m[K
+[0.400s] [01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:4:44:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[K::[m[K’ token
+[0.400s]     4 | void chatterCallback(const sensor_msgs::msg[01;31m[K::[m[KImu::ConstPtr& msg){
+[0.401s]       |                                            [01;31m[K^~[m[K
+[0.401s] [01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[0.401s] [01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:11:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+[0.402s]    11 |     [01;31m[Kros[m[K::init(argc, argv, "controller_node");
+[0.402s]       |     [01;31m[K^~~[m[K
+[0.403s] [01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:12:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+[0.403s]    12 |     [01;31m[Kros[m[K::NodeHandle n;
+[0.404s]       |     [01;31m[K^~~[m[K
+[0.404s] [01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:13:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+[0.405s]    13 |     [01;31m[Kros[m[K::Subscriber sub = n.subscribe("/mavros/imu/data", 1000, chatterCallback);
+[0.406s]       |     [01;31m[K^~~[m[K
+[0.408s] [01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:14:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+[0.408s]    14 |     [01;31m[Kros[m[K::spin();
+[0.409s]       |     [01;31m[K^~~[m[K
+[0.410s] [01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:[m[K At global scope:
+[0.410s] [01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:18:5:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kint main(int, char**)[m[K’
+[0.411s]    18 | int [01;31m[Kmain[m[K(int argc, char ** argv)
+[0.411s]       |     [01;31m[K^~~~[m[K
+[0.411s] [01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:10:5:[m[K [01;36m[Knote: [m[K‘[01m[Kint main(int, char**)[m[K’ previously defined here
+[0.414s]    10 | int [01;36m[Kmain[m[K(int argc, char **argv){
+[0.414s]       |     [01;36m[K^~~~[m[K
+[0.415s] make[2]: *** [CMakeFiles/controller_node.dir/build.make:63: CMakeFiles/controller_node.dir/src/controller_node.cpp.o] Error 1
+[0.415s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/controller_node.dir/all] Error 2
+[0.416s] make: *** [Makefile:141: all] Error 2
+[0.419s] Invoked command in '/home/lur/controller/build/robosub' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/robosub -- -j4 -l4

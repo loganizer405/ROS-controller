@@ -1,0 +1,5 @@
+CMake Error at CMakeLists.txt:56 (amend_export_include_directories):
+  Unknown CMake command "amend_export_include_directories".
+
+
+make: *** [Makefile:310: cmake_check_build_system] Error 1

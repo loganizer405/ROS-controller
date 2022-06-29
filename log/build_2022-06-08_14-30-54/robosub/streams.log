@@ -1,0 +1,24 @@
+[0.069s] Invoking command in '/home/lur/controller/build/robosub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/robosub -- -j4 -l4
+[0.170s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.264s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.938s] -- Found mavros: 2.1.1 (/opt/ros/foxy/share/mavros/cmake)
+[0.956s] -- Found std_msgs: 2.0.5 (/opt/ros/foxy/share/std_msgs/cmake)
+[1.034s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.048s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.463s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.616s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.980s] CMake Error at CMakeLists.txt:24 (target_include_directories):
+[1.981s]   Cannot specify include directories for target "controller_node" which is
+[1.981s]   not built by this project.
+[1.981s] 
+[1.981s] 
+[1.982s] CMake Error at /opt/ros/foxy/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:42 (message):
+[1.982s]   ament_target_dependencies() the first argument must be a valid target name
+[1.982s] Call Stack (most recent call first):
+[1.983s]   CMakeLists.txt:28 (ament_target_dependencies)
+[1.983s] 
+[1.983s] 
+[1.985s] -- Configuring incomplete, errors occurred!
+[1.985s] See also "/home/lur/controller/build/robosub/CMakeFiles/CMakeOutput.log".
+[2.005s] make: *** [Makefile:266: cmake_check_build_system] Error 1
+[2.014s] Invoked command in '/home/lur/controller/build/robosub' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/robosub -- -j4 -l4

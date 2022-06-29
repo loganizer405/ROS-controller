@@ -1,0 +1,210 @@
+[0.000000] (-) TimerEvent: {}
+[0.002088] (robosub) JobQueued: {'identifier': 'robosub', 'dependencies': OrderedDict()}
+[0.002774] (robosub) JobStarted: {'identifier': 'robosub'}
+[0.046405] (robosub) JobProgress: {'identifier': 'robosub', 'progress': 'cmake'}
+[0.049896] (robosub) JobProgress: {'identifier': 'robosub', 'progress': 'build'}
+[0.052716] (robosub) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lur/controller/build/robosub', '--', '-j4', '-l4'], 'cwd': '/home/lur/controller/build/robosub', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lur'), ('SSH_AGENT_PID', '2674'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/lur'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2498'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/lur/controller/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'lur'), ('JOURNAL_STREAM', '7:56168'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'lur'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/osprey:@/tmp/.ICE-unix/2710,unix/osprey:/tmp/.ICE-unix/2710'), ('INVOCATION_ID', 'b97d483a4b3f403fb70d2fdf73af8451'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/ad8e7771_235e_4adb_9b84_c0f6dec15105'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.77'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/lur/controller/install/robosub:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/lur/controller/build/robosub'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/lur/controller/install/robosub:/opt/ros/foxy')]), 'shell': False}
+[0.099019] (-) TimerEvent: {}
+[0.200328] (-) TimerEvent: {}
+[0.230894] (robosub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target controller_node\x1b[0m\n'}
+[0.300595] (-) TimerEvent: {}
+[0.357085] (robosub) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/controller_node.dir/src/controller_node.cpp.o\x1b[0m\n'}
+[0.400830] (-) TimerEvent: {}
+[0.501728] (-) TimerEvent: {}
+[0.602835] (-) TimerEvent: {}
+[0.703891] (-) TimerEvent: {}
+[0.804804] (-) TimerEvent: {}
+[0.905772] (-) TimerEvent: {}
+[1.007231] (-) TimerEvent: {}
+[1.108272] (-) TimerEvent: {}
+[1.209349] (-) TimerEvent: {}
+[1.310482] (-) TimerEvent: {}
+[1.411689] (-) TimerEvent: {}
+[1.512726] (-) TimerEvent: {}
+[1.613732] (-) TimerEvent: {}
+[1.714778] (-) TimerEvent: {}
+[1.815780] (-) TimerEvent: {}
+[1.916794] (-) TimerEvent: {}
+[2.017846] (-) TimerEvent: {}
+[2.118803] (-) TimerEvent: {}
+[2.219899] (-) TimerEvent: {}
+[2.320932] (-) TimerEvent: {}
+[2.422006] (-) TimerEvent: {}
+[2.523083] (-) TimerEvent: {}
+[2.624158] (-) TimerEvent: {}
+[2.725214] (-) TimerEvent: {}
+[2.826366] (-) TimerEvent: {}
+[2.927586] (-) TimerEvent: {}
+[3.028583] (-) TimerEvent: {}
+[3.129581] (-) TimerEvent: {}
+[3.230579] (-) TimerEvent: {}
+[3.331655] (-) TimerEvent: {}
+[3.433512] (-) TimerEvent: {}
+[3.534591] (-) TimerEvent: {}
+[3.635646] (-) TimerEvent: {}
+[3.736688] (-) TimerEvent: {}
+[3.837679] (-) TimerEvent: {}
+[3.938724] (-) TimerEvent: {}
+[4.039830] (-) TimerEvent: {}
+[4.140893] (-) TimerEvent: {}
+[4.241987] (-) TimerEvent: {}
+[4.343054] (-) TimerEvent: {}
+[4.444096] (-) TimerEvent: {}
+[4.545142] (-) TimerEvent: {}
+[4.646235] (-) TimerEvent: {}
+[4.747304] (-) TimerEvent: {}
+[4.848331] (-) TimerEvent: {}
+[4.949348] (-) TimerEvent: {}
+[5.050468] (-) TimerEvent: {}
+[5.151644] (-) TimerEvent: {}
+[5.252611] (-) TimerEvent: {}
+[5.353672] (-) TimerEvent: {}
+[5.454746] (-) TimerEvent: {}
+[5.555884] (-) TimerEvent: {}
+[5.656914] (-) TimerEvent: {}
+[5.757900] (-) TimerEvent: {}
+[5.858930] (-) TimerEvent: {}
+[5.959973] (-) TimerEvent: {}
+[6.061228] (-) TimerEvent: {}
+[6.162294] (-) TimerEvent: {}
+[6.263488] (-) TimerEvent: {}
+[6.364591] (-) TimerEvent: {}
+[6.465597] (-) TimerEvent: {}
+[6.566610] (-) TimerEvent: {}
+[6.667652] (-) TimerEvent: {}
+[6.768597] (-) TimerEvent: {}
+[6.869585] (-) TimerEvent: {}
+[6.970654] (-) TimerEvent: {}
+[7.071661] (-) TimerEvent: {}
+[7.172714] (-) TimerEvent: {}
+[7.273804] (-) TimerEvent: {}
+[7.374899] (-) TimerEvent: {}
+[7.475972] (-) TimerEvent: {}
+[7.577032] (-) TimerEvent: {}
+[7.678105] (-) TimerEvent: {}
+[7.779162] (-) TimerEvent: {}
+[7.880261] (-) TimerEvent: {}
+[7.981275] (-) TimerEvent: {}
+[8.082355] (-) TimerEvent: {}
+[8.183491] (-) TimerEvent: {}
+[8.284600] (-) TimerEvent: {}
+[8.385678] (-) TimerEvent: {}
+[8.486719] (-) TimerEvent: {}
+[8.587873] (-) TimerEvent: {}
+[8.688922] (-) TimerEvent: {}
+[8.789956] (-) TimerEvent: {}
+[8.890992] (-) TimerEvent: {}
+[8.992165] (-) TimerEvent: {}
+[9.093244] (-) TimerEvent: {}
+[9.194409] (-) TimerEvent: {}
+[9.295497] (-) TimerEvent: {}
+[9.396680] (-) TimerEvent: {}
+[9.497654] (-) TimerEvent: {}
+[9.598602] (-) TimerEvent: {}
+[9.699637] (-) TimerEvent: {}
+[9.800670] (-) TimerEvent: {}
+[9.901717] (-) TimerEvent: {}
+[10.002853] (-) TimerEvent: {}
+[10.103988] (-) TimerEvent: {}
+[10.205000] (-) TimerEvent: {}
+[10.306054] (-) TimerEvent: {}
+[10.407073] (-) TimerEvent: {}
+[10.508372] (-) TimerEvent: {}
+[10.609436] (-) TimerEvent: {}
+[10.710480] (-) TimerEvent: {}
+[10.811666] (-) TimerEvent: {}
+[10.912844] (-) TimerEvent: {}
+[11.014147] (-) TimerEvent: {}
+[11.115261] (-) TimerEvent: {}
+[11.216391] (-) TimerEvent: {}
+[11.317453] (-) TimerEvent: {}
+[11.418512] (-) TimerEvent: {}
+[11.519650] (-) TimerEvent: {}
+[11.620621] (-) TimerEvent: {}
+[11.721659] (-) TimerEvent: {}
+[11.822794] (-) TimerEvent: {}
+[11.924001] (-) TimerEvent: {}
+[12.025113] (-) TimerEvent: {}
+[12.126221] (-) TimerEvent: {}
+[12.227357] (-) TimerEvent: {}
+[12.328531] (-) TimerEvent: {}
+[12.429604] (-) TimerEvent: {}
+[12.530657] (-) TimerEvent: {}
+[12.631657] (-) TimerEvent: {}
+[12.732663] (-) TimerEvent: {}
+[12.833752] (-) TimerEvent: {}
+[12.934891] (-) TimerEvent: {}
+[13.036112] (-) TimerEvent: {}
+[13.137214] (-) TimerEvent: {}
+[13.238847] (-) TimerEvent: {}
+[13.340052] (-) TimerEvent: {}
+[13.441213] (-) TimerEvent: {}
+[13.542335] (-) TimerEvent: {}
+[13.643510] (-) TimerEvent: {}
+[13.744607] (-) TimerEvent: {}
+[13.845724] (-) TimerEvent: {}
+[13.946805] (-) TimerEvent: {}
+[14.047974] (-) TimerEvent: {}
+[14.149040] (-) TimerEvent: {}
+[14.250146] (-) TimerEvent: {}
+[14.351202] (-) TimerEvent: {}
+[14.453633] (-) TimerEvent: {}
+[14.554704] (-) TimerEvent: {}
+[14.655931] (-) TimerEvent: {}
+[14.757072] (-) TimerEvent: {}
+[14.858175] (-) TimerEvent: {}
+[14.959328] (-) TimerEvent: {}
+[15.060417] (-) TimerEvent: {}
+[15.161412] (-) TimerEvent: {}
+[15.262398] (-) TimerEvent: {}
+[15.363354] (-) TimerEvent: {}
+[15.464363] (-) TimerEvent: {}
+[15.565317] (-) TimerEvent: {}
+[15.666286] (-) TimerEvent: {}
+[15.767296] (-) TimerEvent: {}
+[15.868287] (-) TimerEvent: {}
+[15.969262] (-) TimerEvent: {}
+[16.070245] (-) TimerEvent: {}
+[16.171303] (-) TimerEvent: {}
+[16.272483] (-) TimerEvent: {}
+[16.373536] (-) TimerEvent: {}
+[16.474541] (-) TimerEvent: {}
+[16.546950] (robosub) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable controller_node\x1b[0m\n'}
+[16.574837] (-) TimerEvent: {}
+[16.675947] (-) TimerEvent: {}
+[16.777032] (-) TimerEvent: {}
+[16.878062] (-) TimerEvent: {}
+[16.979081] (-) TimerEvent: {}
+[17.080180] (-) TimerEvent: {}
+[17.181245] (-) TimerEvent: {}
+[17.282316] (-) TimerEvent: {}
+[17.383148] (-) TimerEvent: {}
+[17.409945] (robosub) StdoutLine: {'line': b'[100%] Built target controller_node\n'}
+[17.453099] (robosub) CommandEnded: {'returncode': 0}
+[17.483825] (-) TimerEvent: {}
+[17.546074] (robosub) JobProgress: {'identifier': 'robosub', 'progress': 'install'}
+[17.585469] (-) TimerEvent: {}
+[17.591311] (robosub) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/lur/controller/build/robosub'], 'cwd': '/home/lur/controller/build/robosub', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lur'), ('SSH_AGENT_PID', '2674'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/lur'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2498'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/lur/controller/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'lur'), ('JOURNAL_STREAM', '7:56168'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'lur'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/osprey:@/tmp/.ICE-unix/2710,unix/osprey:/tmp/.ICE-unix/2710'), ('INVOCATION_ID', 'b97d483a4b3f403fb70d2fdf73af8451'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/ad8e7771_235e_4adb_9b84_c0f6dec15105'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.77'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/lur/controller/install/robosub:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/lur/controller/build/robosub'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/lur/controller/install/robosub:/opt/ros/foxy')]), 'shell': False}
+[17.628504] (robosub) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[17.629952] (robosub) StdoutLine: {'line': b'-- Installing: /home/lur/controller/install/robosub/lib/robosub/controller_node\n'}
+[17.643136] (robosub) StdoutLine: {'line': b'-- Set runtime path of "/home/lur/controller/install/robosub/lib/robosub/controller_node" to ""\n'}
+[17.644147] (robosub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/robosub/share/ament_index/resource_index/package_run_dependencies/robosub\n'}
+[17.644632] (robosub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/robosub/share/ament_index/resource_index/parent_prefix_path/robosub\n'}
+[17.644962] (robosub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/environment/ament_prefix_path.sh\n'}
+[17.645525] (robosub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/environment/ament_prefix_path.dsv\n'}
+[17.645891] (robosub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/environment/path.sh\n'}
+[17.646179] (robosub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/environment/path.dsv\n'}
+[17.646455] (robosub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/local_setup.bash\n'}
+[17.646734] (robosub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/local_setup.sh\n'}
+[17.647292] (robosub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/local_setup.zsh\n'}
+[17.647964] (robosub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/local_setup.dsv\n'}
+[17.648377] (robosub) StdoutLine: {'line': b'-- Installing: /home/lur/controller/install/robosub/share/robosub/package.dsv\n'}
+[17.648664] (robosub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/robosub/share/ament_index/resource_index/packages/robosub\n'}
+[17.649055] (robosub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/cmake/robosubConfig.cmake\n'}
+[17.649349] (robosub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/cmake/robosubConfig-version.cmake\n'}
+[17.649617] (robosub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/package.xml\n'}
+[17.657039] (robosub) CommandEnded: {'returncode': 0}
+[17.685521] (-) TimerEvent: {}
+[17.787907] (-) TimerEvent: {}
+[17.855354] (robosub) JobEnded: {'identifier': 'robosub', 'rc': 0}
+[17.859521] (-) EventReactorShutdown: {}

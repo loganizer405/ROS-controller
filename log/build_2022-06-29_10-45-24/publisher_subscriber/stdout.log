@@ -1,0 +1,3 @@
+[35m[1mScanning dependencies of target imu_data[0m
+[ 50%] Built target publisher
+[ 75%] [32mBuilding CXX object CMakeFiles/imu_data.dir/src/imu_data.cpp.o[0m

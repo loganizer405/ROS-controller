@@ -1,0 +1,38 @@
+[0.052s] Invoking command in '/home/lur/controller/build/robosub': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/lur/controller/src/robosub -DCMAKE_INSTALL_PREFIX=/home/lur/controller/install/robosub
+[0.828s] -- The C compiler identification is GNU 9.4.0
+[1.380s] -- The CXX compiler identification is GNU 9.4.0
+[1.417s] -- Check for working C compiler: /usr/bin/cc
+[1.737s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.747s] -- Detecting C compiler ABI info
+[2.058s] -- Detecting C compiler ABI info - done
+[2.123s] -- Detecting C compile features
+[2.125s] -- Detecting C compile features - done
+[2.140s] -- Check for working CXX compiler: /usr/bin/c++
+[2.473s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[2.477s] -- Detecting CXX compiler ABI info
+[2.816s] -- Detecting CXX compiler ABI info - done
+[2.881s] -- Detecting CXX compile features
+[2.884s] -- Detecting CXX compile features - done
+[2.901s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[3.008s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[3.009s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.821s] CMake Error at CMakeLists.txt:20 (find_package):
+[3.822s]   By not providing "Findroscpp.cmake" in CMAKE_MODULE_PATH this project has
+[3.822s]   asked CMake to find a package configuration file provided by "roscpp", but
+[3.822s]   CMake did not find one.
+[3.823s] 
+[3.823s]   Could not find a package configuration file provided by "roscpp" with any
+[3.823s]   of the following names:
+[3.824s] 
+[3.824s]     roscppConfig.cmake
+[3.824s]     roscpp-config.cmake
+[3.825s] 
+[3.825s]   Add the installation prefix of "roscpp" to CMAKE_PREFIX_PATH or set
+[3.826s]   "roscpp_DIR" to a directory containing one of the above files.  If "roscpp"
+[3.826s]   provides a separate development package or SDK, be sure it has been
+[3.827s]   installed.
+[3.827s] 
+[3.827s] 
+[3.828s] -- Configuring incomplete, errors occurred!
+[3.828s] See also "/home/lur/controller/build/robosub/CMakeFiles/CMakeOutput.log".
+[3.842s] Invoked command in '/home/lur/controller/build/robosub' returned '1': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/lur/controller/src/robosub -DCMAKE_INSTALL_PREFIX=/home/lur/controller/install/robosub

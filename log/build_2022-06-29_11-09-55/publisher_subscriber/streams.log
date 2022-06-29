@@ -1,0 +1,29 @@
+[0.058s] Invoking command in '/home/lur/controller/build/publisher_subscriber': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/publisher_subscriber -- -j4 -l4
+[0.215s] [35m[1mScanning dependencies of target imu_data[0m
+[0.244s] [ 50%] Built target publisher
+[0.339s] [ 75%] [32mBuilding CXX object CMakeFiles/imu_data.dir/src/imu_data.cpp.o[0m
+[4.835s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:5:41:[m[K [01;31m[Kerror: [m[K‘[01m[KImu[m[K’ in namespace ‘[01m[Ksensor_msgs[m[K’ does not name a type
+[4.836s]     5 | void chatterCallback(const sensor_msgs::[01;31m[KImu[m[K::ConstPtr& msg){
+[4.836s]       |                                         [01;31m[K^~~[m[K
+[4.837s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:5:54:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K&[m[K’ token
+[4.837s]     5 | void chatterCallback(const sensor_msgs::Imu::ConstPtr[01;31m[K&[m[K msg){
+[4.837s]       |                                                      [01;31m[K^[m[K
+[4.838s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:5:54:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K&[m[K’ token
+[4.838s]     5 | void chatterCallback[34m[K([m[Kconst sensor_msgs::Imu::ConstPtr[01;31m[K&[m[K msg){
+[4.838s]       |                     [34m[K~[m[K                                [01;31m[K^[m[K
+[4.838s]       |                                                      [32m[K)[m[K
+[4.839s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:5:56:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kmsg[m[K’
+[4.839s]     5 | void chatterCallback(const sensor_msgs::Imu::ConstPtr& [01;31m[Kmsg[m[K){
+[4.839s]       |                                                        [01;31m[K^~~[m[K
+[4.840s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[4.840s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:14:29:[m[K [01;31m[Kerror: [m[Kfound ‘[01m[K:[m[K’ in nested-name-specifier, expected ‘[01m[K::[m[K’
+[4.840s]    14 |     auto node = rclcpp::Node[01;31m[K:[m[Kmake_shared("imu_data");
+[4.840s]       |                             [01;31m[K^[m[K
+[4.841s]       |                             [32m[K::[m[K
+[4.844s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:16:62:[m[K [01;31m[Kerror: [m[K‘[01m[KchatterCallback[m[K’ was not declared in this scope
+[4.845s]    16 |     auto sub = node->create_subscription("/mavros/imu/data", [01;31m[KchatterCallback[m[K);
+[4.845s]       |                                                              [01;31m[K^~~~~~~~~~~~~~~[m[K
+[6.230s] make[2]: *** [CMakeFiles/imu_data.dir/build.make:63: CMakeFiles/imu_data.dir/src/imu_data.cpp.o] Error 1
+[6.232s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/imu_data.dir/all] Error 2
+[6.232s] make: *** [Makefile:141: all] Error 2
+[6.241s] Invoked command in '/home/lur/controller/build/publisher_subscriber' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/publisher_subscriber -- -j4 -l4

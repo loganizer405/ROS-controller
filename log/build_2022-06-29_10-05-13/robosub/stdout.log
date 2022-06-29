@@ -1,0 +1,18 @@
+[100%] Built target controller_node
+-- Install configuration: ""
+-- Up-to-date: /home/lur/controller/install/robosub/lib/robosub/controller_node
+-- Up-to-date: /home/lur/controller/install/robosub/share/ament_index/resource_index/package_run_dependencies/robosub
+-- Up-to-date: /home/lur/controller/install/robosub/share/ament_index/resource_index/parent_prefix_path/robosub
+-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/environment/ament_prefix_path.sh
+-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/environment/path.sh
+-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/environment/path.dsv
+-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/local_setup.bash
+-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/local_setup.sh
+-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/local_setup.zsh
+-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/local_setup.dsv
+-- Installing: /home/lur/controller/install/robosub/share/robosub/package.dsv
+-- Up-to-date: /home/lur/controller/install/robosub/share/ament_index/resource_index/packages/robosub
+-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/cmake/robosubConfig.cmake
+-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/cmake/robosubConfig-version.cmake
+-- Up-to-date: /home/lur/controller/install/robosub/share/robosub/package.xml

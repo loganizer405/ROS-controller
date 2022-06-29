@@ -1,0 +1,3289 @@
+lur@osprey:~/controller$ sudo docker build . --tag sub
+Sending build context to Docker daemon  9.748MB
+Step 1/16 : FROM nvcr.io/nvidia/l4t-base:r34.1.1
+ ---> 4b634595da11
+Step 2/16 : RUN apt-get update && apt-get install -y --no-install-recommends locales software-properties-common && locale-gen en_US en_US.UTF-8 && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 && export LANG=en_US.UTF-8 && add-apt-repository universe
+ ---> Using cache
+ ---> 6067d1effa48
+Step 3/16 : RUN apt-get update && apt-get install -y --no-install-recommends 	curl 	gnupg2 	lsb-release
+ ---> Using cache
+ ---> 549f486df311
+Step 4/16 : RUN apt-get update && curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key  -o /usr/share/keyrings/ros-archive-keyring.gpg && echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | tee /etc/apt/sources.list.d/ros2.list > /dev/null
+ ---> Using cache
+ ---> f4ea8a283e3d
+Step 5/16 : RUN apt-get update && apt-get install -y   build-essential   cmake   git   libbullet-dev   python3-colcon-common-extensions   python3-flake8   python3-pip   python3-pytest-cov   python3-rosdep   python3-setuptools   python3-vcstool   wget && python3 -m pip install -U   argcomplete   flake8-blind-except   flake8-builtins   flake8-class-newline   flake8-comprehensions   flake8-deprecated   flake8-docstrings   flake8-import-order   flake8-quotes   pytest-repeat   pytest-rerunfailures   pytest && apt-get install --no-install-recommends -y   libasio-dev   libtinyxml2-dev && apt-get install --no-install-recommends -y   libcunit1-dev
+ ---> Using cache
+ ---> f4a2d97574c9
+Step 6/16 : RUN mkdir -p /home/ros2_foxy/src
+ ---> Using cache
+ ---> a2c68e0857f1
+Step 7/16 : WORKDIR /home/ros2_foxy
+ ---> Using cache
+ ---> cfa5cfe0932e
+Step 8/16 : RUN wget https://raw.githubusercontent.com/ros2/ros2/foxy/ros2.repos && vcs import src < ros2.repos
+ ---> Using cache
+ ---> 26ae70f25c78
+Step 9/16 : RUN apt-get update && rosdep init && rosdep update && rosdep install -y --from-paths src --ignore-src --skip-keys "fastcdr rti-connext-dds-5.3.1 urdfdom_headers"     && rm -rf /var/lib/apt/lists/*     && apt-get clean
+ ---> Running in 2de7b92924ce
+Hit:1 http://packages.ros.org/ros2/ubuntu focal InRelease
+Hit:2 https://repo.download.nvidia.com/jetson/common r34.1 InRelease
+Hit:3 http://ports.ubuntu.com/ubuntu-ports focal InRelease
+Get:4 http://ports.ubuntu.com/ubuntu-ports focal-updates InRelease [114 kB]
+Get:5 http://ports.ubuntu.com/ubuntu-ports focal-backports InRelease [108 kB]
+Get:6 http://ports.ubuntu.com/ubuntu-ports focal-security InRelease [114 kB]
+Get:7 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 Packages [1688 kB]
+Get:8 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 Packages [1096 kB]
+Fetched 3120 kB in 5s (687 kB/s)
+Reading package lists...
+Wrote /etc/ros/rosdep/sources.list.d/20-default.list
+Recommended: please run
+
+	rosdep update
+
+Warning: running 'rosdep update' as root is not recommended.
+  You should run 'sudo rosdep fix-permissions' and invoke 'rosdep update' again without sudo.
+reading in sources list data from /etc/ros/rosdep/sources.list.d
+Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/osx-homebrew.yaml
+Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/base.yaml
+Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/python.yaml
+Hit https://raw.githubusercontent.com/ros/rosdistro/master/rosdep/ruby.yaml
+Hit https://raw.githubusercontent.com/ros/rosdistro/master/releases/fuerte.yaml
+Query rosdistro index https://raw.githubusercontent.com/ros/rosdistro/master/index-v4.yaml
+Skip end-of-life distro "ardent"
+Skip end-of-life distro "bouncy"
+Skip end-of-life distro "crystal"
+Skip end-of-life distro "dashing"
+Skip end-of-life distro "eloquent"
+Add distro "foxy"
+Add distro "galactic"
+Skip end-of-life distro "groovy"
+Add distro "humble"
+Skip end-of-life distro "hydro"
+Skip end-of-life distro "indigo"
+Skip end-of-life distro "jade"
+Skip end-of-life distro "kinetic"
+Skip end-of-life distro "lunar"
+Add distro "melodic"
+Add distro "noetic"
+Add distro "rolling"
+updated cache in /root/.ros/rosdep/sources.cache
+WARNING: ROS_PYTHON_VERSION is unset. Defaulting to 3
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+  libcurl4-doc libidn11-dev libkrb5-dev libldap2-dev librtmp-dev libssh2-1-dev
+  libssl-dev pkg-config
+The following NEW packages will be installed:
+  libcurl4-openssl-dev
+0 upgraded, 1 newly installed, 0 to remove and 24 not upgraded.
+Need to get 310 kB of archives.
+After this operation, 1488 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libcurl4-openssl-dev arm64 7.68.0-1ubuntu2.11 [310 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 310 kB in 1s (363 kB/s)
+Selecting previously unselected package libcurl4-openssl-dev:arm64.
+(Reading database ... 45086 files and directories currently installed.)
+Preparing to unpack .../libcurl4-openssl-dev_7.68.0-1ubuntu2.11_arm64.deb ...
+Unpacking libcurl4-openssl-dev:arm64 (7.68.0-1ubuntu2.11) ...
+Setting up libcurl4-openssl-dev:arm64 (7.68.0-1ubuntu2.11) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  pkg-config
+0 upgraded, 1 newly installed, 0 to remove and 24 not upgraded.
+Need to get 43.8 kB of archives.
+After this operation, 186 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 pkg-config arm64 0.29.1-0ubuntu4 [43.8 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 43.8 kB in 0s (96.9 kB/s)
+Selecting previously unselected package pkg-config.
+(Reading database ... 45107 files and directories currently installed.)
+Preparing to unpack .../pkg-config_0.29.1-0ubuntu4_arm64.deb ...
+Unpacking pkg-config (0.29.1-0ubuntu4) ...
+Setting up pkg-config (0.29.1-0ubuntu4) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libdouble-conversion3 libpcre2-16-0 qttranslations5-l10n
+The following NEW packages will be installed:
+  libdouble-conversion3 libpcre2-16-0 libqt5core5a qttranslations5-l10n
+0 upgraded, 4 newly installed, 0 to remove and 24 not upgraded.
+Need to get 3518 kB of archives.
+After this operation, 18.9 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libdouble-conversion3 arm64 3.1.5-4ubuntu1 [34.2 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libpcre2-16-0 arm64 10.34-7 [156 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 libqt5core5a arm64 5.12.8+dfsg-0ubuntu2.1 [1842 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 qttranslations5-l10n all 5.12.8-0ubuntu1 [1486 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 3518 kB in 4s (941 kB/s)
+Selecting previously unselected package libdouble-conversion3:arm64.
+(Reading database ... 45123 files and directories currently installed.)
+Preparing to unpack .../libdouble-conversion3_3.1.5-4ubuntu1_arm64.deb ...
+Unpacking libdouble-conversion3:arm64 (3.1.5-4ubuntu1) ...
+Selecting previously unselected package libpcre2-16-0:arm64.
+Preparing to unpack .../libpcre2-16-0_10.34-7_arm64.deb ...
+Unpacking libpcre2-16-0:arm64 (10.34-7) ...
+Selecting previously unselected package libqt5core5a:arm64.
+Preparing to unpack .../libqt5core5a_5.12.8+dfsg-0ubuntu2.1_arm64.deb ...
+Unpacking libqt5core5a:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Selecting previously unselected package qttranslations5-l10n.
+Preparing to unpack .../qttranslations5-l10n_5.12.8-0ubuntu1_all.deb ...
+Unpacking qttranslations5-l10n (5.12.8-0ubuntu1) ...
+Setting up libdouble-conversion3:arm64 (3.1.5-4ubuntu1) ...
+Setting up libpcre2-16-0:arm64 (10.34-7) ...
+Setting up qttranslations5-l10n (5.12.8-0ubuntu1) ...
+Setting up libqt5core5a:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libevdev2 libinput-bin libinput10 libmtdev1 libqt5dbus5 libqt5network5
+  libqt5svg5 libqt5widgets5 libwacom-bin libwacom-common libwacom2
+  libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0
+  libxcb-render-util0 libxcb-shape0 libxcb-util1 libxcb-xinerama0
+  libxcb-xinput0 libxcb-xkb1 libxkbcommon-x11-0 qt5-gtk-platformtheme
+Suggested packages:
+  qt5-image-formats-plugins qtwayland5
+The following NEW packages will be installed:
+  libevdev2 libinput-bin libinput10 libmtdev1 libqt5dbus5 libqt5gui5
+  libqt5network5 libqt5svg5 libqt5widgets5 libwacom-bin libwacom-common
+  libwacom2 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-randr0
+  libxcb-render-util0 libxcb-shape0 libxcb-util1 libxcb-xinerama0
+  libxcb-xinput0 libxcb-xkb1 libxkbcommon-x11-0 qt5-gtk-platformtheme
+0 upgraded, 24 newly installed, 0 to remove and 24 not upgraded.
+Need to get 6250 kB of archives.
+After this operation, 25.8 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libevdev2 arm64 1.9.0+dfsg-1ubuntu0.2 [29.7 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libmtdev1 arm64 1.1.5-1.1 [14.0 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libwacom-common all 1.3-2ubuntu3 [45.3 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libwacom2 arm64 1.3-2ubuntu3 [18.8 kB]
+Get:5 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libinput-bin arm64 1.15.5-1ubuntu0.3 [19.2 kB]
+Get:6 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libinput10 arm64 1.15.5-1ubuntu0.3 [101 kB]
+Get:7 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 libqt5dbus5 arm64 5.12.8+dfsg-0ubuntu2.1 [194 kB]
+Get:8 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 libqt5network5 arm64 5.12.8+dfsg-0ubuntu2.1 [625 kB]
+Get:9 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxcb-icccm4 arm64 0.4.1-1.1 [10.3 kB]
+Get:10 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxcb-util1 arm64 0.4.0-0ubuntu3 [10.5 kB]
+Get:11 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxcb-image0 arm64 0.4.0-1build1 [11.1 kB]
+Get:12 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxcb-keysyms1 arm64 0.4.0-1build1 [8344 B]
+Get:13 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxcb-randr0 arm64 1.14-2 [16.2 kB]
+Get:14 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxcb-render-util0 arm64 0.3.9-1build1 [9756 B]
+Get:15 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxcb-shape0 arm64 1.14-2 [5896 B]
+Get:16 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxcb-xinerama0 arm64 1.14-2 [5252 B]
+Get:17 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxcb-xinput0 arm64 1.14-2 [29.1 kB]
+Get:18 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxcb-xkb1 arm64 1.14-2 [28.4 kB]
+Get:19 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxkbcommon-x11-0 arm64 0.10.0-1 [12.8 kB]
+Get:20 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 libqt5gui5 arm64 5.12.8+dfsg-0ubuntu2.1 [2661 kB]
+Get:21 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 libqt5widgets5 arm64 5.12.8+dfsg-0ubuntu2.1 [2151 kB]
+Get:22 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libqt5svg5 arm64 5.12.8-0ubuntu1 [121 kB]
+Get:23 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libwacom-bin arm64 1.3-2ubuntu3 [5388 B]
+Get:24 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 qt5-gtk-platformtheme arm64 5.12.8+dfsg-0ubuntu2.1 [118 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 6250 kB in 6s (1033 kB/s)
+Selecting previously unselected package libevdev2:arm64.
+(Reading database ... 45418 files and directories currently installed.)
+Preparing to unpack .../00-libevdev2_1.9.0+dfsg-1ubuntu0.2_arm64.deb ...
+Unpacking libevdev2:arm64 (1.9.0+dfsg-1ubuntu0.2) ...
+Selecting previously unselected package libmtdev1:arm64.
+Preparing to unpack .../01-libmtdev1_1.1.5-1.1_arm64.deb ...
+Unpacking libmtdev1:arm64 (1.1.5-1.1) ...
+Selecting previously unselected package libwacom-common.
+Preparing to unpack .../02-libwacom-common_1.3-2ubuntu3_all.deb ...
+Unpacking libwacom-common (1.3-2ubuntu3) ...
+Selecting previously unselected package libwacom2:arm64.
+Preparing to unpack .../03-libwacom2_1.3-2ubuntu3_arm64.deb ...
+Unpacking libwacom2:arm64 (1.3-2ubuntu3) ...
+Selecting previously unselected package libinput-bin.
+Preparing to unpack .../04-libinput-bin_1.15.5-1ubuntu0.3_arm64.deb ...
+Unpacking libinput-bin (1.15.5-1ubuntu0.3) ...
+Selecting previously unselected package libinput10:arm64.
+Preparing to unpack .../05-libinput10_1.15.5-1ubuntu0.3_arm64.deb ...
+Unpacking libinput10:arm64 (1.15.5-1ubuntu0.3) ...
+Selecting previously unselected package libqt5dbus5:arm64.
+Preparing to unpack .../06-libqt5dbus5_5.12.8+dfsg-0ubuntu2.1_arm64.deb ...
+Unpacking libqt5dbus5:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Selecting previously unselected package libqt5network5:arm64.
+Preparing to unpack .../07-libqt5network5_5.12.8+dfsg-0ubuntu2.1_arm64.deb ...
+Unpacking libqt5network5:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Selecting previously unselected package libxcb-icccm4:arm64.
+Preparing to unpack .../08-libxcb-icccm4_0.4.1-1.1_arm64.deb ...
+Unpacking libxcb-icccm4:arm64 (0.4.1-1.1) ...
+Selecting previously unselected package libxcb-util1:arm64.
+Preparing to unpack .../09-libxcb-util1_0.4.0-0ubuntu3_arm64.deb ...
+Unpacking libxcb-util1:arm64 (0.4.0-0ubuntu3) ...
+Selecting previously unselected package libxcb-image0:arm64.
+Preparing to unpack .../10-libxcb-image0_0.4.0-1build1_arm64.deb ...
+Unpacking libxcb-image0:arm64 (0.4.0-1build1) ...
+Selecting previously unselected package libxcb-keysyms1:arm64.
+Preparing to unpack .../11-libxcb-keysyms1_0.4.0-1build1_arm64.deb ...
+Unpacking libxcb-keysyms1:arm64 (0.4.0-1build1) ...
+Selecting previously unselected package libxcb-randr0:arm64.
+Preparing to unpack .../12-libxcb-randr0_1.14-2_arm64.deb ...
+Unpacking libxcb-randr0:arm64 (1.14-2) ...
+Selecting previously unselected package libxcb-render-util0:arm64.
+Preparing to unpack .../13-libxcb-render-util0_0.3.9-1build1_arm64.deb ...
+Unpacking libxcb-render-util0:arm64 (0.3.9-1build1) ...
+Selecting previously unselected package libxcb-shape0:arm64.
+Preparing to unpack .../14-libxcb-shape0_1.14-2_arm64.deb ...
+Unpacking libxcb-shape0:arm64 (1.14-2) ...
+Selecting previously unselected package libxcb-xinerama0:arm64.
+Preparing to unpack .../15-libxcb-xinerama0_1.14-2_arm64.deb ...
+Unpacking libxcb-xinerama0:arm64 (1.14-2) ...
+Selecting previously unselected package libxcb-xinput0:arm64.
+Preparing to unpack .../16-libxcb-xinput0_1.14-2_arm64.deb ...
+Unpacking libxcb-xinput0:arm64 (1.14-2) ...
+Selecting previously unselected package libxcb-xkb1:arm64.
+Preparing to unpack .../17-libxcb-xkb1_1.14-2_arm64.deb ...
+Unpacking libxcb-xkb1:arm64 (1.14-2) ...
+Selecting previously unselected package libxkbcommon-x11-0:arm64.
+Preparing to unpack .../18-libxkbcommon-x11-0_0.10.0-1_arm64.deb ...
+Unpacking libxkbcommon-x11-0:arm64 (0.10.0-1) ...
+Selecting previously unselected package libqt5gui5:arm64.
+Preparing to unpack .../19-libqt5gui5_5.12.8+dfsg-0ubuntu2.1_arm64.deb ...
+Unpacking libqt5gui5:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Selecting previously unselected package libqt5widgets5:arm64.
+Preparing to unpack .../20-libqt5widgets5_5.12.8+dfsg-0ubuntu2.1_arm64.deb ...
+Unpacking libqt5widgets5:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Selecting previously unselected package libqt5svg5:arm64.
+Preparing to unpack .../21-libqt5svg5_5.12.8-0ubuntu1_arm64.deb ...
+Unpacking libqt5svg5:arm64 (5.12.8-0ubuntu1) ...
+Selecting previously unselected package libwacom-bin.
+Preparing to unpack .../22-libwacom-bin_1.3-2ubuntu3_arm64.deb ...
+Unpacking libwacom-bin (1.3-2ubuntu3) ...
+Selecting previously unselected package qt5-gtk-platformtheme:arm64.
+Preparing to unpack .../23-qt5-gtk-platformtheme_5.12.8+dfsg-0ubuntu2.1_arm64.deb ...
+Unpacking qt5-gtk-platformtheme:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up libxcb-xinput0:arm64 (1.14-2) ...
+Setting up libxcb-keysyms1:arm64 (0.4.0-1build1) ...
+Setting up libxcb-shape0:arm64 (1.14-2) ...
+Setting up libxcb-render-util0:arm64 (0.3.9-1build1) ...
+Setting up libxcb-icccm4:arm64 (0.4.1-1.1) ...
+Setting up libxcb-util1:arm64 (0.4.0-0ubuntu3) ...
+Setting up libxcb-xkb1:arm64 (1.14-2) ...
+Setting up libxcb-image0:arm64 (0.4.0-1build1) ...
+Setting up libxcb-xinerama0:arm64 (1.14-2) ...
+Setting up libxkbcommon-x11-0:arm64 (0.10.0-1) ...
+Setting up libmtdev1:arm64 (1.1.5-1.1) ...
+Setting up libqt5dbus5:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up libxcb-randr0:arm64 (1.14-2) ...
+Setting up libevdev2:arm64 (1.9.0+dfsg-1ubuntu0.2) ...
+Setting up libwacom-common (1.3-2ubuntu3) ...
+Setting up libqt5network5:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up libwacom2:arm64 (1.3-2ubuntu3) ...
+Setting up libinput-bin (1.15.5-1ubuntu0.3) ...
+Setting up libwacom-bin (1.3-2ubuntu3) ...
+Setting up libinput10:arm64 (1.15.5-1ubuntu0.3) ...
+Setting up libqt5gui5:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up libqt5widgets5:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up qt5-gtk-platformtheme:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up libqt5svg5:arm64 (5.12.8-0ubuntu1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  libqt5opengl5
+0 upgraded, 1 newly installed, 0 to remove and 24 not upgraded.
+Need to get 127 kB of archives.
+After this operation, 569 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 libqt5opengl5 arm64 5.12.8+dfsg-0ubuntu2.1 [127 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 127 kB in 1s (252 kB/s)
+Selecting previously unselected package libqt5opengl5:arm64.
+(Reading database ... 45973 files and directories currently installed.)
+Preparing to unpack .../libqt5opengl5_5.12.8+dfsg-0ubuntu2.1_arm64.deb ...
+Unpacking libqt5opengl5:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up libqt5opengl5:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+libqt5widgets5 is already the newest version (5.12.8+dfsg-0ubuntu2.1).
+libqt5widgets5 set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 24 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libqt5concurrent5 libqt5opengl5-dev libqt5printsupport5 libqt5sql5
+  libqt5sql5-sqlite libqt5test5 libqt5xml5 libvulkan-dev qt5-qmake
+  qt5-qmake-bin qtbase5-dev-tools qtchooser
+Suggested packages:
+  default-libmysqlclient-dev firebird-dev libpq-dev libsqlite3-dev
+  unixodbc-dev
+The following NEW packages will be installed:
+  libqt5concurrent5 libqt5opengl5-dev libqt5printsupport5 libqt5sql5
+  libqt5sql5-sqlite libqt5test5 libqt5xml5 libvulkan-dev qt5-qmake
+  qt5-qmake-bin qtbase5-dev qtbase5-dev-tools qtchooser
+0 upgraded, 13 newly installed, 0 to remove and 24 not upgraded.
+Need to get 3835 kB of archives.
+After this operation, 32.1 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 libqt5concurrent5 arm64 5.12.8+dfsg-0ubuntu2.1 [32.9 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 libqt5printsupport5 arm64 5.12.8+dfsg-0ubuntu2.1 [185 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 libqt5sql5 arm64 5.12.8+dfsg-0ubuntu2.1 [114 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 libqt5test5 arm64 5.12.8+dfsg-0ubuntu2.1 [119 kB]
+Get:5 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 libqt5xml5 arm64 5.12.8+dfsg-0ubuntu2.1 [100 kB]
+Get:6 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libvulkan-dev arm64 1.2.131.2-1 [482 kB]
+Get:7 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 qt5-qmake-bin arm64 5.12.8+dfsg-0ubuntu2.1 [861 kB]
+Get:8 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 qtchooser arm64 66-2build1 [23.2 kB]
+Get:9 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 qt5-qmake arm64 5.12.8+dfsg-0ubuntu2.1 [189 kB]
+Get:10 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 qtbase5-dev-tools arm64 5.12.8+dfsg-0ubuntu2.1 [654 kB]
+Get:11 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 qtbase5-dev arm64 5.12.8+dfsg-0ubuntu2.1 [988 kB]
+Get:12 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 libqt5opengl5-dev arm64 5.12.8+dfsg-0ubuntu2.1 [39.8 kB]
+Get:13 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 libqt5sql5-sqlite arm64 5.12.8+dfsg-0ubuntu2.1 [46.0 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 3835 kB in 4s (1000 kB/s)
+Selecting previously unselected package libqt5concurrent5:arm64.
+(Reading database ... 45980 files and directories currently installed.)
+Preparing to unpack .../00-libqt5concurrent5_5.12.8+dfsg-0ubuntu2.1_arm64.deb ...
+Unpacking libqt5concurrent5:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Selecting previously unselected package libqt5printsupport5:arm64.
+Preparing to unpack .../01-libqt5printsupport5_5.12.8+dfsg-0ubuntu2.1_arm64.deb ...
+Unpacking libqt5printsupport5:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Selecting previously unselected package libqt5sql5:arm64.
+Preparing to unpack .../02-libqt5sql5_5.12.8+dfsg-0ubuntu2.1_arm64.deb ...
+Unpacking libqt5sql5:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Selecting previously unselected package libqt5test5:arm64.
+Preparing to unpack .../03-libqt5test5_5.12.8+dfsg-0ubuntu2.1_arm64.deb ...
+Unpacking libqt5test5:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Selecting previously unselected package libqt5xml5:arm64.
+Preparing to unpack .../04-libqt5xml5_5.12.8+dfsg-0ubuntu2.1_arm64.deb ...
+Unpacking libqt5xml5:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Selecting previously unselected package libvulkan-dev:arm64.
+Preparing to unpack .../05-libvulkan-dev_1.2.131.2-1_arm64.deb ...
+Unpacking libvulkan-dev:arm64 (1.2.131.2-1) ...
+Selecting previously unselected package qt5-qmake-bin.
+Preparing to unpack .../06-qt5-qmake-bin_5.12.8+dfsg-0ubuntu2.1_arm64.deb ...
+Unpacking qt5-qmake-bin (5.12.8+dfsg-0ubuntu2.1) ...
+Selecting previously unselected package qtchooser.
+Preparing to unpack .../07-qtchooser_66-2build1_arm64.deb ...
+Unpacking qtchooser (66-2build1) ...
+Selecting previously unselected package qt5-qmake:arm64.
+Preparing to unpack .../08-qt5-qmake_5.12.8+dfsg-0ubuntu2.1_arm64.deb ...
+Unpacking qt5-qmake:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Selecting previously unselected package qtbase5-dev-tools.
+Preparing to unpack .../09-qtbase5-dev-tools_5.12.8+dfsg-0ubuntu2.1_arm64.deb ...
+Unpacking qtbase5-dev-tools (5.12.8+dfsg-0ubuntu2.1) ...
+Selecting previously unselected package qtbase5-dev:arm64.
+Preparing to unpack .../10-qtbase5-dev_5.12.8+dfsg-0ubuntu2.1_arm64.deb ...
+Unpacking qtbase5-dev:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Selecting previously unselected package libqt5opengl5-dev:arm64.
+Preparing to unpack .../11-libqt5opengl5-dev_5.12.8+dfsg-0ubuntu2.1_arm64.deb ...
+Unpacking libqt5opengl5-dev:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Selecting previously unselected package libqt5sql5-sqlite:arm64.
+Preparing to unpack .../12-libqt5sql5-sqlite_5.12.8+dfsg-0ubuntu2.1_arm64.deb ...
+Unpacking libqt5sql5-sqlite:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up libvulkan-dev:arm64 (1.2.131.2-1) ...
+Setting up libqt5sql5:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up libqt5printsupport5:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up libqt5xml5:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up qt5-qmake-bin (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up libqt5test5:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up libqt5concurrent5:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up qtchooser (66-2build1) ...
+Setting up libqt5sql5-sqlite:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up qt5-qmake:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up qtbase5-dev-tools (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up qtbase5-dev:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Setting up libqt5opengl5-dev:arm64 (5.12.8+dfsg-0ubuntu2.1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+qt5-qmake is already the newest version (5.12.8+dfsg-0ubuntu2.1).
+qt5-qmake set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 24 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libpyside2-py3-5.14 libqt5qml5 libshiboken2-py3-5.14
+Suggested packages:
+  qt5-qmltooling-plugins
+The following NEW packages will be installed:
+  libpyside2-dev libpyside2-py3-5.14 libqt5qml5 libshiboken2-py3-5.14
+0 upgraded, 4 newly installed, 0 to remove and 24 not upgraded.
+Need to get 1707 kB of archives.
+After this operation, 8095 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libqt5qml5 arm64 5.12.8-0ubuntu1 [1340 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libshiboken2-py3-5.14 arm64 5.14.0-1~exp1ubuntu5 [145 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libpyside2-py3-5.14 arm64 5.14.0-1~exp1ubuntu5 [67.3 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libpyside2-dev arm64 5.14.0-1~exp1ubuntu5 [154 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 1707 kB in 2s (877 kB/s)
+Selecting previously unselected package libqt5qml5:arm64.
+(Reading database ... 48710 files and directories currently installed.)
+Preparing to unpack .../libqt5qml5_5.12.8-0ubuntu1_arm64.deb ...
+Unpacking libqt5qml5:arm64 (5.12.8-0ubuntu1) ...
+Selecting previously unselected package libshiboken2-py3-5.14.
+Preparing to unpack .../libshiboken2-py3-5.14_5.14.0-1~exp1ubuntu5_arm64.deb ...
+Unpacking libshiboken2-py3-5.14 (5.14.0-1~exp1ubuntu5) ...
+Selecting previously unselected package libpyside2-py3-5.14.
+Preparing to unpack .../libpyside2-py3-5.14_5.14.0-1~exp1ubuntu5_arm64.deb ...
+Unpacking libpyside2-py3-5.14 (5.14.0-1~exp1ubuntu5) ...
+Selecting previously unselected package libpyside2-dev.
+Preparing to unpack .../libpyside2-dev_5.14.0-1~exp1ubuntu5_arm64.deb ...
+Unpacking libpyside2-dev (5.14.0-1~exp1ubuntu5) ...
+Setting up libshiboken2-py3-5.14 (5.14.0-1~exp1ubuntu5) ...
+Setting up libqt5qml5:arm64 (5.12.8-0ubuntu1) ...
+Setting up libpyside2-py3-5.14 (5.14.0-1~exp1ubuntu5) ...
+Setting up libpyside2-dev (5.14.0-1~exp1ubuntu5) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libclang1-10 libllvm10 libxslt1.1 shiboken2
+The following NEW packages will be installed:
+  libclang1-10 libllvm10 libshiboken2-dev libxslt1.1 shiboken2
+0 upgraded, 5 newly installed, 0 to remove and 24 not upgraded.
+Need to get 19.6 MB of archives.
+After this operation, 97.3 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libllvm10 arm64 1:10.0.0-4ubuntu1 [12.7 MB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libclang1-10 arm64 1:10.0.0-4ubuntu1 [6176 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxslt1.1 arm64 1.1.34-4 [141 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 shiboken2 arm64 5.14.0-1~exp1ubuntu5 [511 kB]
+Get:5 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libshiboken2-dev arm64 5.14.0-1~exp1ubuntu5 [32.4 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 19.6 MB in 18s (1104 kB/s)
+Selecting previously unselected package libllvm10:arm64.
+(Reading database ... 48968 files and directories currently installed.)
+Preparing to unpack .../libllvm10_1%3a10.0.0-4ubuntu1_arm64.deb ...
+Unpacking libllvm10:arm64 (1:10.0.0-4ubuntu1) ...
+Selecting previously unselected package libclang1-10.
+Preparing to unpack .../libclang1-10_1%3a10.0.0-4ubuntu1_arm64.deb ...
+Unpacking libclang1-10 (1:10.0.0-4ubuntu1) ...
+Selecting previously unselected package libxslt1.1:arm64.
+Preparing to unpack .../libxslt1.1_1.1.34-4_arm64.deb ...
+Unpacking libxslt1.1:arm64 (1.1.34-4) ...
+Selecting previously unselected package shiboken2.
+Preparing to unpack .../shiboken2_5.14.0-1~exp1ubuntu5_arm64.deb ...
+Unpacking shiboken2 (5.14.0-1~exp1ubuntu5) ...
+Selecting previously unselected package libshiboken2-dev.
+Preparing to unpack .../libshiboken2-dev_5.14.0-1~exp1ubuntu5_arm64.deb ...
+Unpacking libshiboken2-dev (5.14.0-1~exp1ubuntu5) ...
+Setting up libllvm10:arm64 (1:10.0.0-4ubuntu1) ...
+Setting up libclang1-10 (1:10.0.0-4ubuntu1) ...
+Setting up libxslt1.1:arm64 (1.1.34-4) ...
+Setting up shiboken2 (5.14.0-1~exp1ubuntu5) ...
+Setting up libshiboken2-dev (5.14.0-1~exp1ubuntu5) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  python3-sip python3-sip-dev sip-dev
+Suggested packages:
+  python-sip-doc
+The following NEW packages will be installed:
+  pyqt5-dev python3-sip python3-sip-dev sip-dev
+0 upgraded, 4 newly installed, 0 to remove and 24 not upgraded.
+Need to get 566 kB of archives.
+After this operation, 4178 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-sip arm64 4.19.21+dfsg-1build1 [85.7 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 sip-dev arm64 4.19.21+dfsg-1build1 [149 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-sip-dev arm64 4.19.21+dfsg-1build1 [22.3 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 pyqt5-dev all 5.14.1+dfsg-3build1 [309 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 566 kB in 1s (547 kB/s)
+Selecting previously unselected package python3-sip.
+(Reading database ... 49042 files and directories currently installed.)
+Preparing to unpack .../python3-sip_4.19.21+dfsg-1build1_arm64.deb ...
+Unpacking python3-sip (4.19.21+dfsg-1build1) ...
+Selecting previously unselected package sip-dev.
+Preparing to unpack .../sip-dev_4.19.21+dfsg-1build1_arm64.deb ...
+Unpacking sip-dev (4.19.21+dfsg-1build1) ...
+Selecting previously unselected package python3-sip-dev.
+Preparing to unpack .../python3-sip-dev_4.19.21+dfsg-1build1_arm64.deb ...
+Unpacking python3-sip-dev (4.19.21+dfsg-1build1) ...
+Selecting previously unselected package pyqt5-dev.
+Preparing to unpack .../pyqt5-dev_5.14.1+dfsg-3build1_all.deb ...
+Unpacking pyqt5-dev (5.14.1+dfsg-3build1) ...
+Setting up sip-dev (4.19.21+dfsg-1build1) ...
+Setting up python3-sip (4.19.21+dfsg-1build1) ...
+Setting up python3-sip-dev (4.19.21+dfsg-1build1) ...
+Setting up pyqt5-dev (5.14.1+dfsg-3build1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libqt5designer5 libqt5help5
+Suggested packages:
+  python3-pyqt5-dbg
+The following NEW packages will be installed:
+  libqt5designer5 libqt5help5 python3-pyqt5
+0 upgraded, 3 newly installed, 0 to remove and 24 not upgraded.
+Need to get 4958 kB of archives.
+After this operation, 22.6 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libqt5designer5 arm64 5.12.8-0ubuntu1 [2721 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libqt5help5 arm64 5.12.8-0ubuntu1 [125 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-pyqt5 arm64 5.14.1+dfsg-3build1 [2112 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 4958 kB in 5s (979 kB/s)
+Selecting previously unselected package libqt5designer5:arm64.
+(Reading database ... 49897 files and directories currently installed.)
+Preparing to unpack .../libqt5designer5_5.12.8-0ubuntu1_arm64.deb ...
+Unpacking libqt5designer5:arm64 (5.12.8-0ubuntu1) ...
+Selecting previously unselected package libqt5help5:arm64.
+Preparing to unpack .../libqt5help5_5.12.8-0ubuntu1_arm64.deb ...
+Unpacking libqt5help5:arm64 (5.12.8-0ubuntu1) ...
+Selecting previously unselected package python3-pyqt5.
+Preparing to unpack .../python3-pyqt5_5.14.1+dfsg-3build1_arm64.deb ...
+Unpacking python3-pyqt5 (5.14.1+dfsg-3build1) ...
+Setting up libqt5designer5:arm64 (5.12.8-0ubuntu1) ...
+Setting up libqt5help5:arm64 (5.12.8-0ubuntu1) ...
+Setting up python3-pyqt5 (5.14.1+dfsg-3build1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  python3-pyqt5.qtsvg
+0 upgraded, 1 newly installed, 0 to remove and 24 not upgraded.
+Need to get 25.1 kB of archives.
+After this operation, 145 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-pyqt5.qtsvg arm64 5.14.1+dfsg-3build1 [25.1 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 25.1 kB in 0s (80.9 kB/s)
+Selecting previously unselected package python3-pyqt5.qtsvg.
+(Reading database ... 49977 files and directories currently installed.)
+Preparing to unpack .../python3-pyqt5.qtsvg_5.14.1+dfsg-3build1_arm64.deb ...
+Unpacking python3-pyqt5.qtsvg (5.14.1+dfsg-3build1) ...
+Setting up python3-pyqt5.qtsvg (5.14.1+dfsg-3build1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  python3-pyside2.qtcore python3-pyside2.qtgui python3-pyside2.qtwidgets
+Suggested packages:
+  python-pyside2-doc
+The following NEW packages will be installed:
+  python3-pyside2.qtcore python3-pyside2.qtgui python3-pyside2.qtsvg
+  python3-pyside2.qtwidgets
+0 upgraded, 4 newly installed, 0 to remove and 24 not upgraded.
+Need to get 3151 kB of archives.
+After this operation, 19.4 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-pyside2.qtcore arm64 5.14.0-1~exp1ubuntu5 [801 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-pyside2.qtgui arm64 5.14.0-1~exp1ubuntu5 [900 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-pyside2.qtwidgets arm64 5.14.0-1~exp1ubuntu5 [1407 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-pyside2.qtsvg arm64 5.14.0-1~exp1ubuntu5 [42.2 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 3151 kB in 3s (952 kB/s)
+Selecting previously unselected package python3-pyside2.qtcore.
+(Reading database ... 49983 files and directories currently installed.)
+Preparing to unpack .../python3-pyside2.qtcore_5.14.0-1~exp1ubuntu5_arm64.deb ...
+Unpacking python3-pyside2.qtcore (5.14.0-1~exp1ubuntu5) ...
+Selecting previously unselected package python3-pyside2.qtgui.
+Preparing to unpack .../python3-pyside2.qtgui_5.14.0-1~exp1ubuntu5_arm64.deb ...
+Unpacking python3-pyside2.qtgui (5.14.0-1~exp1ubuntu5) ...
+Selecting previously unselected package python3-pyside2.qtwidgets.
+Preparing to unpack .../python3-pyside2.qtwidgets_5.14.0-1~exp1ubuntu5_arm64.deb ...
+Unpacking python3-pyside2.qtwidgets (5.14.0-1~exp1ubuntu5) ...
+Selecting previously unselected package python3-pyside2.qtsvg.
+Preparing to unpack .../python3-pyside2.qtsvg_5.14.0-1~exp1ubuntu5_arm64.deb ...
+Unpacking python3-pyside2.qtsvg (5.14.0-1~exp1ubuntu5) ...
+Setting up python3-pyside2.qtcore (5.14.0-1~exp1ubuntu5) ...
+Setting up python3-pyside2.qtgui (5.14.0-1~exp1ubuntu5) ...
+Setting up python3-pyside2.qtwidgets (5.14.0-1~exp1ubuntu5) ...
+Setting up python3-pyside2.qtsvg (5.14.0-1~exp1ubuntu5) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+python3-sip-dev is already the newest version (4.19.21+dfsg-1build1).
+python3-sip-dev set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 24 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+shiboken2 is already the newest version (5.14.0-1~exp1ubuntu5).
+shiboken2 set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 24 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  python3-pbr
+Suggested packages:
+  python-mock-doc
+The following NEW packages will be installed:
+  python3-mock python3-pbr
+0 upgraded, 2 newly installed, 0 to remove and 24 not upgraded.
+Need to get 89.6 kB of archives.
+After this operation, 480 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 python3-pbr all 5.4.5-0ubuntu1 [64.0 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-mock all 3.0.5-1build1 [25.6 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 89.6 kB in 1s (153 kB/s)
+Selecting previously unselected package python3-pbr.
+(Reading database ... 49999 files and directories currently installed.)
+Preparing to unpack .../python3-pbr_5.4.5-0ubuntu1_all.deb ...
+Unpacking python3-pbr (5.4.5-0ubuntu1) ...
+Selecting previously unselected package python3-mock.
+Preparing to unpack .../python3-mock_3.0.5-1build1_all.deb ...
+Unpacking python3-mock (3.0.5-1build1) ...
+Setting up python3-pbr (5.4.5-0ubuntu1) ...
+update-alternatives: using /usr/bin/python3-pbr to provide /usr/bin/pbr (pbr) in auto mode
+Setting up python3-mock (3.0.5-1build1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+  libeigen3-doc libmpfrc++-dev
+The following NEW packages will be installed:
+  libeigen3-dev
+0 upgraded, 1 newly installed, 0 to remove and 24 not upgraded.
+Need to get 815 kB of archives.
+After this operation, 7161 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libeigen3-dev all 3.3.7-2 [815 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 815 kB in 1s (711 kB/s)
+Selecting previously unselected package libeigen3-dev.
+(Reading database ... 50090 files and directories currently installed.)
+Preparing to unpack .../libeigen3-dev_3.3.7-2_all.deb ...
+Unpacking libeigen3-dev (3.3.7-2) ...
+Setting up libeigen3-dev (3.3.7-2) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libassimp5 libminizip1
+The following NEW packages will be installed:
+  libassimp-dev libassimp5 libminizip1
+0 upgraded, 3 newly installed, 0 to remove and 24 not upgraded.
+Need to get 2664 kB of archives.
+After this operation, 13.0 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libminizip1 arm64 1.1-8build1 [17.5 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libassimp5 arm64 5.0.1~ds0-1build1 [2515 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libassimp-dev arm64 5.0.1~ds0-1build1 [131 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 2664 kB in 3s (952 kB/s)
+Selecting previously unselected package libminizip1:arm64.
+(Reading database ... 50649 files and directories currently installed.)
+Preparing to unpack .../libminizip1_1.1-8build1_arm64.deb ...
+Unpacking libminizip1:arm64 (1.1-8build1) ...
+Selecting previously unselected package libassimp5:arm64.
+Preparing to unpack .../libassimp5_5.0.1~ds0-1build1_arm64.deb ...
+Unpacking libassimp5:arm64 (5.0.1~ds0-1build1) ...
+Selecting previously unselected package libassimp-dev:arm64.
+Preparing to unpack .../libassimp-dev_5.0.1~ds0-1build1_arm64.deb ...
+Unpacking libassimp-dev:arm64 (5.0.1~ds0-1build1) ...
+Setting up libminizip1:arm64 (1.1-8build1) ...
+Setting up libassimp5:arm64 (5.0.1~ds0-1build1) ...
+Setting up libassimp-dev:arm64 (5.0.1~ds0-1build1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libtinyxml2.6.2v5
+Suggested packages:
+  libtinyxml-doc
+The following NEW packages will be installed:
+  libtinyxml-dev libtinyxml2.6.2v5
+0 upgraded, 2 newly installed, 0 to remove and 24 not upgraded.
+Need to get 72.7 kB of archives.
+After this operation, 348 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libtinyxml2.6.2v5 arm64 2.6.2-4build1 [28.5 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libtinyxml-dev arm64 2.6.2-4build1 [44.2 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 72.7 kB in 1s (134 kB/s)
+Selecting previously unselected package libtinyxml2.6.2v5:arm64.
+(Reading database ... 50755 files and directories currently installed.)
+Preparing to unpack .../libtinyxml2.6.2v5_2.6.2-4build1_arm64.deb ...
+Unpacking libtinyxml2.6.2v5:arm64 (2.6.2-4build1) ...
+Selecting previously unselected package libtinyxml-dev:arm64.
+Preparing to unpack .../libtinyxml-dev_2.6.2-4build1_arm64.deb ...
+Unpacking libtinyxml-dev:arm64 (2.6.2-4build1) ...
+Setting up libtinyxml2.6.2v5:arm64 (2.6.2-4build1) ...
+Setting up libtinyxml-dev:arm64 (2.6.2-4build1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+  python-psutil-doc
+The following NEW packages will be installed:
+  python3-psutil
+0 upgraded, 1 newly installed, 0 to remove and 24 not upgraded.
+Need to get 141 kB of archives.
+After this operation, 893 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 python3-psutil arm64 5.5.1-1ubuntu4 [141 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 141 kB in 1s (272 kB/s)
+Selecting previously unselected package python3-psutil.
+(Reading database ... 50766 files and directories currently installed.)
+Preparing to unpack .../python3-psutil_5.5.1-1ubuntu4_arm64.deb ...
+Unpacking python3-psutil (5.5.1-1ubuntu4) ...
+Setting up python3-psutil (5.5.1-1ubuntu4) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  googletest
+The following NEW packages will be installed:
+  google-mock googletest
+0 upgraded, 2 newly installed, 0 to remove and 24 not upgraded.
+Need to get 627 kB of archives.
+After this operation, 4433 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 googletest all 1.10.0-2 [623 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 google-mock arm64 1.10.0-2 [4076 B]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 627 kB in 1s (592 kB/s)
+Selecting previously unselected package googletest.
+(Reading database ... 50800 files and directories currently installed.)
+Preparing to unpack .../googletest_1.10.0-2_all.deb ...
+Unpacking googletest (1.10.0-2) ...
+Selecting previously unselected package google-mock:arm64.
+Preparing to unpack .../google-mock_1.10.0-2_arm64.deb ...
+Unpacking google-mock:arm64 (1.10.0-2) ...
+Setting up googletest (1.10.0-2) ...
+Setting up google-mock:arm64 (1.10.0-2) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libssl1.1
+Suggested packages:
+  libssl-doc
+The following NEW packages will be installed:
+  libssl-dev
+The following packages will be upgraded:
+  libssl1.1
+1 upgraded, 1 newly installed, 0 to remove and 23 not upgraded.
+Need to get 2619 kB of archives.
+After this operation, 7597 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libssl1.1 arm64 1.1.1f-1ubuntu2.15 [1157 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libssl-dev arm64 1.1.1f-1ubuntu2.15 [1462 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 2619 kB in 3s (938 kB/s)
+(Reading database ... 51076 files and directories currently installed.)
+Preparing to unpack .../libssl1.1_1.1.1f-1ubuntu2.15_arm64.deb ...
+Unpacking libssl1.1:arm64 (1.1.1f-1ubuntu2.15) over (1.1.1f-1ubuntu2.13) ...
+Selecting previously unselected package libssl-dev:arm64.
+Preparing to unpack .../libssl-dev_1.1.1f-1ubuntu2.15_arm64.deb ...
+Unpacking libssl-dev:arm64 (1.1.1f-1ubuntu2.15) ...
+Setting up libssl1.1:arm64 (1.1.1f-1ubuntu2.15) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+Setting up libssl-dev:arm64 (1.1.1f-1ubuntu2.15) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  ca-certificates-java default-jdk-headless default-jre default-jre-headless
+  fonts-dejavu-extra java-common libatk-wrapper-java libatk-wrapper-java-jni
+  libfontenc1 libgif7 libnspr4 libnss3 libxaw7 libxft2 libxkbfile1 libxmu6
+  libxpm4 libxtst6 libxv1 libxxf86dga1 openjdk-11-jdk openjdk-11-jdk-headless
+  openjdk-11-jre openjdk-11-jre-headless x11-utils
+Suggested packages:
+  openjdk-11-demo openjdk-11-source visualvm libnss-mdns fonts-ipafont-gothic
+  fonts-ipafont-mincho fonts-wqy-microhei | fonts-wqy-zenhei fonts-indic
+  mesa-utils
+The following NEW packages will be installed:
+  ca-certificates-java default-jdk default-jdk-headless default-jre
+  default-jre-headless fonts-dejavu-extra java-common libatk-wrapper-java
+  libatk-wrapper-java-jni libfontenc1 libgif7 libnspr4 libnss3 libxaw7 libxft2
+  libxkbfile1 libxmu6 libxpm4 libxtst6 libxv1 libxxf86dga1 openjdk-11-jdk
+  openjdk-11-jdk-headless openjdk-11-jre openjdk-11-jre-headless x11-utils
+0 upgraded, 26 newly installed, 0 to remove and 23 not upgraded.
+Need to get 254 MB of archives.
+After this operation, 406 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 java-common all 0.72 [6816 B]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libnspr4 arm64 2:4.25-1 [99.5 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libnss3 arm64 2:3.49.1-1ubuntu1.7 [1179 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 openjdk-11-jre-headless arm64 11.0.15+10-0ubuntu0.20.04.1 [36.5 MB]
+Get:5 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 default-jre-headless arm64 2:1.11-72 [3192 B]
+Get:6 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 ca-certificates-java all 20190405ubuntu1 [12.2 kB]
+Get:7 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libgif7 arm64 5.1.9-1 [31.9 kB]
+Get:8 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxtst6 arm64 2:1.2.3-1 [11.7 kB]
+Get:9 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 openjdk-11-jre arm64 11.0.15+10-0ubuntu0.20.04.1 [163 kB]
+Get:10 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 default-jre arm64 2:1.11-72 [1084 B]
+Get:11 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 openjdk-11-jdk-headless arm64 11.0.15+10-0ubuntu0.20.04.1 [212 MB]
+^[[2~Get:12 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 default-jdk-headless arm64 2:1.11-72 [1140 B]
+Get:13 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 openjdk-11-jdk arm64 11.0.15+10-0ubuntu0.20.04.1 [1535 kB]
+Get:14 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 default-jdk arm64 2:1.11-72 [1096 B]
+Get:15 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 fonts-dejavu-extra all 2.37-1 [1953 kB]
+Get:16 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libfontenc1 arm64 1:1.1.4-0ubuntu1 [13.1 kB]
+Get:17 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxmu6 arm64 2:1.1.3-0ubuntu1 [42.9 kB]
+Get:18 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxpm4 arm64 1:3.5.12-1 [28.8 kB]
+Get:19 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxaw7 arm64 2:1.0.13-1 [137 kB]
+Get:20 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxft2 arm64 2.3.3-0ubuntu1 [35.9 kB]
+Get:21 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxkbfile1 arm64 1:1.1.0-1 [61.1 kB]
+Get:22 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxv1 arm64 2:1.0.11-1 [9736 B]
+Get:23 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxxf86dga1 arm64 2:1.1.5-0ubuntu1 [11.6 kB]
+Get:24 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 x11-utils arm64 7.7+5 [191 kB]
+Get:25 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libatk-wrapper-java all 0.37.1-1 [53.0 kB]
+Get:26 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libatk-wrapper-java-jni arm64 0.37.1-1 [40.0 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 254 MB in 3min 44s (1134 kB/s)
+Selecting previously unselected package java-common.
+(Reading database ... 51193 files and directories currently installed.)
+Preparing to unpack .../00-java-common_0.72_all.deb ...
+Unpacking java-common (0.72) ...
+Selecting previously unselected package libnspr4:arm64.
+Preparing to unpack .../01-libnspr4_2%3a4.25-1_arm64.deb ...
+Unpacking libnspr4:arm64 (2:4.25-1) ...
+Selecting previously unselected package libnss3:arm64.
+Preparing to unpack .../02-libnss3_2%3a3.49.1-1ubuntu1.7_arm64.deb ...
+Unpacking libnss3:arm64 (2:3.49.1-1ubuntu1.7) ...
+Selecting previously unselected package openjdk-11-jre-headless:arm64.
+Preparing to unpack .../03-openjdk-11-jre-headless_11.0.15+10-0ubuntu0.20.04.1_arm64.deb ...
+Unpacking openjdk-11-jre-headless:arm64 (11.0.15+10-0ubuntu0.20.04.1) ...
+Selecting previously unselected package default-jre-headless.
+Preparing to unpack .../04-default-jre-headless_2%3a1.11-72_arm64.deb ...
+Unpacking default-jre-headless (2:1.11-72) ...
+Selecting previously unselected package ca-certificates-java.
+Preparing to unpack .../05-ca-certificates-java_20190405ubuntu1_all.deb ...
+Unpacking ca-certificates-java (20190405ubuntu1) ...
+Selecting previously unselected package libgif7:arm64.
+Preparing to unpack .../06-libgif7_5.1.9-1_arm64.deb ...
+Unpacking libgif7:arm64 (5.1.9-1) ...
+Selecting previously unselected package libxtst6:arm64.
+Preparing to unpack .../07-libxtst6_2%3a1.2.3-1_arm64.deb ...
+Unpacking libxtst6:arm64 (2:1.2.3-1) ...
+Selecting previously unselected package openjdk-11-jre:arm64.
+Preparing to unpack .../08-openjdk-11-jre_11.0.15+10-0ubuntu0.20.04.1_arm64.deb ...
+Unpacking openjdk-11-jre:arm64 (11.0.15+10-0ubuntu0.20.04.1) ...
+Selecting previously unselected package default-jre.
+Preparing to unpack .../09-default-jre_2%3a1.11-72_arm64.deb ...
+Unpacking default-jre (2:1.11-72) ...
+Selecting previously unselected package openjdk-11-jdk-headless:arm64.
+Preparing to unpack .../10-openjdk-11-jdk-headless_11.0.15+10-0ubuntu0.20.04.1_arm64.deb ...
+Unpacking openjdk-11-jdk-headless:arm64 (11.0.15+10-0ubuntu0.20.04.1) ...
+Selecting previously unselected package default-jdk-headless.
+Preparing to unpack .../11-default-jdk-headless_2%3a1.11-72_arm64.deb ...
+Unpacking default-jdk-headless (2:1.11-72) ...
+Selecting previously unselected package openjdk-11-jdk:arm64.
+Preparing to unpack .../12-openjdk-11-jdk_11.0.15+10-0ubuntu0.20.04.1_arm64.deb ...
+Unpacking openjdk-11-jdk:arm64 (11.0.15+10-0ubuntu0.20.04.1) ...
+Selecting previously unselected package default-jdk.
+Preparing to unpack .../13-default-jdk_2%3a1.11-72_arm64.deb ...
+Unpacking default-jdk (2:1.11-72) ...
+Selecting previously unselected package fonts-dejavu-extra.
+Preparing to unpack .../14-fonts-dejavu-extra_2.37-1_all.deb ...
+Unpacking fonts-dejavu-extra (2.37-1) ...
+Selecting previously unselected package libfontenc1:arm64.
+Preparing to unpack .../15-libfontenc1_1%3a1.1.4-0ubuntu1_arm64.deb ...
+Unpacking libfontenc1:arm64 (1:1.1.4-0ubuntu1) ...
+Selecting previously unselected package libxmu6:arm64.
+Preparing to unpack .../16-libxmu6_2%3a1.1.3-0ubuntu1_arm64.deb ...
+Unpacking libxmu6:arm64 (2:1.1.3-0ubuntu1) ...
+Selecting previously unselected package libxpm4:arm64.
+Preparing to unpack .../17-libxpm4_1%3a3.5.12-1_arm64.deb ...
+Unpacking libxpm4:arm64 (1:3.5.12-1) ...
+Selecting previously unselected package libxaw7:arm64.
+Preparing to unpack .../18-libxaw7_2%3a1.0.13-1_arm64.deb ...
+Unpacking libxaw7:arm64 (2:1.0.13-1) ...
+Selecting previously unselected package libxft2:arm64.
+Preparing to unpack .../19-libxft2_2.3.3-0ubuntu1_arm64.deb ...
+Unpacking libxft2:arm64 (2.3.3-0ubuntu1) ...
+Selecting previously unselected package libxkbfile1:arm64.
+Preparing to unpack .../20-libxkbfile1_1%3a1.1.0-1_arm64.deb ...
+Unpacking libxkbfile1:arm64 (1:1.1.0-1) ...
+Selecting previously unselected package libxv1:arm64.
+Preparing to unpack .../21-libxv1_2%3a1.0.11-1_arm64.deb ...
+Unpacking libxv1:arm64 (2:1.0.11-1) ...
+Selecting previously unselected package libxxf86dga1:arm64.
+Preparing to unpack .../22-libxxf86dga1_2%3a1.1.5-0ubuntu1_arm64.deb ...
+Unpacking libxxf86dga1:arm64 (2:1.1.5-0ubuntu1) ...
+Selecting previously unselected package x11-utils.
+Preparing to unpack .../23-x11-utils_7.7+5_arm64.deb ...
+Unpacking x11-utils (7.7+5) ...
+Selecting previously unselected package libatk-wrapper-java.
+Preparing to unpack .../24-libatk-wrapper-java_0.37.1-1_all.deb ...
+Unpacking libatk-wrapper-java (0.37.1-1) ...
+Selecting previously unselected package libatk-wrapper-java-jni:arm64.
+Preparing to unpack .../25-libatk-wrapper-java-jni_0.37.1-1_arm64.deb ...
+Unpacking libatk-wrapper-java-jni:arm64 (0.37.1-1) ...
+Setting up libxft2:arm64 (2.3.3-0ubuntu1) ...
+Setting up libxmu6:arm64 (2:1.1.3-0ubuntu1) ...
+Setting up libxpm4:arm64 (1:3.5.12-1) ...
+Setting up java-common (0.72) ...
+Setting up libxtst6:arm64 (2:1.2.3-1) ...
+Setting up libxxf86dga1:arm64 (2:1.1.5-0ubuntu1) ...
+Setting up libxaw7:arm64 (2:1.0.13-1) ...
+Setting up libfontenc1:arm64 (1:1.1.4-0ubuntu1) ...
+Setting up libnspr4:arm64 (2:4.25-1) ...
+Setting up libxv1:arm64 (2:1.0.11-1) ...
+Setting up libgif7:arm64 (5.1.9-1) ...
+Setting up fonts-dejavu-extra (2.37-1) ...
+Setting up libxkbfile1:arm64 (1:1.1.0-1) ...
+Setting up libnss3:arm64 (2:3.49.1-1ubuntu1.7) ...
+Setting up x11-utils (7.7+5) ...
+Setting up libatk-wrapper-java (0.37.1-1) ...
+Setting up libatk-wrapper-java-jni:arm64 (0.37.1-1) ...
+Setting up default-jre-headless (2:1.11-72) ...
+Setting up openjdk-11-jre-headless:arm64 (11.0.15+10-0ubuntu0.20.04.1) ...
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/java to provide /usr/bin/java (java) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jjs to provide /usr/bin/jjs (jjs) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/rmid to provide /usr/bin/rmid (rmid) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/pack200 to provide /usr/bin/pack200 (pack200) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/unpack200 to provide /usr/bin/unpack200 (unpack200) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+Setting up openjdk-11-jre:arm64 (11.0.15+10-0ubuntu0.20.04.1) ...
+Setting up openjdk-11-jdk-headless:arm64 (11.0.15+10-0ubuntu0.20.04.1) ...
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jar to provide /usr/bin/jar (jar) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jarsigner to provide /usr/bin/jarsigner (jarsigner) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/javac to provide /usr/bin/javac (javac) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/javadoc to provide /usr/bin/javadoc (javadoc) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/javap to provide /usr/bin/javap (javap) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jcmd to provide /usr/bin/jcmd (jcmd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jdb to provide /usr/bin/jdb (jdb) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jdeprscan to provide /usr/bin/jdeprscan (jdeprscan) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jdeps to provide /usr/bin/jdeps (jdeps) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jfr to provide /usr/bin/jfr (jfr) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jimage to provide /usr/bin/jimage (jimage) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jinfo to provide /usr/bin/jinfo (jinfo) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jlink to provide /usr/bin/jlink (jlink) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jmap to provide /usr/bin/jmap (jmap) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jmod to provide /usr/bin/jmod (jmod) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jps to provide /usr/bin/jps (jps) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jrunscript to provide /usr/bin/jrunscript (jrunscript) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jshell to provide /usr/bin/jshell (jshell) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jstack to provide /usr/bin/jstack (jstack) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jstat to provide /usr/bin/jstat (jstat) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jstatd to provide /usr/bin/jstatd (jstatd) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/rmic to provide /usr/bin/rmic (rmic) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/serialver to provide /usr/bin/serialver (serialver) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jaotc to provide /usr/bin/jaotc (jaotc) in auto mode
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jhsdb to provide /usr/bin/jhsdb (jhsdb) in auto mode
+Setting up default-jre (2:1.11-72) ...
+Setting up default-jdk-headless (2:1.11-72) ...
+Setting up openjdk-11-jdk:arm64 (11.0.15+10-0ubuntu0.20.04.1) ...
+update-alternatives: using /usr/lib/jvm/java-11-openjdk-arm64/bin/jconsole to provide /usr/bin/jconsole (jconsole) in auto mode
+Setting up ca-certificates-java (20190405ubuntu1) ...
+head: cannot open '/etc/ssl/certs/java/cacerts' for reading: No such file or directory
+Adding debian:Baltimore_CyberTrust_Root.pem
+Adding debian:Entrust.net_Premium_2048_Secure_Server_CA.pem
+Adding debian:emSign_Root_CA_-_C1.pem
+Adding debian:SecureSign_RootCA11.pem
+Adding debian:Entrust_Root_Certification_Authority.pem
+Adding debian:AffirmTrust_Commercial.pem
+Adding debian:Staat_der_Nederlanden_Root_CA_-_G3.pem
+Adding debian:USERTrust_ECC_Certification_Authority.pem
+Adding debian:Certigna_Root_CA.pem
+Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
+Adding debian:CFCA_EV_ROOT.pem
+Adding debian:DigiCert_Assured_ID_Root_G2.pem
+Adding debian:Trustwave_Global_ECC_P256_Certification_Authority.pem
+Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
+Adding debian:SZAFIR_ROOT_CA2.pem
+Adding debian:GTS_Root_R4.pem
+Adding debian:USERTrust_RSA_Certification_Authority.pem
+Adding debian:Microsoft_ECC_Root_Certificate_Authority_2017.pem
+Adding debian:SSL.com_EV_Root_Certification_Authority_ECC.pem
+Adding debian:Buypass_Class_2_Root_CA.pem
+Adding debian:Entrust_Root_Certification_Authority_-_G2.pem
+Adding debian:GlobalSign_Root_CA_-_R3.pem
+Adding debian:SwissSign_Gold_CA_-_G2.pem
+Adding debian:Go_Daddy_Class_2_CA.pem
+Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
+Adding debian:TrustCor_ECA-1.pem
+Adding debian:Staat_der_Nederlanden_EV_Root_CA.pem
+Adding debian:DigiCert_Global_Root_G3.pem
+Adding debian:AC_RAIZ_FNMT-RCM.pem
+Adding debian:DigiCert_Assured_ID_Root_G3.pem
+Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+Adding debian:TeliaSonera_Root_CA_v1.pem
+Adding debian:Sonera_Class_2_Root_CA.pem
+Adding debian:GTS_Root_R3.pem
+Adding debian:VeriSign_Universal_Root_Certification_Authority.pem
+Adding debian:SecureTrust_CA.pem
+Adding debian:Hongkong_Post_Root_CA_1.pem
+Adding debian:ACCVRAIZ1.pem
+Adding debian:SwissSign_Silver_CA_-_G2.pem
+Adding debian:Hongkong_Post_Root_CA_3.pem
+Adding debian:Amazon_Root_CA_4.pem
+Adding debian:Chambers_of_Commerce_Root_-_2008.pem
+Adding debian:DigiCert_Assured_ID_Root_CA.pem
+Adding debian:OISTE_WISeKey_Global_Root_GC_CA.pem
+Adding debian:GTS_Root_R2.pem
+Adding debian:CA_Disig_Root_R2.pem
+Adding debian:emSign_Root_CA_-_G1.pem
+Adding debian:NAVER_Global_Root_Certification_Authority.pem
+Adding debian:Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
+Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
+Adding debian:Atos_TrustedRoot_2011.pem
+Adding debian:AffirmTrust_Networking.pem
+Adding debian:TrustCor_RootCert_CA-2.pem
+Adding debian:GlobalSign_Root_CA_-_R2.pem
+Adding debian:Comodo_AAA_Services_root.pem
+Adding debian:certSIGN_ROOT_CA.pem
+Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+Adding debian:Trustwave_Global_ECC_P384_Certification_Authority.pem
+Adding debian:AffirmTrust_Premium_ECC.pem
+Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
+Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
+Adding debian:SSL.com_Root_Certification_Authority_RSA.pem
+Adding debian:Global_Chambersign_Root_-_2008.pem
+Adding debian:GeoTrust_Primary_Certification_Authority_-_G2.pem
+Adding debian:SSL.com_Root_Certification_Authority_ECC.pem
+Adding debian:XRamp_Global_CA_Root.pem
+Adding debian:Secure_Global_CA.pem
+Adding debian:Certigna.pem
+Adding debian:Buypass_Class_3_Root_CA.pem
+Adding debian:QuoVadis_Root_CA_2.pem
+Adding debian:Amazon_Root_CA_3.pem
+Adding debian:COMODO_Certification_Authority.pem
+Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+Adding debian:Amazon_Root_CA_1.pem
+Adding debian:UCA_Global_G2_Root.pem
+Adding debian:SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
+Adding debian:COMODO_RSA_Certification_Authority.pem
+Adding debian:ISRG_Root_X1.pem
+Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem
+Adding debian:Entrust_Root_Certification_Authority_-_G4.pem
+Adding debian:Microsoft_RSA_Root_Certificate_Authority_2017.pem
+Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
+Adding debian:Certum_Trusted_Network_CA.pem
+Adding debian:DigiCert_Global_Root_G2.pem
+Adding debian:certSIGN_Root_CA_G2.pem
+Adding debian:TrustCor_RootCert_CA-1.pem
+Adding debian:e-Szigno_Root_CA_2017.pem
+Adding debian:QuoVadis_Root_CA_3_G3.pem
+Adding debian:emSign_ECC_Root_CA_-_C3.pem
+Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2011.pem
+Adding debian:COMODO_ECC_Certification_Authority.pem
+Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
+Adding debian:GlobalSign_Root_CA.pem
+Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
+Adding debian:TWCA_Global_Root_CA.pem
+Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
+Adding debian:Actalis_Authentication_Root_CA.pem
+Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
+Adding debian:Security_Communication_RootCA2.pem
+Adding debian:E-Tugra_Certification_Authority.pem
+Adding debian:Trustis_FPS_Root_CA.pem
+Adding debian:TWCA_Root_Certification_Authority.pem
+Adding debian:emSign_ECC_Root_CA_-_G3.pem
+Adding debian:UCA_Extended_Validation_Root.pem
+Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
+Adding debian:Amazon_Root_CA_2.pem
+Adding debian:Starfield_Class_2_CA.pem
+Adding debian:Trustwave_Global_Certification_Authority.pem
+Adding debian:Network_Solutions_Certificate_Authority.pem
+Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+Adding debian:GTS_Root_R1.pem
+Adding debian:ePKI_Root_Certification_Authority.pem
+Adding debian:Izenpe.com.pem
+Adding debian:DigiCert_Trusted_Root_G4.pem
+Adding debian:QuoVadis_Root_CA_3.pem
+Adding debian:Security_Communication_Root_CA.pem
+Adding debian:IdenTrust_Commercial_Root_CA_1.pem
+Adding debian:QuoVadis_Root_CA_1_G3.pem
+Adding debian:AffirmTrust_Premium.pem
+Adding debian:Certum_Trusted_Network_CA_2.pem
+Adding debian:GlobalSign_Root_CA_-_R6.pem
+Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
+Adding debian:QuoVadis_Root_CA_2_G3.pem
+Adding debian:EC-ACC.pem
+Adding debian:QuoVadis_Root_CA.pem
+Adding debian:Cybertrust_Global_Root.pem
+Adding debian:DigiCert_Global_Root_CA.pem
+done.
+Setting up default-jdk (2:1.11-72) ...
+Processing triggers for ca-certificates (20210119~20.04.2) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+
+done.
+done.
+Processing triggers for fontconfig (2.13.1-2ubuntu3) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+Processing triggers for hicolor-icon-theme (0.17-2) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libspdlog1
+The following NEW packages will be installed:
+  libspdlog-dev libspdlog1
+0 upgraded, 2 newly installed, 0 to remove and 23 not upgraded.
+Need to get 373 kB of archives.
+After this operation, 1616 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libspdlog1 arm64 1:1.5.0-1 [144 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libspdlog-dev arm64 1:1.5.0-1 [230 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 373 kB in 1s (392 kB/s)
+Selecting previously unselected package libspdlog1.
+(Reading database ... 51888 files and directories currently installed.)
+Preparing to unpack .../libspdlog1_1%3a1.5.0-1_arm64.deb ...
+Unpacking libspdlog1 (1:1.5.0-1) ...
+Selecting previously unselected package libspdlog-dev.
+Preparing to unpack .../libspdlog-dev_1%3a1.5.0-1_arm64.deb ...
+Unpacking libspdlog-dev (1:1.5.0-1) ...
+Setting up libspdlog1 (1:1.5.0-1) ...
+Setting up libspdlog-dev (1:1.5.0-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libbenchmark1
+Suggested packages:
+  libbenchmark-tools
+The following NEW packages will be installed:
+  libbenchmark-dev libbenchmark1
+0 upgraded, 2 newly installed, 0 to remove and 23 not upgraded.
+Need to get 131 kB of archives.
+After this operation, 387 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libbenchmark1 arm64 1.5.0-4build1 [98.6 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libbenchmark-dev arm64 1.5.0-4build1 [32.4 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 131 kB in 1s (227 kB/s)
+Selecting previously unselected package libbenchmark1:arm64.
+(Reading database ... 52017 files and directories currently installed.)
+Preparing to unpack .../libbenchmark1_1.5.0-4build1_arm64.deb ...
+Unpacking libbenchmark1:arm64 (1.5.0-4build1) ...
+Selecting previously unselected package libbenchmark-dev.
+Preparing to unpack .../libbenchmark-dev_1.5.0-4build1_arm64.deb ...
+Unpacking libbenchmark-dev (1.5.0-4build1) ...
+Setting up libbenchmark1:arm64 (1.5.0-4build1) ...
+Setting up libbenchmark-dev (1.5.0-4build1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libxmu-dev libxmu-headers libxpm-dev
+Suggested packages:
+  libxaw-doc
+The following NEW packages will be installed:
+  libxaw7-dev libxmu-dev libxmu-headers libxpm-dev
+0 upgraded, 4 newly installed, 0 to remove and 23 not upgraded.
+Need to get 392 kB of archives.
+After this operation, 1801 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxmu-headers all 2:1.1.3-0ubuntu1 [54.2 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxmu-dev arm64 2:1.1.3-0ubuntu1 [48.5 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxpm-dev arm64 1:3.5.12-1 [83.1 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxaw7-dev arm64 2:1.0.13-1 [206 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 392 kB in 1s (427 kB/s)
+Selecting previously unselected package libxmu-headers.
+(Reading database ... 52036 files and directories currently installed.)
+Preparing to unpack .../libxmu-headers_2%3a1.1.3-0ubuntu1_all.deb ...
+Unpacking libxmu-headers (2:1.1.3-0ubuntu1) ...
+Selecting previously unselected package libxmu-dev:arm64.
+Preparing to unpack .../libxmu-dev_2%3a1.1.3-0ubuntu1_arm64.deb ...
+Unpacking libxmu-dev:arm64 (2:1.1.3-0ubuntu1) ...
+Selecting previously unselected package libxpm-dev:arm64.
+Preparing to unpack .../libxpm-dev_1%3a3.5.12-1_arm64.deb ...
+Unpacking libxpm-dev:arm64 (1:3.5.12-1) ...
+Selecting previously unselected package libxaw7-dev:arm64.
+Preparing to unpack .../libxaw7-dev_2%3a1.0.13-1_arm64.deb ...
+Unpacking libxaw7-dev:arm64 (2:1.0.13-1) ...
+Setting up libxmu-headers (2:1.1.3-0ubuntu1) ...
+Setting up libxmu-dev:arm64 (2:1.1.3-0ubuntu1) ...
+Setting up libxpm-dev:arm64 (1:3.5.12-1) ...
+Setting up libxaw7-dev:arm64 (2:1.0.13-1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libxrender-dev x11proto-randr-dev
+The following NEW packages will be installed:
+  libxrandr-dev libxrender-dev x11proto-randr-dev
+0 upgraded, 3 newly installed, 0 to remove and 23 not upgraded.
+Need to get 50.0 kB of archives.
+After this operation, 239 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 x11proto-randr-dev all 2019.2-1ubuntu1 [2620 B]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxrender-dev arm64 1:0.9.10-1 [22.9 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libxrandr-dev arm64 2:1.5.2-0ubuntu1 [24.6 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 50.0 kB in 0s (104 kB/s)
+Selecting previously unselected package x11proto-randr-dev.
+(Reading database ... 52163 files and directories currently installed.)
+Preparing to unpack .../x11proto-randr-dev_2019.2-1ubuntu1_all.deb ...
+Unpacking x11proto-randr-dev (2019.2-1ubuntu1) ...
+Selecting previously unselected package libxrender-dev:arm64.
+Preparing to unpack .../libxrender-dev_1%3a0.9.10-1_arm64.deb ...
+Unpacking libxrender-dev:arm64 (1:0.9.10-1) ...
+Selecting previously unselected package libxrandr-dev:arm64.
+Preparing to unpack .../libxrandr-dev_2%3a1.5.2-0ubuntu1_arm64.deb ...
+Unpacking libxrandr-dev:arm64 (2:1.5.2-0ubuntu1) ...
+Setting up x11proto-randr-dev (2019.2-1ubuntu1) ...
+Setting up libxrender-dev:arm64 (1:0.9.10-1) ...
+Setting up libxrandr-dev:arm64 (2:1.5.2-0ubuntu1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  libgl1-mesa-dev
+0 upgraded, 1 newly installed, 0 to remove and 23 not upgraded.
+Need to get 6420 B of archives.
+After this operation, 71.7 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libgl1-mesa-dev arm64 21.2.6-0ubuntu0.1~20.04.2 [6420 B]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 6420 B in 0s (28.3 kB/s)
+Selecting previously unselected package libgl1-mesa-dev:arm64.
+(Reading database ... 52196 files and directories currently installed.)
+Preparing to unpack .../libgl1-mesa-dev_21.2.6-0ubuntu0.1~20.04.2_arm64.deb ...
+Unpacking libgl1-mesa-dev:arm64 (21.2.6-0ubuntu0.1~20.04.2) ...
+Setting up libgl1-mesa-dev:arm64 (21.2.6-0ubuntu0.1~20.04.2) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libfreetype-dev libpng-dev libpng-tools
+Suggested packages:
+  freetype2-doc
+The following NEW packages will be installed:
+  libfreetype-dev libfreetype6-dev libpng-dev libpng-tools
+0 upgraded, 4 newly installed, 0 to remove and 23 not upgraded.
+Need to get 680 kB of archives.
+After this operation, 2832 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libpng-dev arm64 1.6.37-2 [172 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libfreetype-dev arm64 2.10.1-2ubuntu0.1 [473 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libfreetype6-dev arm64 2.10.1-2ubuntu0.1 [9812 B]
+Get:4 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libpng-tools arm64 1.6.37-2 [25.4 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 680 kB in 1s (576 kB/s)
+Selecting previously unselected package libpng-dev:arm64.
+(Reading database ... 52202 files and directories currently installed.)
+Preparing to unpack .../libpng-dev_1.6.37-2_arm64.deb ...
+Unpacking libpng-dev:arm64 (1.6.37-2) ...
+Selecting previously unselected package libfreetype-dev:arm64.
+Preparing to unpack .../libfreetype-dev_2.10.1-2ubuntu0.1_arm64.deb ...
+Unpacking libfreetype-dev:arm64 (2.10.1-2ubuntu0.1) ...
+Selecting previously unselected package libfreetype6-dev:arm64.
+Preparing to unpack .../libfreetype6-dev_2.10.1-2ubuntu0.1_arm64.deb ...
+Unpacking libfreetype6-dev:arm64 (2.10.1-2ubuntu0.1) ...
+Selecting previously unselected package libpng-tools.
+Preparing to unpack .../libpng-tools_1.6.37-2_arm64.deb ...
+Unpacking libpng-tools (1.6.37-2) ...
+Setting up libpng-tools (1.6.37-2) ...
+Setting up libpng-dev:arm64 (1.6.37-2) ...
+Setting up libfreetype-dev:arm64 (2.10.1-2ubuntu0.1) ...
+Setting up libfreetype6-dev:arm64 (2.10.1-2ubuntu0.1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libblas3 libgfortran5 liblapack3
+Suggested packages:
+  gfortran python-numpy-doc python3-numpy-dbg
+The following NEW packages will be installed:
+  libblas3 libgfortran5 liblapack3 python3-numpy
+0 upgraded, 4 newly installed, 0 to remove and 23 not upgraded.
+Need to get 5198 kB of archives.
+After this operation, 27.6 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libblas3 arm64 3.9.0-1build1 [89.1 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libgfortran5 arm64 10.3.0-1ubuntu1~20.04 [346 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 liblapack3 arm64 3.9.0-1build1 [1529 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 python3-numpy arm64 1:1.17.4-5ubuntu3 [3234 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 5198 kB in 5s (1004 kB/s)
+Selecting previously unselected package libblas3:arm64.
+(Reading database ... 52294 files and directories currently installed.)
+Preparing to unpack .../libblas3_3.9.0-1build1_arm64.deb ...
+Unpacking libblas3:arm64 (3.9.0-1build1) ...
+Selecting previously unselected package libgfortran5:arm64.
+Preparing to unpack .../libgfortran5_10.3.0-1ubuntu1~20.04_arm64.deb ...
+Unpacking libgfortran5:arm64 (10.3.0-1ubuntu1~20.04) ...
+Selecting previously unselected package liblapack3:arm64.
+Preparing to unpack .../liblapack3_3.9.0-1build1_arm64.deb ...
+Unpacking liblapack3:arm64 (3.9.0-1build1) ...
+Selecting previously unselected package python3-numpy.
+Preparing to unpack .../python3-numpy_1%3a1.17.4-5ubuntu3_arm64.deb ...
+Unpacking python3-numpy (1:1.17.4-5ubuntu3) ...
+Setting up libblas3:arm64 (3.9.0-1build1) ...
+update-alternatives: using /usr/lib/aarch64-linux-gnu/blas/libblas.so.3 to provide /usr/lib/aarch64-linux-gnu/libblas.so.3 (libblas.so.3-aarch64-linux-gnu) in auto mode
+Setting up libgfortran5:arm64 (10.3.0-1ubuntu1~20.04) ...
+Setting up liblapack3:arm64 (3.9.0-1build1) ...
+update-alternatives: using /usr/lib/aarch64-linux-gnu/lapack/liblapack.so.3 to provide /usr/lib/aarch64-linux-gnu/liblapack.so.3 (liblapack.so.3-aarch64-linux-gnu) in auto mode
+Setting up python3-numpy (1:1.17.4-5ubuntu3) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+  cppcheck-gui
+The following NEW packages will be installed:
+  cppcheck
+0 upgraded, 1 newly installed, 0 to remove and 23 not upgraded.
+Need to get 1461 kB of archives.
+After this operation, 6617 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 cppcheck arm64 1.90-4build1 [1461 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 1461 kB in 2s (876 kB/s)
+Selecting previously unselected package cppcheck.
+(Reading database ... 52806 files and directories currently installed.)
+Preparing to unpack .../cppcheck_1.90-4build1_arm64.deb ...
+Unpacking cppcheck (1.90-4build1) ...
+Setting up cppcheck (1.90-4build1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  blt fonts-lyx libjs-jquery-ui libtcl8.6 libtk8.6 python-matplotlib-data
+  python3-cycler python3-kiwisolver python3-tk tk8.6-blt2.5 ttf-bitstream-vera
+Suggested packages:
+  blt-demo libjs-jquery-ui-docs tcl8.6 tk8.6 python-cycler-doc dvipng ffmpeg
+  gir1.2-gtk-3.0 ghostscript inkscape ipython3 python-matplotlib-doc
+  python3-cairocffi python3-gi-cairo python3-gobject python3-nose
+  python3-scipy python3-tornado texlive-extra-utils texlive-latex-extra
+  ttf-staypuft tix python3-tk-dbg
+The following NEW packages will be installed:
+  blt fonts-lyx libjs-jquery-ui libtcl8.6 libtk8.6 python-matplotlib-data
+  python3-cycler python3-kiwisolver python3-matplotlib python3-tk tk8.6-blt2.5
+  ttf-bitstream-vera
+0 upgraded, 12 newly installed, 0 to remove and 23 not upgraded.
+Need to get 11.1 MB of archives.
+After this operation, 37.0 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libtcl8.6 arm64 8.6.10+dfsg-1 [849 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libtk8.6 arm64 8.6.10-1 [674 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 tk8.6-blt2.5 arm64 2.5.3+dfsg-4 [478 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 blt arm64 2.5.3+dfsg-4 [4944 B]
+Get:5 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 fonts-lyx all 2.3.4.2-2 [154 kB]
+Get:6 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libjs-jquery-ui all 1.12.1+dfsg-5 [232 kB]
+Get:7 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 ttf-bitstream-vera all 1.10-8 [352 kB]
+Get:8 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python-matplotlib-data all 3.1.2-1ubuntu4 [3788 kB]
+Get:9 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-cycler all 0.10.0-3 [8132 B]
+Get:10 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-kiwisolver arm64 1.0.1-3build1 [55.5 kB]
+Get:11 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-matplotlib arm64 3.1.2-1ubuntu4 [4407 kB]
+Get:12 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 python3-tk arm64 3.8.10-0ubuntu1~20.04 [104 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 11.1 MB in 10s (1104 kB/s)
+Selecting previously unselected package libtcl8.6:arm64.
+(Reading database ... 52877 files and directories currently installed.)
+Preparing to unpack .../00-libtcl8.6_8.6.10+dfsg-1_arm64.deb ...
+Unpacking libtcl8.6:arm64 (8.6.10+dfsg-1) ...
+Selecting previously unselected package libtk8.6:arm64.
+Preparing to unpack .../01-libtk8.6_8.6.10-1_arm64.deb ...
+Unpacking libtk8.6:arm64 (8.6.10-1) ...
+Selecting previously unselected package tk8.6-blt2.5.
+Preparing to unpack .../02-tk8.6-blt2.5_2.5.3+dfsg-4_arm64.deb ...
+Unpacking tk8.6-blt2.5 (2.5.3+dfsg-4) ...
+Selecting previously unselected package blt.
+Preparing to unpack .../03-blt_2.5.3+dfsg-4_arm64.deb ...
+Unpacking blt (2.5.3+dfsg-4) ...
+Selecting previously unselected package fonts-lyx.
+Preparing to unpack .../04-fonts-lyx_2.3.4.2-2_all.deb ...
+Unpacking fonts-lyx (2.3.4.2-2) ...
+Selecting previously unselected package libjs-jquery-ui.
+Preparing to unpack .../05-libjs-jquery-ui_1.12.1+dfsg-5_all.deb ...
+Unpacking libjs-jquery-ui (1.12.1+dfsg-5) ...
+Selecting previously unselected package ttf-bitstream-vera.
+Preparing to unpack .../06-ttf-bitstream-vera_1.10-8_all.deb ...
+Unpacking ttf-bitstream-vera (1.10-8) ...
+Selecting previously unselected package python-matplotlib-data.
+Preparing to unpack .../07-python-matplotlib-data_3.1.2-1ubuntu4_all.deb ...
+Unpacking python-matplotlib-data (3.1.2-1ubuntu4) ...
+Selecting previously unselected package python3-cycler.
+Preparing to unpack .../08-python3-cycler_0.10.0-3_all.deb ...
+Unpacking python3-cycler (0.10.0-3) ...
+Selecting previously unselected package python3-kiwisolver.
+Preparing to unpack .../09-python3-kiwisolver_1.0.1-3build1_arm64.deb ...
+Unpacking python3-kiwisolver (1.0.1-3build1) ...
+Selecting previously unselected package python3-matplotlib.
+Preparing to unpack .../10-python3-matplotlib_3.1.2-1ubuntu4_arm64.deb ...
+Unpacking python3-matplotlib (3.1.2-1ubuntu4) ...
+Selecting previously unselected package python3-tk:arm64.
+Preparing to unpack .../11-python3-tk_3.8.10-0ubuntu1~20.04_arm64.deb ...
+Unpacking python3-tk:arm64 (3.8.10-0ubuntu1~20.04) ...
+Setting up ttf-bitstream-vera (1.10-8) ...
+Setting up fonts-lyx (2.3.4.2-2) ...
+Setting up libjs-jquery-ui (1.12.1+dfsg-5) ...
+Setting up python3-cycler (0.10.0-3) ...
+Setting up python3-kiwisolver (1.0.1-3build1) ...
+Setting up libtcl8.6:arm64 (8.6.10+dfsg-1) ...
+Setting up python-matplotlib-data (3.1.2-1ubuntu4) ...
+Setting up python3-matplotlib (3.1.2-1ubuntu4) ...
+Setting up libtk8.6:arm64 (8.6.10-1) ...
+Setting up tk8.6-blt2.5 (2.5.3+dfsg-4) ...
+Setting up blt (2.5.3+dfsg-4) ...
+Setting up python3-tk:arm64 (3.8.10-0ubuntu1~20.04) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Processing triggers for fontconfig (2.13.1-2ubuntu3) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+  libyaml-doc
+The following NEW packages will be installed:
+  libyaml-dev
+0 upgraded, 1 newly installed, 0 to remove and 23 not upgraded.
+Need to get 54.8 kB of archives.
+After this operation, 243 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libyaml-dev arm64 0.2.2-1 [54.8 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 54.8 kB in 0s (129 kB/s)
+Selecting previously unselected package libyaml-dev:arm64.
+(Reading database ... 54362 files and directories currently installed.)
+Preparing to unpack .../libyaml-dev_0.2.2-1_arm64.deb ...
+Unpacking libyaml-dev:arm64 (0.2.2-1) ...
+Setting up libyaml-dev:arm64 (0.2.2-1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  uncrustify
+0 upgraded, 1 newly installed, 0 to remove and 23 not upgraded.
+Need to get 411 kB of archives.
+After this operation, 1288 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 uncrustify arm64 0.69.0+dfsg1-1build1 [411 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 411 kB in 1s (525 kB/s)
+Selecting previously unselected package uncrustify.
+(Reading database ... 54369 files and directories currently installed.)
+Preparing to unpack .../uncrustify_0.69.0+dfsg1-1build1_arm64.deb ...
+Unpacking uncrustify (0.69.0+dfsg1-1build1) ...
+Setting up uncrustify (0.69.0+dfsg1-1build1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  python3-netifaces
+0 upgraded, 1 newly installed, 0 to remove and 23 not upgraded.
+Need to get 15.7 kB of archives.
+After this operation, 67.6 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 python3-netifaces arm64 0.10.4-1ubuntu4 [15.7 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 15.7 kB in 0s (53.6 kB/s)
+Selecting previously unselected package python3-netifaces.
+(Reading database ... 54418 files and directories currently installed.)
+Preparing to unpack .../python3-netifaces_0.10.4-1ubuntu4_arm64.deb ...
+Unpacking python3-netifaces (0.10.4-1ubuntu4) ...
+Setting up python3-netifaces (0.10.4-1ubuntu4) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  python3-pydocstyle python3-snowballstemmer
+Suggested packages:
+  python3-stemmer
+The following NEW packages will be installed:
+  pydocstyle python3-pydocstyle python3-snowballstemmer
+0 upgraded, 3 newly installed, 0 to remove and 23 not upgraded.
+Need to get 93.1 kB of archives.
+After this operation, 965 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-snowballstemmer all 2.0.0-1 [58.6 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-pydocstyle all 2.1.1-1 [27.1 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 pydocstyle all 2.1.1-1 [7424 B]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 93.1 kB in 1s (180 kB/s)
+Selecting previously unselected package python3-snowballstemmer.
+(Reading database ... 54428 files and directories currently installed.)
+Preparing to unpack .../python3-snowballstemmer_2.0.0-1_all.deb ...
+Unpacking python3-snowballstemmer (2.0.0-1) ...
+Selecting previously unselected package python3-pydocstyle.
+Preparing to unpack .../python3-pydocstyle_2.1.1-1_all.deb ...
+Unpacking python3-pydocstyle (2.1.1-1) ...
+Selecting previously unselected package pydocstyle.
+Preparing to unpack .../pydocstyle_2.1.1-1_all.deb ...
+Unpacking pydocstyle (2.1.1-1) ...
+Setting up python3-snowballstemmer (2.0.0-1) ...
+Setting up python3-pydocstyle (2.1.1-1) ...
+Setting up pydocstyle (2.1.1-1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+  sqlite3-doc
+The following NEW packages will be installed:
+  libsqlite3-dev
+0 upgraded, 1 newly installed, 0 to remove and 23 not upgraded.
+Need to get 652 kB of archives.
+After this operation, 2354 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libsqlite3-dev arm64 3.31.1-4ubuntu0.3 [652 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 652 kB in 1s (611 kB/s)
+Selecting previously unselected package libsqlite3-dev:arm64.
+(Reading database ... 54493 files and directories currently installed.)
+Preparing to unpack .../libsqlite3-dev_3.31.1-4ubuntu0.3_arm64.deb ...
+Unpacking libsqlite3-dev:arm64 (3.31.1-4ubuntu0.3) ...
+Setting up libsqlite3-dev:arm64 (3.31.1-4ubuntu0.3) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  python3-bs4 python3-html5lib python3-lxml python3-mypy-extensions
+  python3-soupsieve python3-typed-ast python3-typing-extensions
+  python3-webencodings
+Suggested packages:
+  python3-genshi python3-lxml-dbg python-lxml-doc
+The following NEW packages will be installed:
+  python3-bs4 python3-html5lib python3-lxml python3-mypy
+  python3-mypy-extensions python3-soupsieve python3-typed-ast
+  python3-typing-extensions python3-webencodings
+0 upgraded, 9 newly installed, 0 to remove and 23 not upgraded.
+Need to get 6986 kB of archives.
+After this operation, 36.6 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 python3-soupsieve all 1.9.5+dfsg-1 [29.1 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 python3-bs4 all 4.8.2-1 [83.0 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 python3-webencodings all 0.5.1-1ubuntu1 [11.0 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 python3-html5lib all 1.0.1-2 [84.3 kB]
+Get:5 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 python3-lxml arm64 4.5.0-1ubuntu0.5 [1166 kB]
+Get:6 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-mypy-extensions all 0.4.3-1 [5436 B]
+Get:7 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-typed-ast arm64 1.4.1-1build1 [132 kB]
+Get:8 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-typing-extensions all 3.7.4.1-1 [27.5 kB]
+Get:9 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-mypy arm64 0.761-1build1 [5447 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 6986 kB in 7s (1050 kB/s)
+Selecting previously unselected package python3-soupsieve.
+(Reading database ... 54502 files and directories currently installed.)
+Preparing to unpack .../0-python3-soupsieve_1.9.5+dfsg-1_all.deb ...
+Unpacking python3-soupsieve (1.9.5+dfsg-1) ...
+Selecting previously unselected package python3-bs4.
+Preparing to unpack .../1-python3-bs4_4.8.2-1_all.deb ...
+Unpacking python3-bs4 (4.8.2-1) ...
+Selecting previously unselected package python3-webencodings.
+Preparing to unpack .../2-python3-webencodings_0.5.1-1ubuntu1_all.deb ...
+Unpacking python3-webencodings (0.5.1-1ubuntu1) ...
+Selecting previously unselected package python3-html5lib.
+Preparing to unpack .../3-python3-html5lib_1.0.1-2_all.deb ...
+Unpacking python3-html5lib (1.0.1-2) ...
+Selecting previously unselected package python3-lxml:arm64.
+Preparing to unpack .../4-python3-lxml_4.5.0-1ubuntu0.5_arm64.deb ...
+Unpacking python3-lxml:arm64 (4.5.0-1ubuntu0.5) ...
+Selecting previously unselected package python3-mypy-extensions.
+Preparing to unpack .../5-python3-mypy-extensions_0.4.3-1_all.deb ...
+Unpacking python3-mypy-extensions (0.4.3-1) ...
+Selecting previously unselected package python3-typed-ast.
+Preparing to unpack .../6-python3-typed-ast_1.4.1-1build1_arm64.deb ...
+Unpacking python3-typed-ast (1.4.1-1build1) ...
+Selecting previously unselected package python3-typing-extensions.
+Preparing to unpack .../7-python3-typing-extensions_3.7.4.1-1_all.deb ...
+Unpacking python3-typing-extensions (3.7.4.1-1) ...
+Selecting previously unselected package python3-mypy.
+Preparing to unpack .../8-python3-mypy_0.761-1build1_arm64.deb ...
+Unpacking python3-mypy (0.761-1build1) ...
+Setting up python3-typed-ast (1.4.1-1build1) ...
+Setting up python3-mypy-extensions (0.4.3-1) ...
+Setting up python3-webencodings (0.5.1-1ubuntu1) ...
+Setting up python3-typing-extensions (3.7.4.1-1) ...
+Setting up python3-html5lib (1.0.1-2) ...
+Setting up python3-lxml:arm64 (4.5.0-1ubuntu0.5) ...
+Setting up python3-soupsieve (1.9.5+dfsg-1) ...
+Setting up python3-bs4 (4.8.2-1) ...
+Setting up python3-mypy (0.761-1build1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  python3-pytest-mock
+0 upgraded, 1 newly installed, 0 to remove and 23 not upgraded.
+Need to get 14.6 kB of archives.
+After this operation, 52.2 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-pytest-mock all 1.10.4-3 [14.6 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 14.6 kB in 0s (47.1 kB/s)
+Selecting previously unselected package python3-pytest-mock.
+(Reading database ... 56355 files and directories currently installed.)
+Preparing to unpack .../python3-pytest-mock_1.10.4-3_all.deb ...
+Unpacking python3-pytest-mock (1.10.4-3) ...
+Setting up python3-pytest-mock (1.10.4-3) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  binfmt-support clang-10 clang-tidy-10 clang-tools-10 libclang-common-10-dev
+  libclang-cpp10 libffi-dev libgc1c2 libncurses-dev libobjc-9-dev libobjc4
+  libomp-10-dev libomp5-10 libpfm4 libpipeline1 libtinfo-dev libz3-4 libz3-dev
+  llvm-10 llvm-10-dev llvm-10-runtime llvm-10-tools
+Suggested packages:
+  clang-10-doc ncurses-doc libomp-10-doc llvm-10-doc
+The following NEW packages will be installed:
+  binfmt-support clang-10 clang-tidy clang-tidy-10 clang-tools-10
+  libclang-common-10-dev libclang-cpp10 libffi-dev libgc1c2 libncurses-dev
+  libobjc-9-dev libobjc4 libomp-10-dev libomp5-10 libpfm4 libpipeline1
+  libtinfo-dev libz3-4 libz3-dev llvm-10 llvm-10-dev llvm-10-runtime
+  llvm-10-tools
+0 upgraded, 23 newly installed, 0 to remove and 23 not upgraded.
+Need to get 51.8 MB of archives.
+After this operation, 346 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libpipeline1 arm64 1.5.2-2build1 [26.1 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 binfmt-support arm64 2.2.0-2 [55.5 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libclang-cpp10 arm64 1:10.0.0-4ubuntu1 [8123 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libgc1c2 arm64 1:7.6.4-0.4ubuntu1 [74.0 kB]
+Get:5 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 libobjc4 arm64 10.3.0-1ubuntu1~20.04 [39.5 kB]
+Get:6 http://ports.ubuntu.com/ubuntu-ports focal-updates/universe arm64 libobjc-9-dev arm64 9.4.0-1ubuntu1~20.04.1 [211 kB]
+Get:7 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libclang-common-10-dev arm64 1:10.0.0-4ubuntu1 [3267 kB]
+Get:8 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 clang-10 arm64 1:10.0.0-4ubuntu1 [61.9 kB]
+Get:9 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 clang-tools-10 arm64 1:10.0.0-4ubuntu1 [4996 kB]
+Get:10 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 clang-tidy-10 arm64 1:10.0.0-4ubuntu1 [846 kB]
+Get:11 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 clang-tidy arm64 1:10.0-50~exp1 [3048 B]
+Get:12 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libncurses-dev arm64 6.2-0ubuntu2 [327 kB]
+Get:13 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libomp5-10 arm64 1:10.0.0-4ubuntu1 [233 kB]
+Get:14 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libomp-10-dev arm64 1:10.0.0-4ubuntu1 [44.5 kB]
+Get:15 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libtinfo-dev arm64 6.2-0ubuntu2 [972 B]
+Get:16 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 llvm-10-runtime arm64 1:10.0.0-4ubuntu1 [148 kB]
+Get:17 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libpfm4 arm64 4.10.1+git20-g7700f49-2 [33.1 kB]
+Get:18 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 llvm-10 arm64 1:10.0.0-4ubuntu1 [4076 kB]
+Get:19 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libffi-dev arm64 3.3-4 [53.5 kB]
+Get:20 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 llvm-10-tools arm64 1:10.0.0-4ubuntu1 [276 kB]
+Get:21 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libz3-4 arm64 4.8.7-4build1 [5860 kB]
+Get:22 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libz3-dev arm64 4.8.7-4build1 [67.5 kB]
+Get:23 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 llvm-10-dev arm64 1:10.0.0-4ubuntu1 [23.0 MB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 51.8 MB in 46s (1126 kB/s)
+Selecting previously unselected package libpipeline1:arm64.
+(Reading database ... 56367 files and directories currently installed.)
+Preparing to unpack .../00-libpipeline1_1.5.2-2build1_arm64.deb ...
+Unpacking libpipeline1:arm64 (1.5.2-2build1) ...
+Selecting previously unselected package binfmt-support.
+Preparing to unpack .../01-binfmt-support_2.2.0-2_arm64.deb ...
+Unpacking binfmt-support (2.2.0-2) ...
+Selecting previously unselected package libclang-cpp10.
+Preparing to unpack .../02-libclang-cpp10_1%3a10.0.0-4ubuntu1_arm64.deb ...
+Unpacking libclang-cpp10 (1:10.0.0-4ubuntu1) ...
+Selecting previously unselected package libgc1c2:arm64.
+Preparing to unpack .../03-libgc1c2_1%3a7.6.4-0.4ubuntu1_arm64.deb ...
+Unpacking libgc1c2:arm64 (1:7.6.4-0.4ubuntu1) ...
+Selecting previously unselected package libobjc4:arm64.
+Preparing to unpack .../04-libobjc4_10.3.0-1ubuntu1~20.04_arm64.deb ...
+Unpacking libobjc4:arm64 (10.3.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libobjc-9-dev:arm64.
+Preparing to unpack .../05-libobjc-9-dev_9.4.0-1ubuntu1~20.04.1_arm64.deb ...
+Unpacking libobjc-9-dev:arm64 (9.4.0-1ubuntu1~20.04.1) ...
+Selecting previously unselected package libclang-common-10-dev.
+Preparing to unpack .../06-libclang-common-10-dev_1%3a10.0.0-4ubuntu1_arm64.deb ...
+Unpacking libclang-common-10-dev (1:10.0.0-4ubuntu1) ...
+Selecting previously unselected package clang-10.
+Preparing to unpack .../07-clang-10_1%3a10.0.0-4ubuntu1_arm64.deb ...
+Unpacking clang-10 (1:10.0.0-4ubuntu1) ...
+Selecting previously unselected package clang-tools-10.
+Preparing to unpack .../08-clang-tools-10_1%3a10.0.0-4ubuntu1_arm64.deb ...
+Unpacking clang-tools-10 (1:10.0.0-4ubuntu1) ...
+Selecting previously unselected package clang-tidy-10.
+Preparing to unpack .../09-clang-tidy-10_1%3a10.0.0-4ubuntu1_arm64.deb ...
+Unpacking clang-tidy-10 (1:10.0.0-4ubuntu1) ...
+Selecting previously unselected package clang-tidy.
+Preparing to unpack .../10-clang-tidy_1%3a10.0-50~exp1_arm64.deb ...
+Unpacking clang-tidy (1:10.0-50~exp1) ...
+Selecting previously unselected package libncurses-dev:arm64.
+Preparing to unpack .../11-libncurses-dev_6.2-0ubuntu2_arm64.deb ...
+Unpacking libncurses-dev:arm64 (6.2-0ubuntu2) ...
+Selecting previously unselected package libomp5-10:arm64.
+Preparing to unpack .../12-libomp5-10_1%3a10.0.0-4ubuntu1_arm64.deb ...
+Unpacking libomp5-10:arm64 (1:10.0.0-4ubuntu1) ...
+Selecting previously unselected package libomp-10-dev.
+Preparing to unpack .../13-libomp-10-dev_1%3a10.0.0-4ubuntu1_arm64.deb ...
+Unpacking libomp-10-dev (1:10.0.0-4ubuntu1) ...
+Selecting previously unselected package libtinfo-dev:arm64.
+Preparing to unpack .../14-libtinfo-dev_6.2-0ubuntu2_arm64.deb ...
+Unpacking libtinfo-dev:arm64 (6.2-0ubuntu2) ...
+Selecting previously unselected package llvm-10-runtime.
+Preparing to unpack .../15-llvm-10-runtime_1%3a10.0.0-4ubuntu1_arm64.deb ...
+Unpacking llvm-10-runtime (1:10.0.0-4ubuntu1) ...
+Selecting previously unselected package libpfm4:arm64.
+Preparing to unpack .../16-libpfm4_4.10.1+git20-g7700f49-2_arm64.deb ...
+Unpacking libpfm4:arm64 (4.10.1+git20-g7700f49-2) ...
+Selecting previously unselected package llvm-10.
+Preparing to unpack .../17-llvm-10_1%3a10.0.0-4ubuntu1_arm64.deb ...
+Unpacking llvm-10 (1:10.0.0-4ubuntu1) ...
+Selecting previously unselected package libffi-dev:arm64.
+Preparing to unpack .../18-libffi-dev_3.3-4_arm64.deb ...
+Unpacking libffi-dev:arm64 (3.3-4) ...
+Selecting previously unselected package llvm-10-tools.
+Preparing to unpack .../19-llvm-10-tools_1%3a10.0.0-4ubuntu1_arm64.deb ...
+Unpacking llvm-10-tools (1:10.0.0-4ubuntu1) ...
+Selecting previously unselected package libz3-4:arm64.
+Preparing to unpack .../20-libz3-4_4.8.7-4build1_arm64.deb ...
+Unpacking libz3-4:arm64 (4.8.7-4build1) ...
+Selecting previously unselected package libz3-dev:arm64.
+Preparing to unpack .../21-libz3-dev_4.8.7-4build1_arm64.deb ...
+Unpacking libz3-dev:arm64 (4.8.7-4build1) ...
+Selecting previously unselected package llvm-10-dev.
+Preparing to unpack .../22-llvm-10-dev_1%3a10.0.0-4ubuntu1_arm64.deb ...
+Unpacking llvm-10-dev (1:10.0.0-4ubuntu1) ...
+Setting up libpipeline1:arm64 (1.5.2-2build1) ...
+Setting up libncurses-dev:arm64 (6.2-0ubuntu2) ...
+Setting up llvm-10-tools (1:10.0.0-4ubuntu1) ...
+Setting up libclang-common-10-dev (1:10.0.0-4ubuntu1) ...
+Setting up libgc1c2:arm64 (1:7.6.4-0.4ubuntu1) ...
+Setting up libobjc4:arm64 (10.3.0-1ubuntu1~20.04) ...
+Setting up libffi-dev:arm64 (3.3-4) ...
+Setting up libclang-cpp10 (1:10.0.0-4ubuntu1) ...
+Setting up libz3-4:arm64 (4.8.7-4build1) ...
+Setting up libpfm4:arm64 (4.10.1+git20-g7700f49-2) ...
+Setting up binfmt-support (2.2.0-2) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/binfmt-support.service → /lib/systemd/system/binfmt-support.service.
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up libobjc-9-dev:arm64 (9.4.0-1ubuntu1~20.04.1) ...
+Setting up libomp5-10:arm64 (1:10.0.0-4ubuntu1) ...
+Setting up clang-10 (1:10.0.0-4ubuntu1) ...
+Setting up clang-tools-10 (1:10.0.0-4ubuntu1) ...
+Setting up libtinfo-dev:arm64 (6.2-0ubuntu2) ...
+Setting up libz3-dev:arm64 (4.8.7-4build1) ...
+Setting up libomp-10-dev (1:10.0.0-4ubuntu1) ...
+Setting up llvm-10-runtime (1:10.0.0-4ubuntu1) ...
+Setting up clang-tidy-10 (1:10.0.0-4ubuntu1) ...
+Setting up clang-tidy (1:10.0-50~exp1) ...
+Setting up llvm-10 (1:10.0.0-4ubuntu1) ...
+Setting up llvm-10-dev (1:10.0.0-4ubuntu1) ...
+Processing triggers for systemd (245.4-4ubuntu3.17) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  fonts-liberation libann0 libcdt5 libcgraph6 libgd3 libgts-0.7-5 libgts-bin
+  libgvc6 libgvpr2 liblab-gamut1 libpathplan4
+Suggested packages:
+  gsfonts graphviz-doc libgd-tools
+The following NEW packages will be installed:
+  fonts-liberation graphviz libann0 libcdt5 libcgraph6 libgd3 libgts-0.7-5
+  libgts-bin libgvc6 libgvpr2 liblab-gamut1 libpathplan4
+0 upgraded, 12 newly installed, 0 to remove and 23 not upgraded.
+Need to get 2652 kB of archives.
+After this operation, 11.4 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 fonts-liberation all 1:1.07.4-11 [822 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libann0 arm64 1.1.2+doc-7build1 [24.2 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libcdt5 arm64 2.42.2-3build2 [17.6 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libcgraph6 arm64 2.42.2-3build2 [38.8 kB]
+Get:5 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libgd3 arm64 2.2.5-5.2ubuntu2.1 [107 kB]
+Get:6 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libgts-0.7-5 arm64 0.7.6+darcs121130-4 [117 kB]
+Get:7 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libpathplan4 arm64 2.42.2-3build2 [20.1 kB]
+Get:8 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libgvc6 arm64 2.42.2-3build2 [588 kB]
+Get:9 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libgvpr2 arm64 2.42.2-3build2 [156 kB]
+Get:10 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 liblab-gamut1 arm64 2.42.2-3build2 [177 kB]
+Get:11 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 graphviz arm64 2.42.2-3build2 [545 kB]
+Get:12 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libgts-bin arm64 0.7.6+darcs121130-4 [38.8 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 2652 kB in 3s (910 kB/s)
+Selecting previously unselected package fonts-liberation.
+(Reading database ... 59451 files and directories currently installed.)
+Preparing to unpack .../00-fonts-liberation_1%3a1.07.4-11_all.deb ...
+Unpacking fonts-liberation (1:1.07.4-11) ...
+Selecting previously unselected package libann0.
+Preparing to unpack .../01-libann0_1.1.2+doc-7build1_arm64.deb ...
+Unpacking libann0 (1.1.2+doc-7build1) ...
+Selecting previously unselected package libcdt5:arm64.
+Preparing to unpack .../02-libcdt5_2.42.2-3build2_arm64.deb ...
+Unpacking libcdt5:arm64 (2.42.2-3build2) ...
+Selecting previously unselected package libcgraph6:arm64.
+Preparing to unpack .../03-libcgraph6_2.42.2-3build2_arm64.deb ...
+Unpacking libcgraph6:arm64 (2.42.2-3build2) ...
+Selecting previously unselected package libgd3:arm64.
+Preparing to unpack .../04-libgd3_2.2.5-5.2ubuntu2.1_arm64.deb ...
+Unpacking libgd3:arm64 (2.2.5-5.2ubuntu2.1) ...
+Selecting previously unselected package libgts-0.7-5:arm64.
+Preparing to unpack .../05-libgts-0.7-5_0.7.6+darcs121130-4_arm64.deb ...
+Unpacking libgts-0.7-5:arm64 (0.7.6+darcs121130-4) ...
+Selecting previously unselected package libpathplan4:arm64.
+Preparing to unpack .../06-libpathplan4_2.42.2-3build2_arm64.deb ...
+Unpacking libpathplan4:arm64 (2.42.2-3build2) ...
+Selecting previously unselected package libgvc6.
+Preparing to unpack .../07-libgvc6_2.42.2-3build2_arm64.deb ...
+Unpacking libgvc6 (2.42.2-3build2) ...
+Selecting previously unselected package libgvpr2:arm64.
+Preparing to unpack .../08-libgvpr2_2.42.2-3build2_arm64.deb ...
+Unpacking libgvpr2:arm64 (2.42.2-3build2) ...
+Selecting previously unselected package liblab-gamut1:arm64.
+Preparing to unpack .../09-liblab-gamut1_2.42.2-3build2_arm64.deb ...
+Unpacking liblab-gamut1:arm64 (2.42.2-3build2) ...
+Selecting previously unselected package graphviz.
+Preparing to unpack .../10-graphviz_2.42.2-3build2_arm64.deb ...
+Unpacking graphviz (2.42.2-3build2) ...
+Selecting previously unselected package libgts-bin.
+Preparing to unpack .../11-libgts-bin_0.7.6+darcs121130-4_arm64.deb ...
+Unpacking libgts-bin (0.7.6+darcs121130-4) ...
+Setting up liblab-gamut1:arm64 (2.42.2-3build2) ...
+Setting up libgts-0.7-5:arm64 (0.7.6+darcs121130-4) ...
+Setting up libpathplan4:arm64 (2.42.2-3build2) ...
+Setting up libann0 (1.1.2+doc-7build1) ...
+Setting up libgd3:arm64 (2.2.5-5.2ubuntu2.1) ...
+Setting up fonts-liberation (1:1.07.4-11) ...
+Setting up libcdt5:arm64 (2.42.2-3build2) ...
+Setting up libcgraph6:arm64 (2.42.2-3build2) ...
+Setting up libgts-bin (0.7.6+darcs121130-4) ...
+Setting up libgvc6 (2.42.2-3build2) ...
+Setting up libgvpr2:arm64 (2.42.2-3build2) ...
+Setting up graphviz (2.42.2-3build2) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Processing triggers for fontconfig (2.13.1-2ubuntu3) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  python3-pydot
+0 upgraded, 1 newly installed, 0 to remove and 23 not upgraded.
+Need to get 21.3 kB of archives.
+After this operation, 96.3 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-pydot all 1.4.1-3 [21.3 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 21.3 kB in 0s (61.8 kB/s)
+Selecting previously unselected package python3-pydot.
+(Reading database ... 59670 files and directories currently installed.)
+Preparing to unpack .../python3-pydot_1.4.1-3_all.deb ...
+Unpacking python3-pydot (1.4.1-3) ...
+Setting up python3-pydot (1.4.1-3) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+  python-pygraphviz-doc
+The following NEW packages will be installed:
+  python3-pygraphviz
+0 upgraded, 1 newly installed, 0 to remove and 23 not upgraded.
+Need to get 71.4 kB of archives.
+After this operation, 415 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-pygraphviz arm64 1.5-4build1 [71.4 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 71.4 kB in 0s (149 kB/s)
+Selecting previously unselected package python3-pygraphviz.
+(Reading database ... 59681 files and directories currently installed.)
+Preparing to unpack .../python3-pygraphviz_1.5-4build1_arm64.deb ...
+Unpacking python3-pygraphviz (1.5-4build1) ...
+Setting up python3-pygraphviz (1.5-4build1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  libgtest-dev
+0 upgraded, 1 newly installed, 0 to remove and 23 not upgraded.
+Need to get 216 kB of archives.
+After this operation, 1510 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libgtest-dev arm64 1.10.0-2 [216 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 216 kB in 1s (337 kB/s)
+Selecting previously unselected package libgtest-dev:arm64.
+(Reading database ... 59715 files and directories currently installed.)
+Preparing to unpack .../libgtest-dev_1.10.0-2_arm64.deb ...
+Unpacking libgtest-dev:arm64 (1.10.0-2) ...
+Setting up libgtest-dev:arm64 (1.10.0-2) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libapr1 libapr1-dev libaprutil1 libaprutil1-dev libldap2-dev liblog4cxx10v5
+  libsctp-dev libsctp1 uuid-dev
+Suggested packages:
+  liblog4cxx-doc zip lksctp-tools
+The following NEW packages will be installed:
+  libapr1 libapr1-dev libaprutil1 libaprutil1-dev libldap2-dev liblog4cxx-dev
+  liblog4cxx10v5 libsctp-dev libsctp1 uuid-dev
+0 upgraded, 10 newly installed, 0 to remove and 23 not upgraded.
+Need to get 2676 kB of archives.
+After this operation, 25.8 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libapr1 arm64 1.6.5-1ubuntu1 [85.4 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 uuid-dev arm64 2.34-0.1ubuntu9.3 [33.9 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libsctp1 arm64 1.0.18+dfsg-1 [7908 B]
+Get:4 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libsctp-dev arm64 1.0.18+dfsg-1 [60.0 kB]
+Get:5 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libapr1-dev arm64 1.6.5-1ubuntu1 [698 kB]
+Get:6 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libaprutil1 arm64 1.6.1-4ubuntu2 [82.4 kB]
+Get:7 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libldap2-dev arm64 2.4.49+dfsg-2ubuntu1.9 [262 kB]
+Get:8 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libaprutil1-dev arm64 1.6.1-4ubuntu2 [396 kB]
+Get:9 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 liblog4cxx10v5 arm64 0.10.0-15ubuntu2 [381 kB]
+Get:10 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 liblog4cxx-dev arm64 0.10.0-15ubuntu2 [669 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 2676 kB in 3s (778 kB/s)
+Selecting previously unselected package libapr1:arm64.
+(Reading database ... 59751 files and directories currently installed.)
+Preparing to unpack .../0-libapr1_1.6.5-1ubuntu1_arm64.deb ...
+Unpacking libapr1:arm64 (1.6.5-1ubuntu1) ...
+Selecting previously unselected package uuid-dev:arm64.
+Preparing to unpack .../1-uuid-dev_2.34-0.1ubuntu9.3_arm64.deb ...
+Unpacking uuid-dev:arm64 (2.34-0.1ubuntu9.3) ...
+Selecting previously unselected package libsctp1:arm64.
+Preparing to unpack .../2-libsctp1_1.0.18+dfsg-1_arm64.deb ...
+Unpacking libsctp1:arm64 (1.0.18+dfsg-1) ...
+Selecting previously unselected package libsctp-dev:arm64.
+Preparing to unpack .../3-libsctp-dev_1.0.18+dfsg-1_arm64.deb ...
+Unpacking libsctp-dev:arm64 (1.0.18+dfsg-1) ...
+Selecting previously unselected package libapr1-dev.
+Preparing to unpack .../4-libapr1-dev_1.6.5-1ubuntu1_arm64.deb ...
+Unpacking libapr1-dev (1.6.5-1ubuntu1) ...
+Selecting previously unselected package libaprutil1:arm64.
+Preparing to unpack .../5-libaprutil1_1.6.1-4ubuntu2_arm64.deb ...
+Unpacking libaprutil1:arm64 (1.6.1-4ubuntu2) ...
+Selecting previously unselected package libldap2-dev:arm64.
+Preparing to unpack .../6-libldap2-dev_2.4.49+dfsg-2ubuntu1.9_arm64.deb ...
+Unpacking libldap2-dev:arm64 (2.4.49+dfsg-2ubuntu1.9) ...
+Selecting previously unselected package libaprutil1-dev.
+Preparing to unpack .../7-libaprutil1-dev_1.6.1-4ubuntu2_arm64.deb ...
+Unpacking libaprutil1-dev (1.6.1-4ubuntu2) ...
+Selecting previously unselected package liblog4cxx10v5:arm64.
+Preparing to unpack .../8-liblog4cxx10v5_0.10.0-15ubuntu2_arm64.deb ...
+Unpacking liblog4cxx10v5:arm64 (0.10.0-15ubuntu2) ...
+Selecting previously unselected package liblog4cxx-dev:arm64.
+Preparing to unpack .../9-liblog4cxx-dev_0.10.0-15ubuntu2_arm64.deb ...
+Unpacking liblog4cxx-dev:arm64 (0.10.0-15ubuntu2) ...
+Setting up libapr1:arm64 (1.6.5-1ubuntu1) ...
+Setting up libldap2-dev:arm64 (2.4.49+dfsg-2ubuntu1.9) ...
+Setting up uuid-dev:arm64 (2.34-0.1ubuntu9.3) ...
+Setting up libsctp1:arm64 (1.0.18+dfsg-1) ...
+Setting up libaprutil1:arm64 (1.6.1-4ubuntu2) ...
+Setting up liblog4cxx10v5:arm64 (0.10.0-15ubuntu2) ...
+Setting up libsctp-dev:arm64 (1.0.18+dfsg-1) ...
+Setting up libapr1-dev (1.6.5-1ubuntu1) ...
+Setting up libaprutil1-dev (1.6.1-4ubuntu2) ...
+Setting up liblog4cxx-dev:arm64 (0.10.0-15ubuntu2) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+  gnome-icon-theme kdelibs-data
+The following NEW packages will be installed:
+  tango-icon-theme
+0 upgraded, 1 newly installed, 0 to remove and 23 not upgraded.
+Need to get 1161 kB of archives.
+After this operation, 11.3 MB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 tango-icon-theme all 0.8.90-7 [1161 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 1161 kB in 2s (759 kB/s)
+Selecting previously unselected package tango-icon-theme.
+(Reading database ... 61318 files and directories currently installed.)
+Preparing to unpack .../tango-icon-theme_0.8.90-7_all.deb ...
+Unpacking tango-icon-theme (0.8.90-7) ...
+Setting up tango-icon-theme (0.8.90-7) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+python3-lxml is already the newest version (4.5.0-1ubuntu0.5).
+python3-lxml set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 23 not upgraded.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  python3-cffi-backend
+Suggested packages:
+  python-cryptography-doc python3-cryptography-vectors
+The following NEW packages will be installed:
+  python3-cffi-backend python3-cryptography
+0 upgraded, 2 newly installed, 0 to remove and 23 not upgraded.
+Need to get 264 kB of archives.
+After this operation, 1853 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 python3-cffi-backend arm64 1.14.0-1build1 [69.0 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 python3-cryptography arm64 2.8-3ubuntu0.1 [195 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 264 kB in 1s (347 kB/s)
+Selecting previously unselected package python3-cffi-backend.
+(Reading database ... 65615 files and directories currently installed.)
+Preparing to unpack .../python3-cffi-backend_1.14.0-1build1_arm64.deb ...
+Unpacking python3-cffi-backend (1.14.0-1build1) ...
+Selecting previously unselected package python3-cryptography.
+Preparing to unpack .../python3-cryptography_2.8-3ubuntu0.1_arm64.deb ...
+Unpacking python3-cryptography (2.8-3ubuntu0.1) ...
+Setting up python3-cffi-backend (1.14.0-1build1) ...
+Setting up python3-cryptography (2.8-3ubuntu0.1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libcppunit-1.15-0
+Suggested packages:
+  libcppunit-doc
+The following NEW packages will be installed:
+  libcppunit-1.15-0 libcppunit-dev
+0 upgraded, 2 newly installed, 0 to remove and 23 not upgraded.
+Need to get 205 kB of archives.
+After this operation, 1171 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libcppunit-1.15-0 arm64 1.15.1-2build1 [72.3 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libcppunit-dev arm64 1.15.1-2build1 [133 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 205 kB in 1s (327 kB/s)
+Selecting previously unselected package libcppunit-1.15-0:arm64.
+(Reading database ... 65727 files and directories currently installed.)
+Preparing to unpack .../libcppunit-1.15-0_1.15.1-2build1_arm64.deb ...
+Unpacking libcppunit-1.15-0:arm64 (1.15.1-2build1) ...
+Selecting previously unselected package libcppunit-dev.
+Preparing to unpack .../libcppunit-dev_1.15.1-2build1_arm64.deb ...
+Unpacking libcppunit-dev (1.15.1-2build1) ...
+Setting up libcppunit-1.15-0:arm64 (1.15.1-2build1) ...
+Setting up libcppunit-dev (1.15.1-2build1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libgail-common libgail18 libgtk2.0-0 libgtk2.0-bin libgtk2.0-common
+  libopencv libtbb2
+Suggested packages:
+  gvfs
+The following NEW packages will be installed:
+  libgail-common libgail18 libgtk2.0-0 libgtk2.0-bin libgtk2.0-common
+  libopencv libopencv-dev libtbb2
+0 upgraded, 8 newly installed, 0 to remove and 23 not upgraded.
+Need to get 14.5 MB of archives.
+After this operation, 77.1 MB of additional disk space will be used.
+Get:1 https://repo.download.nvidia.com/jetson/common r34.1/main arm64 libopencv arm64 4.5.4-8-g3e4c170df4 [11.3 MB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libgtk2.0-common all 2.24.32-4ubuntu4 [126 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libgtk2.0-0 arm64 2.24.32-4ubuntu4 [1646 kB]
+Get:4 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libgail18 arm64 2.24.32-4ubuntu4 [13.7 kB]
+Get:5 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libgail-common arm64 2.24.32-4ubuntu4 [107 kB]
+Get:6 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libgtk2.0-bin arm64 2.24.32-4ubuntu4 [7728 B]
+Get:7 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libtbb2 arm64 2020.1-2 [92.3 kB]
+Get:8 https://repo.download.nvidia.com/jetson/common r34.1/main arm64 libopencv-dev arm64 4.5.4-8-g3e4c170df4 [1247 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 14.5 MB in 13s (1126 kB/s)
+Selecting previously unselected package libgtk2.0-common.
+(Reading database ... 65817 files and directories currently installed.)
+Preparing to unpack .../0-libgtk2.0-common_2.24.32-4ubuntu4_all.deb ...
+Unpacking libgtk2.0-common (2.24.32-4ubuntu4) ...
+Selecting previously unselected package libgtk2.0-0:arm64.
+Preparing to unpack .../1-libgtk2.0-0_2.24.32-4ubuntu4_arm64.deb ...
+Unpacking libgtk2.0-0:arm64 (2.24.32-4ubuntu4) ...
+Selecting previously unselected package libgail18:arm64.
+Preparing to unpack .../2-libgail18_2.24.32-4ubuntu4_arm64.deb ...
+Unpacking libgail18:arm64 (2.24.32-4ubuntu4) ...
+Selecting previously unselected package libgail-common:arm64.
+Preparing to unpack .../3-libgail-common_2.24.32-4ubuntu4_arm64.deb ...
+Unpacking libgail-common:arm64 (2.24.32-4ubuntu4) ...
+Selecting previously unselected package libgtk2.0-bin.
+Preparing to unpack .../4-libgtk2.0-bin_2.24.32-4ubuntu4_arm64.deb ...
+Unpacking libgtk2.0-bin (2.24.32-4ubuntu4) ...
+Selecting previously unselected package libtbb2:arm64.
+Preparing to unpack .../5-libtbb2_2020.1-2_arm64.deb ...
+Unpacking libtbb2:arm64 (2020.1-2) ...
+Selecting previously unselected package libopencv.
+Preparing to unpack .../6-libopencv_4.5.4-8-g3e4c170df4_arm64.deb ...
+Unpacking libopencv (4.5.4-8-g3e4c170df4) ...
+Selecting previously unselected package libopencv-dev.
+Preparing to unpack .../7-libopencv-dev_4.5.4-8-g3e4c170df4_arm64.deb ...
+Unpacking libopencv-dev (4.5.4-8-g3e4c170df4) ...
+Setting up libtbb2:arm64 (2020.1-2) ...
+Setting up libgtk2.0-common (2.24.32-4ubuntu4) ...
+Setting up libgtk2.0-0:arm64 (2.24.32-4ubuntu4) ...
+Setting up libopencv (4.5.4-8-g3e4c170df4) ...
+Setting up libopencv-dev (4.5.4-8-g3e4c170df4) ...
+Setting up libgail18:arm64 (2.24.32-4ubuntu4) ...
+Setting up libgtk2.0-bin (2.24.32-4ubuntu4) ...
+Setting up libgail-common:arm64 (2.24.32-4ubuntu4) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  libxml2-utils
+0 upgraded, 1 newly installed, 0 to remove and 23 not upgraded.
+Need to get 35.3 kB of archives.
+After this operation, 185 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libxml2-utils arm64 2.9.10+dfsg-5ubuntu0.20.04.3 [35.3 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 35.3 kB in 0s (106 kB/s)
+Selecting previously unselected package libxml2-utils.
+(Reading database ... 66345 files and directories currently installed.)
+Preparing to unpack .../libxml2-utils_2.9.10+dfsg-5ubuntu0.20.04.3_arm64.deb ...
+Unpacking libxml2-utils (2.9.10+dfsg-5ubuntu0.20.04.3) ...
+Setting up libxml2-utils (2.9.10+dfsg-5ubuntu0.20.04.3) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  clang-format-10
+The following NEW packages will be installed:
+  clang-format clang-format-10
+0 upgraded, 2 newly installed, 0 to remove and 23 not upgraded.
+Need to get 41.1 kB of archives.
+After this operation, 227 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 clang-format-10 arm64 1:10.0.0-4ubuntu1 [37.8 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 clang-format arm64 1:10.0-50~exp1 [3272 B]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 41.1 kB in 0s (93.9 kB/s)
+Selecting previously unselected package clang-format-10.
+(Reading database ... 66353 files and directories currently installed.)
+Preparing to unpack .../clang-format-10_1%3a10.0.0-4ubuntu1_arm64.deb ...
+Unpacking clang-format-10 (1:10.0.0-4ubuntu1) ...
+Selecting previously unselected package clang-format.
+Preparing to unpack .../clang-format_1%3a10.0-50~exp1_arm64.deb ...
+Unpacking clang-format (1:10.0-50~exp1) ...
+Setting up clang-format-10 (1:10.0.0-4ubuntu1) ...
+Setting up clang-format (1:10.0-50~exp1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+  python-lark-doc
+The following NEW packages will be installed:
+  python3-lark
+0 upgraded, 1 newly installed, 0 to remove and 23 not upgraded.
+Need to get 48.8 kB of archives.
+After this operation, 237 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-lark all 0.8.1-1 [48.8 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 48.8 kB in 0s (126 kB/s)
+Selecting previously unselected package python3-lark.
+(Reading database ... 66383 files and directories currently installed.)
+Preparing to unpack .../python3-lark_0.8.1-1_all.deb ...
+Unpacking python3-lark (0.8.1-1) ...
+Setting up python3-lark (0.8.1-1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libconsole-bridge0.4
+The following NEW packages will be installed:
+  libconsole-bridge-dev libconsole-bridge0.4
+0 upgraded, 2 newly installed, 0 to remove and 23 not upgraded.
+Need to get 14.7 kB of archives.
+After this operation, 68.6 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libconsole-bridge0.4 arm64 0.4.4+dfsg-1build1 [8036 B]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 libconsole-bridge-dev arm64 0.4.4+dfsg-1build1 [6640 B]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 14.7 kB in 0s (50.3 kB/s)
+Selecting previously unselected package libconsole-bridge0.4:arm64.
+(Reading database ... 66423 files and directories currently installed.)
+Preparing to unpack .../libconsole-bridge0.4_0.4.4+dfsg-1build1_arm64.deb ...
+Unpacking libconsole-bridge0.4:arm64 (0.4.4+dfsg-1build1) ...
+Selecting previously unselected package libconsole-bridge-dev:arm64.
+Preparing to unpack .../libconsole-bridge-dev_0.4.4+dfsg-1build1_arm64.deb ...
+Unpacking libconsole-bridge-dev:arm64 (0.4.4+dfsg-1build1) ...
+Setting up libconsole-bridge0.4:arm64 (0.4.4+dfsg-1build1) ...
+Setting up libconsole-bridge-dev:arm64 (0.4.4+dfsg-1build1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  libzstd-dev
+0 upgraded, 1 newly installed, 0 to remove and 23 not upgraded.
+Need to get 268 kB of archives.
+After this operation, 1005 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal-updates/main arm64 libzstd-dev arm64 1.4.4+dfsg-3ubuntu0.1 [268 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 268 kB in 1s (223 kB/s)
+Selecting previously unselected package libzstd-dev:arm64.
+(Reading database ... 66441 files and directories currently installed.)
+Preparing to unpack .../libzstd-dev_1.4.4+dfsg-3ubuntu0.1_arm64.deb ...
+Unpacking libzstd-dev:arm64 (1.4.4+dfsg-3ubuntu0.1) ...
+Setting up libzstd-dev:arm64 (1.4.4+dfsg-3ubuntu0.1) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  net-tools
+The following NEW packages will be installed:
+  net-tools python3-ifcfg
+0 upgraded, 2 newly installed, 0 to remove and 23 not upgraded.
+Need to get 203 kB of archives.
+After this operation, 874 kB of additional disk space will be used.
+Get:1 http://packages.ros.org/ros2/ubuntu focal/main arm64 python3-ifcfg all 0.18-2osrf~focal [9300 B]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 net-tools arm64 1.60+git20180626.aebd88e-1ubuntu1 [194 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 203 kB in 1s (318 kB/s)
+Selecting previously unselected package net-tools.
+(Reading database ... 66465 files and directories currently installed.)
+Preparing to unpack .../net-tools_1.60+git20180626.aebd88e-1ubuntu1_arm64.deb ...
+Unpacking net-tools (1.60+git20180626.aebd88e-1ubuntu1) ...
+Selecting previously unselected package python3-ifcfg.
+Preparing to unpack .../python3-ifcfg_0.18-2osrf~focal_all.deb ...
+Unpacking python3-ifcfg (0.18-2osrf~focal) ...
+Setting up net-tools (1.60+git20180626.aebd88e-1ubuntu1) ...
+Setting up python3-ifcfg (0.18-2osrf~focal) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+  python-nose-doc
+The following NEW packages will be installed:
+  python3-nose
+0 upgraded, 1 newly installed, 0 to remove and 23 not upgraded.
+Need to get 116 kB of archives.
+After this operation, 551 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-nose all 1.3.7-5 [116 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 116 kB in 1s (218 kB/s)
+Selecting previously unselected package python3-nose.
+(Reading database ... 66529 files and directories currently installed.)
+Preparing to unpack .../python3-nose_1.3.7-5_all.deb ...
+Unpacking python3-nose (1.3.7-5) ...
+Setting up python3-nose (1.3.7-5) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  liblttng-ctl0 liburcu6
+The following NEW packages will be installed:
+  liblttng-ctl0 liburcu6 python3-lttng
+0 upgraded, 3 newly installed, 0 to remove and 23 not upgraded.
+Need to get 320 kB of archives.
+After this operation, 1451 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 liburcu6 arm64 0.11.1-2 [51.9 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 liblttng-ctl0 arm64 2.11.2-1build1 [139 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-lttng arm64 2.11.2-1build1 [129 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 320 kB in 1s (363 kB/s)
+Selecting previously unselected package liburcu6:arm64.
+(Reading database ... 66593 files and directories currently installed.)
+Preparing to unpack .../liburcu6_0.11.1-2_arm64.deb ...
+Unpacking liburcu6:arm64 (0.11.1-2) ...
+Selecting previously unselected package liblttng-ctl0:arm64.
+Preparing to unpack .../liblttng-ctl0_2.11.2-1build1_arm64.deb ...
+Unpacking liblttng-ctl0:arm64 (2.11.2-1build1) ...
+Selecting previously unselected package python3-lttng.
+Preparing to unpack .../python3-lttng_2.11.2-1build1_arm64.deb ...
+Unpacking python3-lttng (2.11.2-1build1) ...
+Setting up liburcu6:arm64 (0.11.1-2) ...
+Setting up liblttng-ctl0:arm64 (2.11.2-1build1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Processing triggers for sgml-base (1.29.1) ...
+Setting up python3-lttng (2.11.2-1build1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libbabeltrace1 libdw1
+The following NEW packages will be installed:
+  libbabeltrace1 libdw1 python3-babeltrace
+0 upgraded, 3 newly installed, 0 to remove and 23 not upgraded.
+Need to get 396 kB of archives.
+After this operation, 1617 kB of additional disk space will be used.
+Get:1 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libdw1 arm64 0.176-1.1build1 [212 kB]
+Get:2 http://ports.ubuntu.com/ubuntu-ports focal/main arm64 libbabeltrace1 arm64 1.5.8-1build1 [142 kB]
+Get:3 http://ports.ubuntu.com/ubuntu-ports focal/universe arm64 python3-babeltrace arm64 1.5.8-1build1 [41.0 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 396 kB in 1s (366 kB/s)
+Selecting previously unselected package libdw1:arm64.
+(Reading database ... 66624 files and directories currently installed.)
+Preparing to unpack .../libdw1_0.176-1.1build1_arm64.deb ...
+Unpacking libdw1:arm64 (0.176-1.1build1) ...
+Selecting previously unselected package libbabeltrace1:arm64.
+Preparing to unpack .../libbabeltrace1_1.5.8-1build1_arm64.deb ...
+Unpacking libbabeltrace1:arm64 (1.5.8-1build1) ...
+Selecting previously unselected package python3-babeltrace.
+Preparing to unpack .../python3-babeltrace_1.5.8-1build1_arm64.deb ...
+Unpacking python3-babeltrace (1.5.8-1build1) ...
+Setting up libdw1:arm64 (0.176-1.1build1) ...
+Setting up libbabeltrace1:arm64 (1.5.8-1build1) ...
+Setting up python3-babeltrace (1.5.8-1build1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+executing command [apt-get install -y libcurl4-openssl-dev]
+executing command [apt-get install -y pkg-config]
+executing command [apt-get install -y libqt5core5a]
+executing command [apt-get install -y libqt5gui5]
+executing command [apt-get install -y libqt5opengl5]
+executing command [apt-get install -y libqt5widgets5]
+executing command [apt-get install -y qtbase5-dev]
+executing command [apt-get install -y qt5-qmake]
+executing command [apt-get install -y libpyside2-dev]
+executing command [apt-get install -y libshiboken2-dev]
+executing command [apt-get install -y pyqt5-dev]
+executing command [apt-get install -y python3-pyqt5]
+executing command [apt-get install -y python3-pyqt5.qtsvg]
+executing command [apt-get install -y python3-pyside2.qtsvg]
+executing command [apt-get install -y python3-sip-dev]
+executing command [apt-get install -y shiboken2]
+executing command [apt-get install -y python3-mock]
+executing command [apt-get install -y libeigen3-dev]
+executing command [apt-get install -y libassimp-dev]
+executing command [apt-get install -y libtinyxml-dev]
+executing command [apt-get install -y python3-psutil]
+executing command [apt-get install -y google-mock]
+executing command [apt-get install -y libssl-dev]
+executing command [apt-get install -y default-jdk]
+executing command [apt-get install -y libspdlog-dev]
+executing command [apt-get install -y libbenchmark-dev]
+executing command [apt-get install -y libxaw7-dev]
+executing command [apt-get install -y libxrandr-dev]
+executing command [apt-get install -y libgl1-mesa-dev]
+executing command [apt-get install -y libfreetype6-dev]
+executing command [apt-get install -y python3-numpy]
+executing command [apt-get install -y cppcheck]
+executing command [apt-get install -y python3-matplotlib]
+executing command [apt-get install -y libyaml-dev]
+executing command [apt-get install -y uncrustify]
+executing command [apt-get install -y python3-netifaces]
+executing command [apt-get install -y pydocstyle]
+executing command [apt-get install -y libsqlite3-dev]
+executing command [apt-get install -y python3-mypy]
+executing command [apt-get install -y python3-pytest-mock]
+executing command [apt-get install -y clang-tidy]
+executing command [apt-get install -y graphviz]
+executing command [apt-get install -y python3-pydot]
+executing command [apt-get install -y python3-pygraphviz]
+executing command [apt-get install -y libgtest-dev]
+executing command [apt-get install -y liblog4cxx-dev]
+executing command [apt-get install -y tango-icon-theme]
+executing command [apt-get install -y python3-lxml]
+executing command [apt-get install -y python3-cryptography]
+executing command [apt-get install -y libcppunit-dev]
+executing command [apt-get install -y libopencv-dev]
+executing command [apt-get install -y libxml2-utils]
+executing command [apt-get install -y clang-format]
+executing command [apt-get install -y python3-lark]
+executing command [apt-get install -y libconsole-bridge-dev]
+executing command [apt-get install -y libzstd-dev]
+executing command [apt-get install -y python3-ifcfg]
+executing command [apt-get install -y python3-nose]
+executing command [apt-get install -y python3-lttng]
+executing command [apt-get install -y python3-babeltrace]
+#All required rosdeps installed successfully
+Removing intermediate container 2de7b92924ce
+ ---> 4b8502fbc3f3
+Step 10/16 : RUN colcon build --symlink-install
+ ---> Running in 29eaa5bea7d4
+Starting >>> ament_package
+Starting >>> ament_lint
+Starting >>> gtest_vendor
+Starting >>> fastcdr
+Finished <<< gtest_vendor [2.48s]
+Starting >>> gmock_vendor
+Finished <<< gmock_vendor [0.64s]
+Starting >>> ament_cppcheck
+Finished <<< ament_lint [5.55s]
+Starting >>> ament_flake8
+Finished <<< ament_package [5.68s]
+Starting >>> ament_cmake_core
+Finished <<< ament_cppcheck [3.69s]
+Starting >>> cyclonedds
+Finished <<< ament_flake8 [5.27s]
+Starting >>> ament_pep257
+Finished <<< ament_cmake_core [6.57s]
+Starting >>> ament_cmake_libraries
+Finished <<< fastcdr [14.4s]
+Starting >>> ament_cmake_export_libraries
+Finished <<< ament_cmake_libraries [2.48s]
+Starting >>> ament_cmake_python
+Finished <<< ament_pep257 [4.12s]
+Starting >>> ament_cmake_export_dependencies
+Finished <<< ament_cmake_export_libraries [2.80s]
+Starting >>> ament_cmake_include_directories
+Finished <<< ament_cmake_python [2.63s]
+Starting >>> ament_cmake_test
+Finished <<< ament_cmake_export_dependencies [3.00s]
+Starting >>> ament_cmake_export_targets
+Finished <<< ament_cmake_include_directories [2.77s]
+Starting >>> ament_cmake_export_definitions
+Finished <<< ament_cmake_test [3.34s]
+Starting >>> ament_cmake_export_include_directories
+Finished <<< ament_cmake_export_targets [2.80s]
+Starting >>> ament_cmake_export_link_flags
+Finished <<< ament_cmake_export_definitions [2.46s]
+Starting >>> ament_cmake_version
+Finished <<< ament_cmake_export_include_directories [2.52s]
+Starting >>> ament_cmake_export_interfaces
+Finished <<< ament_cmake_export_link_flags [2.56s]
+Starting >>> ament_cmake_target_dependencies
+Finished <<< ament_cmake_version [2.34s]
+Starting >>> ament_copyright
+Finished <<< ament_cmake_target_dependencies [3.20s]
+Starting >>> ament_cmake_gtest
+Finished <<< ament_cmake_export_interfaces [3.45s]
+Starting >>> ament_cmake
+Finished <<< ament_copyright [3.99s]
+Starting >>> ament_cmake_pytest
+Finished <<< ament_cmake [2.39s]
+Starting >>> domain_coordinator
+Finished <<< ament_cmake_gtest [2.63s]
+Starting >>> ament_cmake_gmock
+Finished <<< ament_cmake_pytest [2.51s]
+Starting >>> ament_index_python
+Finished <<< ament_cmake_gmock [3.92s]
+Starting >>> ament_lint_cmake
+Finished <<< domain_coordinator [5.06s]
+Starting >>> ament_xmllint
+Finished <<< ament_index_python [4.39s]
+Starting >>> uncrustify_vendor
+Finished <<< ament_lint_cmake [4.15s]
+Starting >>> ament_cmake_lint_cmake
+Finished <<< ament_xmllint [4.01s]
+Starting >>> rpyutils
+Finished <<< uncrustify_vendor [4.98s]
+Starting >>> ament_cpplint
+Finished <<< ament_cmake_lint_cmake [3.48s]
+Starting >>> ament_cmake_copyright
+Finished <<< rpyutils [4.10s]
+Starting >>> ament_uncrustify
+Finished <<< ament_cmake_copyright [4.19s]
+Starting >>> ament_cmake_cppcheck
+Finished <<< ament_cpplint [4.50s]
+Starting >>> ament_cmake_cpplint
+Finished <<< ament_uncrustify [4.22s]
+Starting >>> ament_cmake_uncrustify
+Finished <<< ament_cmake_cppcheck [2.74s]
+Starting >>> ament_cmake_xmllint
+Finished <<< ament_cmake_cpplint [2.70s]
+Starting >>> ament_cmake_flake8
+Finished <<< ament_cmake_uncrustify [2.64s]
+Starting >>> ament_cmake_pep257
+Finished <<< ament_cmake_xmllint [3.45s]
+Starting >>> foonathan_memory_vendor
+Finished <<< ament_cmake_flake8 [4.21s]
+Starting >>> ament_lint_auto
+Finished <<< ament_cmake_pep257 [6.87s]
+Starting >>> ament_lint_common
+Finished <<< ament_lint_auto [4.91s]
+Starting >>> osrf_pycommon
+Finished <<< ament_lint_common [2.99s]
+Starting >>> ament_cmake_ros
+Finished <<< osrf_pycommon [3.88s]
+Starting >>> rosidl_adapter
+Finished <<< ament_cmake_ros [3.71s]
+Starting >>> rosidl_typesupport_interface
+Finished <<< rosidl_adapter [6.74s]
+Starting >>> rosidl_parser
+Finished <<< rosidl_parser [5.99s]
+Starting >>> rosidl_cmake
+Finished <<< rosidl_cmake [4.23s]
+Starting >>> connext_cmake_module
+Finished <<< connext_cmake_module [5.45s]
+Starting >>> rosidl_generator_dds_idl
+Finished <<< rosidl_generator_dds_idl [4.09s]
+Starting >>> fastrtps_cmake_module
+Finished <<< rosidl_typesupport_interface [29.4s]
+Starting >>> python_cmake_module
+Finished <<< fastrtps_cmake_module [5.64s]
+Starting >>> rmw_implementation_cmake
+Finished <<< python_cmake_module [3.32s]
+Starting >>> spdlog_vendor
+Finished <<< rmw_implementation_cmake [3.65s]
+Starting >>> tracetools
+Finished <<< spdlog_vendor [6.84s]
+Starting >>> launch
+Finished <<< tracetools [8.25s]
+Starting >>> ament_index_cpp
+Finished <<< launch [4.65s]
+Starting >>> launch_testing
+--- stderr: foonathan_memory_vendor
+Cloning into 'foo_mem-ext'...
+Note: switching to 'v0.7-1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 19ab075 Release 0.7-1
+---
+Finished <<< foonathan_memory_vendor [58.0s]
+Starting >>> fastrtps
+Finished <<< launch_testing [4.43s]
+Starting >>> osrf_testing_tools_cpp
+[Processing: ament_index_cpp, cyclonedds, fastrtps, osrf_testing_tools_cpp]
+Finished <<< ament_index_cpp [42.8s]
+Starting >>> launch_testing_ament_cmake
+Finished <<< launch_testing_ament_cmake [3.21s]
+Starting >>> python_qt_binding
+Finished <<< python_qt_binding [8.23s]
+Starting >>> tango_icons_vendor
+^[[6~Finished <<< tango_icons_vendor [5.81s]
+Starting >>> qt_gui
+Finished <<< qt_gui [7.88s]
+Starting >>> google_benchmark_vendor
+Finished <<< osrf_testing_tools_cpp [1min 20s]
+Starting >>> tinyxml2_vendor
+Finished <<< tinyxml2_vendor [6.60s]
+Starting >>> eigen3_cmake_module
+Finished <<< cyclonedds [3min 14s]
+Starting >>> yaml_cpp_vendor
+Finished <<< eigen3_cmake_module [5.57s]
+Starting >>> orocos_kdl
+[Processing: fastrtps, google_benchmark_vendor, orocos_kdl, yaml_cpp_vendor]
+Finished <<< google_benchmark_vendor [1min 28s]
+Starting >>> ament_cmake_google_benchmark
+Finished <<< ament_cmake_google_benchmark [3.01s]
+Starting >>> performance_test_fixture
+Finished <<< performance_test_fixture [19.5s]
+Starting >>> rosidl_runtime_cpp
+Finished <<< yaml_cpp_vendor [1min 47s]
+Starting >>> console_bridge_vendor
+Finished <<< rosidl_runtime_cpp [35.0s]
+Starting >>> urdfdom_headers
+Finished <<< urdfdom_headers [2.85s]
+Starting >>> tinyxml_vendor
+Finished <<< console_bridge_vendor [18.5s]
+Starting >>> shared_queues_vendor
+Finished <<< tinyxml_vendor [4.87s]
+Starting >>> urdfdom
+Finished <<< shared_queues_vendor [11.2s]
+Starting >>> ament_mypy
+Finished <<< ament_mypy [3.75s]
+Starting >>> libcurl_vendor
+Finished <<< libcurl_vendor [5.04s]
+Starting >>> mimick_vendor
+--- stderr: mimick_vendor
+Cloning into 'mimick-de11f8377eb95f932a03707b583bf3d4ce5bd3e7'...
+HEAD is now at de11f83 Support raspberry pi zero (#21)
+---
+Finished <<< mimick_vendor [20.2s]
+Starting >>> rcutils
+[Processing: fastrtps, orocos_kdl, rcutils, urdfdom]
+Finished <<< urdfdom [1min 35s]
+Starting >>> urdf
+Finished <<< urdf [10.1s]
+Starting >>> ament_cmake_auto
+Finished <<< ament_cmake_auto [2.68s]
+Starting >>> rviz_assimp_vendor
+Finished <<< rviz_assimp_vendor [4.54s]
+Starting >>> rviz_ogre_vendor
+^[^[^[^[^[[Processing: fastrtps, orocos_kdl, rcutils, rviz_ogre_vendor]
+[Processing: fastrtps, orocos_kdl, rcutils, rviz_ogre_vendor]
+[Processing: fastrtps, orocos_kdl, rcutils, rviz_ogre_vendor]
+[Processing: fastrtps, orocos_kdl, rcutils, rviz_ogre_vendor]
+Finished <<< orocos_kdl [6min 13s]
+Starting >>> qt_gui_py_common
+Finished <<< qt_gui_py_common [6.26s]
+Starting >>> resource_retriever
+Finished <<< rcutils [3min 49s]
+Starting >>> rosidl_runtime_c
+Finished <<< resource_retriever [34.9s]
+Starting >>> rcpputils
+[Processing: fastrtps, rcpputils, rosidl_runtime_c, rviz_ogre_vendor]
+Finished <<< rosidl_runtime_c [1min 6s]
+Starting >>> rmw
+[Processing: fastrtps, rcpputils, rmw, rviz_ogre_vendor]
+Finished <<< rcpputils [1min 42s]
+Starting >>> rosidl_typesupport_introspection_c
+Finished <<< rosidl_typesupport_introspection_c [8.33s]
+Starting >>> rosidl_typesupport_introspection_cpp
+Finished <<< rosidl_typesupport_introspection_cpp [7.96s]
+Starting >>> libyaml_vendor
+[Processing: fastrtps, libyaml_vendor, rmw, rviz_ogre_vendor]
+Finished <<< libyaml_vendor [43.2s]
+Starting >>> rcl_logging_log4cxx
+Finished <<< rcl_logging_log4cxx [8.30s]
+Starting >>> rcl_logging_noop
+Finished <<< rcl_logging_noop [6.27s]
+Starting >>> rcl_logging_spdlog
+Finished <<< rmw [2min 23s]
+Starting >>> rosidl_typesupport_connext_cpp
+--- stderr: rosidl_typesupport_connext_cpp
+CMake Warning at CMakeLists.txt:32 (message):
+  Could not find RTI Connext - skipping 'rosidl_typesupport_connext_cpp'
+
+
+---
+Finished <<< rosidl_typesupport_connext_cpp [7.63s]
+Starting >>> rmw_connext_shared_cpp
+Finished <<< rmw_connext_shared_cpp [11.1s]
+--- stderr: rmw_connext_shared_cpp
+CMake Warning at CMakeLists.txt:22 (message):
+  Could not find RTI Connext - skipping 'rmw_connext_shared_cpp'
+
+
+---
+Starting >>> rcl_yaml_param_parser
+[Processing: fastrtps, rcl_logging_spdlog, rcl_yaml_param_parser, rviz_ogre_vendor]
+Finished <<< rcl_logging_spdlog [59.5s]
+Starting >>> class_loader
+[Processing: class_loader, fastrtps, rcl_yaml_param_parser, rviz_ogre_vendor]
+Finished <<< rcl_yaml_param_parser [1min 21s]
+Starting >>> zstd_vendor
+[Processing: class_loader, fastrtps, rviz_ogre_vendor, zstd_vendor]
+Finished <<< class_loader [1min 21s]
+Starting >>> pluginlib
+[Processing: fastrtps, pluginlib, rviz_ogre_vendor, zstd_vendor]
+[Processing: fastrtps, pluginlib, rviz_ogre_vendor, zstd_vendor]
+Finished <<< pluginlib [1min 2s]
+Starting >>> test_interface_files
+Finished <<< test_interface_files [3.54s]
+Starting >>> rosidl_generator_c
+Finished <<< rosidl_generator_c [22.2s]
+Starting >>> rosidl_typesupport_connext_c
+--- stderr: rosidl_typesupport_connext_c
+CMake Warning at CMakeLists.txt:37 (message):
+  Could not find RTI Connext - skipping 'rosidl_typesupport_connext_c'
+
+
+---
+Finished <<< rosidl_typesupport_connext_c [5.66s]
+Starting >>> rmw_connext_cpp
+Finished <<< rmw_connext_cpp [5.70s]
+--- stderr: rmw_connext_cpp
+CMake Warning at CMakeLists.txt:32 (message):
+  Could not find RTI Connext - skipping 'rmw_connext_cpp'
+
+
+---
+Starting >>> rosidl_generator_cpp
+Finished <<< zstd_vendor [2min 17s]
+Starting >>> launch_xml
+Finished <<< launch_xml [4.35s]
+Starting >>> sqlite3_vendor
+Finished <<< sqlite3_vendor [4.68s]
+Starting >>> tracetools_trace
+Finished <<< tracetools_trace [4.40s]
+Starting >>> qt_gui_cpp
+[Processing: fastrtps, qt_gui_cpp, rosidl_generator_cpp, rviz_ogre_vendor]
+[Processing: fastrtps, qt_gui_cpp, rosidl_generator_cpp, rviz_ogre_vendor]
+Finished <<< rosidl_generator_cpp [1min 37s]
+Starting >>> ament_pycodestyle
+Finished <<< ament_pycodestyle [3.75s]
+Starting >>> launch_yaml
+Finished <<< launch_yaml [4.40s]
+Starting >>> tlsf
+Finished <<< tlsf [6.05s]
+Starting >>> qt_dotgraph
+Finished <<< qt_dotgraph [7.98s]
+Starting >>> kdl_parser
+Finished <<< kdl_parser [12.9s]
+Starting >>> ament_pyflakes
+Finished <<< ament_pyflakes [4.43s]
+Starting >>> ament_clang_format
+Finished <<< ament_clang_format [5.48s]
+Starting >>> ament_clang_tidy
+Finished <<< ament_clang_tidy [4.66s]
+Starting >>> ament_pclint
+Finished <<< ament_pclint [4.41s]
+Starting >>> tracetools_read
+Finished <<< tracetools_read [5.27s]
+Starting >>> ament_cmake_mypy
+Finished <<< ament_cmake_mypy [2.63s]
+Starting >>> rttest
+[Processing: fastrtps, qt_gui_cpp, rttest, rviz_ogre_vendor]
+Finished <<< rttest [33.4s]
+Starting >>> qt_gui_app
+Finished <<< qt_gui_app [5.45s]
+Starting >>> test_osrf_testing_tools_cpp
+Finished <<< test_osrf_testing_tools_cpp [6.16s]
+Starting >>> ros_environment
+Finished <<< ros_environment [2.60s]
+Starting >>> ament_cmake_nose
+Finished <<< ament_cmake_nose [2.41s]
+Starting >>> ament_cmake_clang_format
+Finished <<< ament_cmake_clang_format [2.61s]
+Starting >>> ament_cmake_clang_tidy
+Finished <<< ament_cmake_clang_tidy [3.13s]
+Starting >>> ament_cmake_pclint
+Finished <<< ament_cmake_pclint [2.81s]
+Starting >>> ament_cmake_pycodestyle
+Finished <<< ament_cmake_pycodestyle [2.82s]
+Starting >>> ament_cmake_pyflakes
+Finished <<< ament_cmake_pyflakes [2.59s]
+Starting >>> test_launch_testing
+[Processing: fastrtps, qt_gui_cpp, rviz_ogre_vendor, test_launch_testing]
+Finished <<< test_launch_testing [33.9s]
+--- stderr: qt_gui_cpp
+qt.shiboken: (typesystem) Unable to locate Clang's built-in include directory (neither by checking the environment variables LLVM_INSTALL_DIR, CLANG_INSTALL_DIR  nor running llvm-config). This may lead to parse errors.
+(typesystem) clang_parseTranslationUnit2(0x0, cmd[25]=-fPIC -Wno-constant-logical-operand -std=c++14 -I/home/ros2_foxy/src/ros-visualization/qt_gui_core/qt_gui_cpp/include -I/home/ros2_foxy/install/pluginlib/include -I/home/ros2_foxy/install/class_loader/include -I/home/ros2_foxy/install/rcpputils/include -I/home/ros2_foxy/install/rcutils/include -I/home/ros2_foxy/install/console_bridge_vendor/include -I/home/ros2_foxy/install/ament_index_cpp/include -I/usr/include -I/usr/include/aarch64-linux-gnu/qt5 -I/usr/include/aarch64-linux-gnu/qt5/QtWidgets -I/usr/include/aarch64-linux-gnu/qt5/QtGui -I/usr/include/aarch64-linux-gnu/qt5/QtCore -I/usr/lib/aarch64-linux-gnu/qt5/mkspecs/linux-g++ -I/usr/include/PySide2 -I/usr/include/c++/9 -I/usr/include/aarch64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/aarch64-linux-gnu/9/include -I/usr/local/include -I/usr/include/aarch64-linux-gnu -I/usr/include /tmp/global_biFPqn.hpp)
+qt.shiboken: (typesystem) Enum 'RCUTILS_LOG_SEVERITY' does not have a type entry
+qt.shiboken: (typesystem) While traversing QOpenGLShaderProgram: setAttributeArray(int,const float*,int,int): Cannot use parameter 2 as an array: <array> modification already applied.
+qt.shiboken: (typesystem) class 'QAccessibleWidget' inherits from unknown base class 'QAccessibleActionInterface'
+qt.shiboken: (typesystem) class not found for setup inheritance 'QAccessibleActionInterface'
+---
+[Processing: fastrtps, qt_gui_cpp, rviz_ogre_vendor]
+[Processing: fastrtps, qt_gui_cpp, rviz_ogre_vendor]
+[Processing: fastrtps, qt_gui_cpp, rviz_ogre_vendor]
+[Processing: fastrtps, qt_gui_cpp, rviz_ogre_vendor]
+[Processing: fastrtps, qt_gui_cpp, rviz_ogre_vendor]
+[Processing: fastrtps, qt_gui_cpp, rviz_ogre_vendor]
+[Processing: fastrtps, qt_gui_cpp, rviz_ogre_vendor]
+[Processing: fastrtps, qt_gui_cpp, rviz_ogre_vendor]
+[Processing: fastrtps, qt_gui_cpp, rviz_ogre_vendor]
+Finished <<< qt_gui_cpp [8min 33s]
+Starting >>> qt_gui_core
+Finished <<< qt_gui_core [4.91s]
+[Processing: fastrtps, rviz_ogre_vendor]
+[Processing: fastrtps, rviz_ogre_vendor]
+[Processing: fastrtps, rviz_ogre_vendor]
+[Processing: fastrtps, rviz_ogre_vendor]
+[Processing: fastrtps, rviz_ogre_vendor]
+[Processing: fastrtps, rviz_ogre_vendor]
+[Processing: fastrtps, rviz_ogre_vendor]
+[Processing: fastrtps, rviz_ogre_vendor]
+[Processing: fastrtps, rviz_ogre_vendor]
+[Processing: fastrtps, rviz_ogre_vendor]
+[Processing: fastrtps, rviz_ogre_vendor]
+[Processing: fastrtps, rviz_ogre_vendor]
+[Processing: fastrtps, rviz_ogre_vendor]
+[Processing: fastrtps, rviz_ogre_vendor]
+[Processing: fastrtps, rviz_ogre_vendor]
+[Processing: fastrtps, rviz_ogre_vendor]
+[Processing: fastrtps, rviz_ogre_vendor]
+Finished <<< fastrtps [32min 59s]
+Starting >>> rosidl_typesupport_fastrtps_cpp
+[Processing: rosidl_typesupport_fastrtps_cpp, rviz_ogre_vendor]
+Finished <<< rosidl_typesupport_fastrtps_cpp [36.4s]
+Starting >>> rosidl_typesupport_fastrtps_c
+[Processing: rosidl_typesupport_fastrtps_c, rviz_ogre_vendor]
+Finished <<< rosidl_typesupport_fastrtps_c [33.7s]
+Starting >>> rosidl_typesupport_c
+[Processing: rosidl_typesupport_c, rviz_ogre_vendor]
+Finished <<< rosidl_typesupport_c [45.5s]
+Starting >>> rosidl_generator_py
+Starting >>> rosidl_typesupport_cpp
+[Processing: rosidl_generator_py, rosidl_typesupport_cpp, rviz_ogre_vendor]
+Finished <<< rosidl_typesupport_cpp [49.6s]
+[Processing: rosidl_generator_py, rviz_ogre_vendor]
+[Processing: rosidl_generator_py, rviz_ogre_vendor]
+Finished <<< rosidl_generator_py [2min 18s]
+Starting >>> rosidl_default_runtime
+Starting >>> rosidl_default_generators
+Finished <<< rosidl_default_runtime [4.22s]
+Finished <<< rosidl_default_generators [4.23s]
+Starting >>> builtin_interfaces
+Starting >>> rmw_dds_common
+Starting >>> unique_identifier_msgs
+[Processing: builtin_interfaces, rmw_dds_common, rviz_ogre_vendor, unique_identifier_msgs]
+Finished <<< unique_identifier_msgs [37.2s]
+Starting >>> lifecycle_msgs
+Finished <<< builtin_interfaces [48.2s]
+Starting >>> rcl_interfaces
+[Processing: lifecycle_msgs, rcl_interfaces, rmw_dds_common, rviz_ogre_vendor]
+[Processing: lifecycle_msgs, rcl_interfaces, rmw_dds_common, rviz_ogre_vendor]
+Finished <<< rmw_dds_common [1min 56s]
+Starting >>> rmw_fastrtps_shared_cpp
+[Processing: lifecycle_msgs, rcl_interfaces, rmw_fastrtps_shared_cpp, rviz_ogre_vendor]
+Finished <<< lifecycle_msgs [2min 4s]
+Starting >>> rmw_cyclonedds_cpp
+[Processing: rcl_interfaces, rmw_cyclonedds_cpp, rmw_fastrtps_shared_cpp, rviz_ogre_vendor]
+[Processing: rcl_interfaces, rmw_cyclonedds_cpp, rmw_fastrtps_shared_cpp, rviz_ogre_vendor]
+Finished <<< rmw_cyclonedds_cpp [1min 2s]
+Starting >>> rosgraph_msgs
+[Processing: rcl_interfaces, rmw_fastrtps_shared_cpp, rosgraph_msgs, rviz_ogre_vendor]
+Finished <<< rosgraph_msgs [38.8s]
+Starting >>> action_msgs
+[Processing: action_msgs, rcl_interfaces, rmw_fastrtps_shared_cpp, rviz_ogre_vendor]
+Finished <<< rcl_interfaces [4min 11s]
+Starting >>> std_msgs
+[Processing: action_msgs, rmw_fastrtps_shared_cpp, rviz_ogre_vendor, std_msgs]
+Finished <<< action_msgs [1min 17s]
+Starting >>> statistics_msgs
+[Processing: rmw_fastrtps_shared_cpp, rviz_ogre_vendor, statistics_msgs, std_msgs]
+[Processing: rmw_fastrtps_shared_cpp, rviz_ogre_vendor, statistics_msgs, std_msgs]
+Finished <<< statistics_msgs [1min 5s]
+Starting >>> composition_interfaces
+Finished <<< rmw_fastrtps_shared_cpp [5min 7s]
+Starting >>> test_msgs
+[Processing: composition_interfaces, rviz_ogre_vendor, std_msgs, test_msgs]
+Finished <<< composition_interfaces [1min 11s]
+Starting >>> example_interfaces
+[Processing: example_interfaces, rviz_ogre_vendor, std_msgs, test_msgs]
+[Processing: example_interfaces, rviz_ogre_vendor, std_msgs, test_msgs]
+[Processing: example_interfaces, rviz_ogre_vendor, std_msgs, test_msgs]
+[Processing: example_interfaces, rviz_ogre_vendor, std_msgs, test_msgs]
+[Processing: example_interfaces, rviz_ogre_vendor, std_msgs, test_msgs]
+[Processing: example_interfaces, rviz_ogre_vendor, std_msgs, test_msgs]
+Finished <<< std_msgs [6min 3s]
+Starting >>> geometry_msgs
+[Processing: example_interfaces, geometry_msgs, rviz_ogre_vendor, test_msgs]
+[Processing: example_interfaces, geometry_msgs, rviz_ogre_vendor, test_msgs]
+[Processing: example_interfaces, geometry_msgs, rviz_ogre_vendor, test_msgs]
+Finished <<< test_msgs [5min 43s]
+Starting >>> rmw_fastrtps_cpp
+[Processing: example_interfaces, geometry_msgs, rmw_fastrtps_cpp, rviz_ogre_vendor]
+[Processing: example_interfaces, geometry_msgs, rmw_fastrtps_cpp, rviz_ogre_vendor]
+[Processing: example_interfaces, geometry_msgs, rmw_fastrtps_cpp, rviz_ogre_vendor]
+Finished <<< example_interfaces [6min 48s]
+Starting >>> rmw_fastrtps_dynamic_cpp
+[Processing: geometry_msgs, rmw_fastrtps_cpp, rmw_fastrtps_dynamic_cpp, rviz_ogre_vendor]
+[Processing: geometry_msgs, rmw_fastrtps_cpp, rmw_fastrtps_dynamic_cpp, rviz_ogre_vendor]
+Finished <<< rmw_fastrtps_cpp [2min 58s]
+Starting >>> std_srvs
+[Processing: geometry_msgs, rmw_fastrtps_dynamic_cpp, rviz_ogre_vendor, std_srvs]
+Finished <<< geometry_msgs [5min 39s]
+Starting >>> tf2
+Finished <<< std_srvs [1min 5s]
+Starting >>> sensor_msgs
+[Processing: rmw_fastrtps_dynamic_cpp, rviz_ogre_vendor, sensor_msgs, tf2]
+Finished <<< tf2 [1min 3s]
+Starting >>> tf2_msgs
+Finished <<< rmw_fastrtps_dynamic_cpp [3min 29s]
+Starting >>> rmw_implementation
+[Processing: rmw_implementation, rviz_ogre_vendor, sensor_msgs, tf2_msgs]
+Finished <<< rmw_implementation [46.8s]
+Starting >>> rcl
+Finished <<< tf2_msgs [1min 25s]
+Starting >>> rosidl_runtime_py
+Finished <<< rosidl_runtime_py [5.76s]
+Starting >>> nav_msgs
+[Processing: nav_msgs, rcl, rviz_ogre_vendor, sensor_msgs]
+[Processing: nav_msgs, rcl, rviz_ogre_vendor, sensor_msgs]
+[Processing: nav_msgs, rcl, rviz_ogre_vendor, sensor_msgs]
+[Processing: nav_msgs, rcl, rviz_ogre_vendor, sensor_msgs]
+Finished <<< nav_msgs [2min 8s]
+Starting >>> visualization_msgs
+[Processing: rcl, rviz_ogre_vendor, sensor_msgs, visualization_msgs]
+[Processing: rcl, rviz_ogre_vendor, sensor_msgs, visualization_msgs]
+[Processing: rcl, rviz_ogre_vendor, sensor_msgs, visualization_msgs]
+[Processing: rcl, rviz_ogre_vendor, sensor_msgs, visualization_msgs]
+[Processing: rcl, rviz_ogre_vendor, sensor_msgs, visualization_msgs]
+Finished <<< sensor_msgs [7min 20s]
+Starting >>> action_tutorials_interfaces
+Finished <<< visualization_msgs [3min 8s]
+Starting >>> map_msgs
+Finished <<< action_tutorials_interfaces [47.4s]
+Starting >>> pendulum_msgs
+[Processing: map_msgs, pendulum_msgs, rcl, rviz_ogre_vendor]
+Finished <<< pendulum_msgs [57.0s]
+Starting >>> actionlib_msgs
+[Processing: actionlib_msgs, map_msgs, rcl, rviz_ogre_vendor]
+[Processing: actionlib_msgs, map_msgs, rcl, rviz_ogre_vendor]
+Finished <<< actionlib_msgs [1min 3s]
+Starting >>> diagnostic_msgs
+Finished <<< map_msgs [2min 31s]
+Starting >>> shape_msgs
+[Processing: diagnostic_msgs, rcl, rviz_ogre_vendor, shape_msgs]
+[Processing: diagnostic_msgs, rcl, rviz_ogre_vendor, shape_msgs]
+Finished <<< shape_msgs [1min 18s]
+Starting >>> trajectory_msgs
+Finished <<< diagnostic_msgs [1min 32s]
+Starting >>> stereo_msgs
+[Processing: rcl, rviz_ogre_vendor, stereo_msgs, trajectory_msgs]
+Finished <<< stereo_msgs [45.4s]
+Starting >>> move_base_msgs
+[Processing: move_base_msgs, rcl, rviz_ogre_vendor, trajectory_msgs]
+Finished <<< trajectory_msgs [1min 23s]
+Starting >>> sensor_msgs_py
+Finished <<< sensor_msgs_py [5.79s]
+Starting >>> tf2_eigen_kdl
+Finished <<< move_base_msgs [46.0s]
+Starting >>> common_interfaces
+Finished <<< common_interfaces [5.19s]
+Starting >>> test_rmw_implementation
+[Processing: rcl, rviz_ogre_vendor, test_rmw_implementation, tf2_eigen_kdl]
+Finished <<< tf2_eigen_kdl [51.6s]
+[Processing: rcl, rviz_ogre_vendor, test_rmw_implementation]
+Finished <<< rcl [12min 40s]
+Starting >>> rcl_action
+Starting >>> libstatistics_collector
+[Processing: libstatistics_collector, rcl_action, rviz_ogre_vendor, test_rmw_implementation]
+[Processing: libstatistics_collector, rcl_action, rviz_ogre_vendor, test_rmw_implementation]
+[Processing: libstatistics_collector, rcl_action, rviz_ogre_vendor, test_rmw_implementation]
+[Processing: libstatistics_collector, rcl_action, rviz_ogre_vendor, test_rmw_implementation]
+Finished <<< libstatistics_collector [2min 18s]
+Starting >>> rclcpp
+[Processing: rcl_action, rclcpp, rviz_ogre_vendor, test_rmw_implementation]
+Finished <<< rcl_action [2min 52s]
+Starting >>> rclpy
+Finished <<< test_rmw_implementation [4min 30s]
+Starting >>> rcl_lifecycle
+[Processing: rcl_lifecycle, rclcpp, rclpy, rviz_ogre_vendor]
+Finished <<< rcl_lifecycle [57.1s]
+[Processing: rclcpp, rclpy, rviz_ogre_vendor]
+[Processing: rclcpp, rclpy, rviz_ogre_vendor]
+Finished <<< rclpy [2min 13s]
+Starting >>> launch_ros
+Starting >>> ros2cli
+Finished <<< launch_ros [10.2s]
+Starting >>> launch_testing_ros
+Finished <<< ros2cli [10.4s]
+Starting >>> tf2_py
+Finished <<< launch_testing_ros [6.78s]
+Starting >>> rqt_gui
+Finished <<< rqt_gui [6.85s]
+Starting >>> rqt_gui_py
+Finished <<< tf2_py [19.7s]
+Starting >>> ros2test
+Finished <<< rqt_gui_py [8.69s]
+Starting >>> rqt_py_common
+Finished <<< ros2test [7.35s]
+Starting >>> ros_testing
+Finished <<< ros_testing [5.41s]
+Starting >>> ros2pkg
+Finished <<< ros2pkg [7.42s]
+Starting >>> ros2node
+Finished <<< ros2node [8.10s]
+Starting >>> ros2service
+Finished <<< ros2service [7.53s]
+Starting >>> sros2
+Finished <<< sros2 [7.31s]
+Starting >>> ros2run
+Finished <<< ros2run [6.89s]
+Starting >>> ros2param
+Finished <<< ros2param [7.91s]
+Starting >>> demo_nodes_py
+Finished <<< demo_nodes_py [6.45s]
+Starting >>> ros2multicast
+Finished <<< rqt_py_common [1min 5s]
+Starting >>> rqt_console
+Finished <<< ros2multicast [6.88s]
+Starting >>> tracetools_launch
+Finished <<< rqt_console [10.9s]
+Starting >>> rqt_msg
+Finished <<< tracetools_launch [8.44s]
+Starting >>> ros2action
+Finished <<< rqt_msg [6.23s]
+Starting >>> ros2doctor
+Finished <<< ros2action [7.24s]
+Starting >>> ros2interface
+Finished <<< ros2doctor [7.56s]
+Starting >>> ros2topic
+Finished <<< ros2interface [7.45s]
+Starting >>> ros2launch
+Finished <<< ros2topic [7.77s]
+Starting >>> action_tutorials_py
+Finished <<< ros2launch [7.09s]
+Starting >>> examples_rclpy_executors
+Finished <<< action_tutorials_py [7.11s]
+Starting >>> examples_rclpy_minimal_action_client
+Finished <<< examples_rclpy_executors [6.95s]
+Starting >>> examples_rclpy_minimal_action_server
+Finished <<< examples_rclpy_minimal_action_client [6.71s]
+Starting >>> examples_rclpy_minimal_client
+Finished <<< examples_rclpy_minimal_action_server [6.81s]
+Starting >>> examples_rclpy_minimal_publisher
+Finished <<< examples_rclpy_minimal_client [6.65s]
+Starting >>> examples_rclpy_minimal_service
+Finished <<< examples_rclpy_minimal_publisher [6.84s]
+Starting >>> examples_rclpy_minimal_subscriber
+Finished <<< examples_rclpy_minimal_service [6.75s]
+Starting >>> quality_of_service_demo_py
+Finished <<< examples_rclpy_minimal_subscriber [6.82s]
+Starting >>> ros2trace
+Finished <<< quality_of_service_demo_py [6.73s]
+Starting >>> topic_monitor
+Finished <<< ros2trace [7.32s]
+Starting >>> rqt_graph
+Finished <<< topic_monitor [7.41s]
+Starting >>> rqt_plot
+Finished <<< rqt_graph [6.97s]
+Starting >>> rqt_publisher
+Finished <<< rqt_plot [6.58s]
+Starting >>> rqt_py_console
+Finished <<< rqt_publisher [6.60s]
+Starting >>> rqt_service_caller
+Finished <<< rqt_py_console [6.58s]
+Starting >>> rqt_shell
+Finished <<< rqt_service_caller [6.54s]
+Starting >>> rqt_top
+Finished <<< rqt_shell [6.38s]
+Starting >>> rqt_topic
+Finished <<< rqt_top [6.16s]
+Starting >>> rqt_reconfigure
+Finished <<< rqt_topic [6.68s]
+Starting >>> rqt_action
+Finished <<< rqt_reconfigure [7.46s]
+Starting >>> rqt_srv
+Finished <<< rqt_action [7.18s]
+Starting >>> sros2_cmake
+Finished <<< rqt_srv [6.85s]
+Finished <<< sros2_cmake [7.79s]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+[Processing: rclcpp, rviz_ogre_vendor]
+Finished <<< rclcpp [17min 50s]
+Starting >>> rclcpp_components
+Starting >>> rclcpp_action
+Starting >>> message_filters
+[Processing: message_filters, rclcpp_action, rclcpp_components, rviz_ogre_vendor]
+[Processing: message_filters, rclcpp_action, rclcpp_components, rviz_ogre_vendor]
+[Processing: message_filters, rclcpp_action, rclcpp_components, rviz_ogre_vendor]
+[Processing: message_filters, rclcpp_action, rclcpp_components, rviz_ogre_vendor]
+Finished <<< rclcpp_components [2min 7s]
+Starting >>> rosbag2_test_common
+Finished <<< rosbag2_test_common [13.2s]
+Starting >>> rosbag2_storage
+[Processing: message_filters, rclcpp_action, rosbag2_storage, rviz_ogre_vendor]
+[Processing: message_filters, rclcpp_action, rosbag2_storage, rviz_ogre_vendor]
+Finished <<< rclcpp_action [3min 29s]
+Starting >>> rclcpp_lifecycle
+Finished <<< rosbag2_storage [1min 30s]
+Starting >>> rosbag2_cpp
+[Processing: message_filters, rclcpp_lifecycle, rosbag2_cpp, rviz_ogre_vendor]
+Finished <<< rviz_ogre_vendor [1h 27min 59s]
+Starting >>> rviz_rendering
+Finished <<< message_filters [4min 31s]
+Starting >>> tf2_ros
+[Processing: rclcpp_lifecycle, rosbag2_cpp, rviz_rendering, tf2_ros]
+[Processing: rclcpp_lifecycle, rosbag2_cpp, rviz_rendering, tf2_ros]
+[Processing: rclcpp_lifecycle, rosbag2_cpp, rviz_rendering, tf2_ros]
+[Processing: rclcpp_lifecycle, rosbag2_cpp, rviz_rendering, tf2_ros]
+[Processing: rclcpp_lifecycle, rosbag2_cpp, rviz_rendering, tf2_ros]
+Finished <<< rclcpp_lifecycle [3min 45s]
+Starting >>> laser_geometry
+Finished <<< rosbag2_cpp [3min 48s]
+Starting >>> rosbag2_compression
+Finished <<< laser_geometry [52.8s]
+Starting >>> rosbag2_storage_default_plugins
+[Processing: rosbag2_compression, rosbag2_storage_default_plugins, rviz_rendering, tf2_ros]
+[Processing: rosbag2_compression, rosbag2_storage_default_plugins, rviz_rendering, tf2_ros]
+Finished <<< rosbag2_storage_default_plugins [1min 16s]
+Starting >>> rosbag2_converter_default_plugins
+[Processing: rosbag2_compression, rosbag2_converter_default_plugins, rviz_rendering, tf2_ros]
+Finished <<< rosbag2_compression [2min 25s]
+Starting >>> rosbag2_transport
+[Processing: rosbag2_converter_default_plugins, rosbag2_transport, rviz_rendering, tf2_ros]
+Finished <<< rosbag2_converter_default_plugins [1min 21s]
+Starting >>> dummy_map_server
+Finished <<< rviz_rendering [6min 36s]
+Starting >>> rviz_rendering_tests
+Finished <<< tf2_ros [6min 31s]
+Starting >>> tf2_geometry_msgs
+Finished <<< dummy_map_server [28.2s]
+Starting >>> tf2_kdl
+[Processing: rosbag2_transport, rviz_rendering_tests, tf2_geometry_msgs, tf2_kdl]
+Finished <<< tf2_geometry_msgs [47.5s]
+Starting >>> rviz_common
+Finished <<< tf2_kdl [48.5s]
+Starting >>> interactive_markers
+Finished <<< rviz_rendering_tests [1min 16s]
+Starting >>> dummy_sensors
+[Processing: dummy_sensors, interactive_markers, rosbag2_transport, rviz_common]
+Finished <<< dummy_sensors [40.8s]
+Starting >>> rqt_gui_cpp
+[Processing: interactive_markers, rosbag2_transport, rqt_gui_cpp, rviz_common]
+Finished <<< rqt_gui_cpp [54.2s]
+Starting >>> tlsf_cpp
+[Processing: interactive_markers, rosbag2_transport, rviz_common, tlsf_cpp]
+[Processing: interactive_markers, rosbag2_transport, rviz_common, tlsf_cpp]
+Finished <<< interactive_markers [3min 1s]
+Starting >>> ros2lifecycle_test_fixtures
+Finished <<< ros2lifecycle_test_fixtures [23.1s]
+Starting >>> turtlesim
+Finished <<< tlsf_cpp [1min 38s]
+Starting >>> composition
+[Processing: composition, rosbag2_transport, rviz_common, turtlesim]
+[Processing: composition, rosbag2_transport, rviz_common, turtlesim]
+[Processing: composition, rosbag2_transport, rviz_common, turtlesim]
+[Processing: composition, rosbag2_transport, rviz_common, turtlesim]
+Finished <<< composition [2min 12s]
+Starting >>> demo_nodes_cpp
+[Processing: demo_nodes_cpp, rosbag2_transport, rviz_common, turtlesim]
+[Processing: demo_nodes_cpp, rosbag2_transport, rviz_common, turtlesim]
+[Processing: demo_nodes_cpp, rosbag2_transport, rviz_common, turtlesim]
+[Processing: demo_nodes_cpp, rosbag2_transport, rviz_common, turtlesim]
+[Processing: demo_nodes_cpp, rosbag2_transport, rviz_common, turtlesim]
+Finished <<< turtlesim [5min 2s]
+Starting >>> logging_demo
+[Processing: demo_nodes_cpp, logging_demo, rosbag2_transport, rviz_common]
+[Processing: demo_nodes_cpp, logging_demo, rosbag2_transport, rviz_common]
+[Processing: demo_nodes_cpp, logging_demo, rosbag2_transport, rviz_common]
+Finished <<< logging_demo [1min 31s]
+Starting >>> robot_state_publisher
+[Processing: demo_nodes_cpp, robot_state_publisher, rosbag2_transport, rviz_common]
+[Processing: demo_nodes_cpp, robot_state_publisher, rosbag2_transport, rviz_common]
+[Processing: demo_nodes_cpp, robot_state_publisher, rosbag2_transport, rviz_common]
+[Processing: demo_nodes_cpp, robot_state_publisher, rosbag2_transport, rviz_common]
+[Processing: demo_nodes_cpp, robot_state_publisher, rosbag2_transport, rviz_common]
+Finished <<< robot_state_publisher [2min 35s]
+Starting >>> tf2_bullet
+[Processing: demo_nodes_cpp, rosbag2_transport, rviz_common, tf2_bullet]
+Finished <<< tf2_bullet [46.4s]
+Starting >>> tf2_eigen
+[Processing: demo_nodes_cpp, rosbag2_transport, rviz_common, tf2_eigen]
+Finished <<< demo_nodes_cpp [8min 20s]
+Starting >>> tf2_sensor_msgs
+Finished <<< tf2_eigen [53.6s]
+Starting >>> tf2_tools
+Finished <<< tf2_sensor_msgs [15.8s]
+Starting >>> lifecycle
+Finished <<< tf2_tools [8.20s]
+Starting >>> ros2lifecycle
+Finished <<< ros2lifecycle [8.32s]
+Starting >>> ros2component
+Finished <<< ros2component [7.56s]
+Starting >>> examples_rclcpp_minimal_client
+[Processing: examples_rclcpp_minimal_client, lifecycle, rosbag2_transport, rviz_common]
+Finished <<< examples_rclcpp_minimal_client [31.0s]
+Starting >>> examples_rclcpp_minimal_publisher
+[Processing: examples_rclcpp_minimal_publisher, lifecycle, rosbag2_transport, rviz_common]
+Finished <<< lifecycle [1min 29s]
+Starting >>> examples_rclcpp_minimal_service
+Finished <<< examples_rclcpp_minimal_publisher [1min 10s]
+Starting >>> examples_rclcpp_minimal_subscriber
+Finished <<< examples_rclcpp_minimal_service [31.4s]
+Starting >>> examples_rclcpp_minimal_timer
+[Processing: examples_rclcpp_minimal_subscriber, examples_rclcpp_minimal_timer, rosbag2_transport, rviz_common]
+Finished <<< examples_rclcpp_minimal_timer [39.2s]
+Starting >>> examples_rclcpp_multithreaded_executor
+[Processing: examples_rclcpp_minimal_subscriber, examples_rclcpp_multithreaded_executor, rosbag2_transport, rviz_common]
+Finished <<< examples_rclcpp_multithreaded_executor [37.4s]
+Starting >>> intra_process_demo
+Finished <<< examples_rclcpp_minimal_subscriber [1min 21s]
+Starting >>> test_cli
+Finished <<< test_cli [25.6s]
+Starting >>> test_cli_remapping
+[Processing: intra_process_demo, rosbag2_transport, rviz_common, test_cli_remapping]
+Finished <<< test_cli_remapping [31.9s]
+Starting >>> test_quality_of_service
+[Processing: intra_process_demo, rosbag2_transport, rviz_common, test_quality_of_service]
+[Processing: intra_process_demo, rosbag2_transport, rviz_common, test_quality_of_service]
+[Processing: intra_process_demo, rosbag2_transport, rviz_common, test_quality_of_service]
+[Processing: intra_process_demo, rosbag2_transport, rviz_common, test_quality_of_service]
+Finished <<< intra_process_demo [3min 30s]
+Starting >>> action_tutorials_cpp
+Finished <<< rosbag2_transport [23min 22s]
+Starting >>> ros2bag
+Finished <<< ros2bag [8.30s]
+Starting >>> rosbag2_tests
+[Processing: action_tutorials_cpp, rosbag2_tests, rviz_common, test_quality_of_service]
+Finished <<< action_tutorials_cpp [1min 7s]
+Starting >>> examples_rclcpp_minimal_action_client
+Finished <<< test_quality_of_service [3min 43s]
+Starting >>> examples_rclcpp_minimal_action_server
+[Processing: examples_rclcpp_minimal_action_client, examples_rclcpp_minimal_action_server, rosbag2_tests, rviz_common]
+Finished <<< examples_rclcpp_minimal_action_server [42.3s]
+Starting >>> examples_rclcpp_minimal_composition
+Finished <<< examples_rclcpp_minimal_action_client [1min 15s]
+Starting >>> quality_of_service_demo_cpp
+[Processing: examples_rclcpp_minimal_composition, quality_of_service_demo_cpp, rosbag2_tests, rviz_common]
+Finished <<< examples_rclcpp_minimal_composition [1min 18s]
+Starting >>> test_communication
+Finished <<< rosbag2_tests [2min 47s]
+Starting >>> demo_nodes_cpp_native
+[Processing: demo_nodes_cpp_native, quality_of_service_demo_cpp, rviz_common, test_communication]
+Finished <<< demo_nodes_cpp_native [47.7s]
+Starting >>> examples_tf2_py
+Finished <<< examples_tf2_py [7.81s]
+Starting >>> image_tools
+[Processing: image_tools, quality_of_service_demo_cpp, rviz_common, test_communication]
+[Processing: image_tools, quality_of_service_demo_cpp, rviz_common, test_communication]
+[Processing: image_tools, quality_of_service_demo_cpp, rviz_common, test_communication]
+Finished <<< image_tools [1min 38s]
+Starting >>> rqt
+Finished <<< rqt [7.28s]
+Starting >>> test_rclcpp
+Finished <<< quality_of_service_demo_cpp [3min 38s]
+Starting >>> tracetools_test
+[Processing: rviz_common, test_communication, test_rclcpp, tracetools_test]
+[Processing: rviz_common, test_communication, test_rclcpp, tracetools_test]
+Finished <<< rviz_common [28min 43s]
+Starting >>> rviz_visual_testing_framework
+[Processing: rviz_visual_testing_framework, test_communication, test_rclcpp, tracetools_test]
+Finished <<< tracetools_test [2min 20s]
+Starting >>> bag_recorder_nodes
+[Processing: bag_recorder_nodes, rviz_visual_testing_framework, test_communication, test_rclcpp]
+[Processing: bag_recorder_nodes, rviz_visual_testing_framework, test_communication, test_rclcpp]
+Finished <<< bag_recorder_nodes [1min 0s]
+Starting >>> dummy_robot_bringup
+Finished <<< dummy_robot_bringup [11.0s]
+Starting >>> geometry2
+Finished <<< geometry2 [5.86s]
+Starting >>> test_tf2
+[Processing: rviz_visual_testing_framework, test_communication, test_rclcpp, test_tf2]
+[Processing: rviz_visual_testing_framework, test_communication, test_rclcpp, test_tf2]
+Finished <<< rviz_visual_testing_framework [3min 13s]
+Starting >>> rviz_default_plugins
+[Processing: rviz_default_plugins, test_communication, test_rclcpp, test_tf2]
+Finished <<< test_tf2 [1min 46s]
+Starting >>> test_launch_ros
+[8129.327s] WARNING:colcon.colcon_ros.task.ament_python.build:Package 'test_launch_ros' doesn't explicitly install a marker in the package index (colcon-ros currently does it implicitly but that fallback will be removed in the future)
+Finished <<< test_launch_ros [8.06s]
+Starting >>> test_security
+Finished <<< test_security [17.2s]
+Starting >>> pendulum_control
+[Processing: pendulum_control, rviz_default_plugins, test_communication, test_rclcpp]
+[Processing: pendulum_control, rviz_default_plugins, test_communication, test_rclcpp]
+Finished <<< pendulum_control [1min 23s]
+Starting >>> ros1_bridge
+Finished <<< test_communication [10min 3s]
+Starting >>> ros2cli_common_extensions
+Finished <<< ros2cli_common_extensions [10.1s]
+Starting >>> rosbag2
+--- stderr: ros1_bridge
+CMake Warning at CMakeLists.txt:34 (message):
+  Failed to find ROS 1 roscpp, skipping...
+
+
+---
+Finished <<< ros1_bridge [16.8s]
+Finished <<< rosbag2 [7.49s]
+[Processing: rviz_default_plugins, test_rclcpp]
+[Processing: rviz_default_plugins, test_rclcpp]
+[Processing: rviz_default_plugins, test_rclcpp]
+[Processing: rviz_default_plugins, test_rclcpp]
+[Processing: rviz_default_plugins, test_rclcpp]
+[Processing: rviz_default_plugins, test_rclcpp]
+[Processing: rviz_default_plugins, test_rclcpp]
+[Processing: rviz_default_plugins, test_rclcpp]
+[Processing: rviz_default_plugins, test_rclcpp]
+[Processing: rviz_default_plugins, test_rclcpp]
+[Processing: rviz_default_plugins, test_rclcpp]
+[Processing: rviz_default_plugins, test_rclcpp]
+[Processing: rviz_default_plugins, test_rclcpp]
+[Processing: rviz_default_plugins, test_rclcpp]
+[Processing: rviz_default_plugins, test_rclcpp]
+Finished <<< test_rclcpp [15min 10s]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+[Processing: rviz_default_plugins]
+Finished <<< rviz_default_plugins [33min 42s]
+Starting >>> rviz2
+[Processing: rviz2]
+Finished <<< rviz2 [38.8s]
+
+Summary: 311 packages finished [2h 49min 6s]
+  8 packages had stderr output: foonathan_memory_vendor mimick_vendor qt_gui_cpp rmw_connext_cpp rmw_connext_shared_cpp ros1_bridge rosidl_typesupport_connext_c rosidl_typesupport_connext_cpp
+Removing intermediate container 29eaa5bea7d4
+ ---> d24f8705463f
+Step 11/16 : WORKDIR /
+ ---> Running in fa07fd68c24d
+Removing intermediate container fa07fd68c24d
+ ---> 0ffcf7e2863d
+Step 12/16 : RUN echo ". /home/ros2_foxy/install/local_setup.bash" >> /root/.bashrc
+ ---> Running in 177658125af0
+Removing intermediate container 177658125af0
+ ---> c1eb07bc7b90
+Step 13/16 : RUN mkdir -p /home/controller/src
+ ---> Running in 50dd6f8ce47c
+Removing intermediate container 50dd6f8ce47c
+ ---> 7811e61e7063
+Step 14/16 : WORKDIR /home/controller/src
+ ---> Running in ba85fa7b5c3c
+Removing intermediate container ba85fa7b5c3c
+ ---> e5282e7dd2a4
+Step 15/16 : RUN ros2 pkg create--build-type ament_cmake --node-name controller_node robosub --dependencies rclcpp mavros std_msgs sensor_msgs
+ ---> Running in 2092fa22ba5e
+/bin/sh: 1: ros2: not found
+The command '/bin/sh -c ros2 pkg create--build-type ament_cmake --node-name controller_node robosub --dependencies rclcpp mavros std_msgs sensor_msgs' returned a non-zero code: 127
+

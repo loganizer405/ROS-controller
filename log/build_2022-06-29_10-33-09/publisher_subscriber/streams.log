@@ -1,0 +1,24 @@
+[0.065s] Invoking command in '/home/lur/controller/build/publisher_subscriber': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/publisher_subscriber -- -j4 -l4
+[0.159s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.242s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.931s] CMake Error at CMakeLists.txt:19 (find_package):
+[0.931s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[0.931s]   asked CMake to find a package configuration file provided by "catkin", but
+[0.932s]   CMake did not find one.
+[0.932s] 
+[0.933s]   Could not find a package configuration file provided by "catkin" with any
+[0.933s]   of the following names:
+[0.934s] 
+[0.934s]     catkinConfig.cmake
+[0.935s]     catkin-config.cmake
+[0.935s] 
+[0.936s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[0.936s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[0.936s]   provides a separate development package or SDK, be sure it has been
+[0.937s]   installed.
+[0.937s] 
+[0.937s] -- Configuring incomplete, errors occurred!
+[0.938s] See also "/home/lur/controller/build/publisher_subscriber/CMakeFiles/CMakeOutput.log".
+[0.938s] 
+[0.944s] make: *** [Makefile:310: cmake_check_build_system] Error 1
+[0.951s] Invoked command in '/home/lur/controller/build/publisher_subscriber' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/publisher_subscriber -- -j4 -l4

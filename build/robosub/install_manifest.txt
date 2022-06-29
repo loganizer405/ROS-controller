@@ -1,0 +1,16 @@
+/home/lur/controller/install/robosub/lib/robosub/controller_node
+/home/lur/controller/install/robosub/share/ament_index/resource_index/package_run_dependencies/robosub
+/home/lur/controller/install/robosub/share/ament_index/resource_index/parent_prefix_path/robosub
+/home/lur/controller/install/robosub/share/robosub/environment/ament_prefix_path.sh
+/home/lur/controller/install/robosub/share/robosub/environment/ament_prefix_path.dsv
+/home/lur/controller/install/robosub/share/robosub/environment/path.sh
+/home/lur/controller/install/robosub/share/robosub/environment/path.dsv
+/home/lur/controller/install/robosub/share/robosub/local_setup.bash
+/home/lur/controller/install/robosub/share/robosub/local_setup.sh
+/home/lur/controller/install/robosub/share/robosub/local_setup.zsh
+/home/lur/controller/install/robosub/share/robosub/local_setup.dsv
+/home/lur/controller/install/robosub/share/robosub/package.dsv
+/home/lur/controller/install/robosub/share/ament_index/resource_index/packages/robosub
+/home/lur/controller/install/robosub/share/robosub/cmake/robosubConfig.cmake
+/home/lur/controller/install/robosub/share/robosub/cmake/robosubConfig-version.cmake
+/home/lur/controller/install/robosub/share/robosub/package.xml

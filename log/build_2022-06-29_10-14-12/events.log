@@ -1,0 +1,4 @@
+[0.000000] (-) TimerEvent: {}
+[0.001623] (-) JobUnselected: {'identifier': 'publisher_subscriber'}
+[0.001907] (-) JobUnselected: {'identifier': 'robosub'}
+[0.002714] (-) EventReactorShutdown: {}

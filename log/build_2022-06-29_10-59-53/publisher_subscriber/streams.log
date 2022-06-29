@@ -1,0 +1,19 @@
+[0.059s] Invoking command in '/home/lur/controller/build/publisher_subscriber': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/publisher_subscriber -- -j4 -l4
+[0.152s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.236s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.885s] -- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.005s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.017s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.412s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.579s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.583s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.045s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[2.388s] CMake Error at CMakeLists.txt:56 (amend_export_include_directories):
+[2.389s]   Unknown CMake command "amend_export_include_directories".
+[2.389s] 
+[2.389s] 
+[2.395s] -- Configuring incomplete, errors occurred!
+[2.396s] See also "/home/lur/controller/build/publisher_subscriber/CMakeFiles/CMakeOutput.log".
+[2.396s] See also "/home/lur/controller/build/publisher_subscriber/CMakeFiles/CMakeError.log".
+[2.417s] make: *** [Makefile:310: cmake_check_build_system] Error 1
+[2.426s] Invoked command in '/home/lur/controller/build/publisher_subscriber' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/publisher_subscriber -- -j4 -l4

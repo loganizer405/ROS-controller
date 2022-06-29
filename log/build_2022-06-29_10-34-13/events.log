@@ -1,0 +1,195 @@
+[0.000000] (-) TimerEvent: {}
+[0.000913] (-) JobUnselected: {'identifier': 'examples_rclcpp_async_client'}
+[0.001886] (-) JobUnselected: {'identifier': 'examples_rclcpp_cbg_executor'}
+[0.002004] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_action_client'}
+[0.002126] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_action_server'}
+[0.002261] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_client'}
+[0.002352] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_composition'}
+[0.002454] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_publisher'}
+[0.002540] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_service'}
+[0.002625] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_subscriber'}
+[0.002707] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_timer'}
+[0.002787] (-) JobUnselected: {'identifier': 'examples_rclcpp_multithreaded_executor'}
+[0.002867] (-) JobUnselected: {'identifier': 'examples_rclcpp_wait_set'}
+[0.002974] (-) JobUnselected: {'identifier': 'examples_rclpy_executors'}
+[0.003082] (-) JobUnselected: {'identifier': 'examples_rclpy_guard_conditions'}
+[0.003683] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_action_client'}
+[0.003776] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_action_server'}
+[0.004776] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_client'}
+[0.004869] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_publisher'}
+[0.005068] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_service'}
+[0.005159] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_subscriber'}
+[0.005341] (-) JobUnselected: {'identifier': 'examples_rclpy_pointcloud_publisher'}
+[0.005507] (-) JobUnselected: {'identifier': 'launch_testing_examples'}
+[0.007003] (-) JobUnselected: {'identifier': 'robosub'}
+[0.007695] (publisher_subscriber) JobQueued: {'identifier': 'publisher_subscriber', 'dependencies': OrderedDict()}
+[0.007909] (publisher_subscriber) JobStarted: {'identifier': 'publisher_subscriber'}
+[0.049022] (publisher_subscriber) JobProgress: {'identifier': 'publisher_subscriber', 'progress': 'cmake'}
+[0.052015] (publisher_subscriber) JobProgress: {'identifier': 'publisher_subscriber', 'progress': 'build'}
+[0.055941] (publisher_subscriber) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lur/controller/build/publisher_subscriber', '--', '-j4', '-l4'], 'cwd': '/home/lur/controller/build/publisher_subscriber', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lur'), ('SSH_CLIENT', '192.168.55.100 61272 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/lur'), ('OLDPWD', '/home/lur/controller/publisher_subscriber/src'), ('SSH_TTY', '/dev/pts/1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLCON_PREFIX_PATH', '/home/lur/controller/install'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'lur'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '4'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:11.0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/lur/controller/install/publisher_subscriber:/home/lur/controller/install/robosub:/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/lur/controller/build/publisher_subscriber'), ('SSH_CONNECTION', '192.168.55.100 61272 192.168.55.1 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/lur/controller/install/publisher_subscriber:/home/lur/controller/install/robosub:/opt/ros/foxy')]), 'shell': False}
+[0.098588] (-) TimerEvent: {}
+[0.161569] (publisher_subscriber) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.198733] (-) TimerEvent: {}
+[0.243182] (publisher_subscriber) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.299126] (-) TimerEvent: {}
+[0.400650] (-) TimerEvent: {}
+[0.501430] (-) TimerEvent: {}
+[0.602293] (-) TimerEvent: {}
+[0.703180] (-) TimerEvent: {}
+[0.804039] (-) TimerEvent: {}
+[0.899740] (publisher_subscriber) StdoutLine: {'line': b'-- Found angles: 1.12.3 (/opt/ros/foxy/share/angles/cmake)\n'}
+[0.904236] (-) TimerEvent: {}
+[0.939058] (publisher_subscriber) StderrLine: {'line': b'CMake Warning at CMakeLists.txt:21 (find_package):\n'}
+[0.939988] (publisher_subscriber) StderrLine: {'line': b'  By not providing "Findcontrol_toolbox.cmake" in CMAKE_MODULE_PATH this\n'}
+[0.940319] (publisher_subscriber) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[0.940708] (publisher_subscriber) StderrLine: {'line': b'  "control_toolbox", but CMake did not find one.\n'}
+[0.941043] (publisher_subscriber) StderrLine: {'line': b'\n'}
+[0.941429] (publisher_subscriber) StderrLine: {'line': b'  Could not find a package configuration file provided by "control_toolbox"\n'}
+[0.941716] (publisher_subscriber) StderrLine: {'line': b'  with any of the following names:\n'}
+[0.941980] (publisher_subscriber) StderrLine: {'line': b'\n'}
+[0.942235] (publisher_subscriber) StderrLine: {'line': b'    control_toolboxConfig.cmake\n'}
+[0.942572] (publisher_subscriber) StderrLine: {'line': b'    control_toolbox-config.cmake\n'}
+[0.942825] (publisher_subscriber) StderrLine: {'line': b'\n'}
+[0.943075] (publisher_subscriber) StderrLine: {'line': b'  Add the installation prefix of "control_toolbox" to CMAKE_PREFIX_PATH or\n'}
+[0.943335] (publisher_subscriber) StderrLine: {'line': b'  set "control_toolbox_DIR" to a directory containing one of the above files.\n'}
+[0.943656] (publisher_subscriber) StderrLine: {'line': b'  If "control_toolbox" provides a separate development package or SDK, be\n'}
+[0.943930] (publisher_subscriber) StderrLine: {'line': b'  sure it has been installed.\n'}
+[0.944177] (publisher_subscriber) StderrLine: {'line': b'\n'}
+[0.944421] (publisher_subscriber) StderrLine: {'line': b'\n'}
+[0.968449] (publisher_subscriber) StderrLine: {'line': b'CMake Warning at CMakeLists.txt:22 (find_package):\n'}
+[0.969080] (publisher_subscriber) StderrLine: {'line': b'  By not providing "Findeigen_conversions.cmake" in CMAKE_MODULE_PATH this\n'}
+[0.969472] (publisher_subscriber) StderrLine: {'line': b'  project has asked CMake to find a package configuration file provided by\n'}
+[0.969754] (publisher_subscriber) StderrLine: {'line': b'  "eigen_conversions", but CMake did not find one.\n'}
+[0.970045] (publisher_subscriber) StderrLine: {'line': b'\n'}
+[0.970345] (publisher_subscriber) StderrLine: {'line': b'  Could not find a package configuration file provided by "eigen_conversions"\n'}
+[0.970605] (publisher_subscriber) StderrLine: {'line': b'  with any of the following names:\n'}
+[0.970856] (publisher_subscriber) StderrLine: {'line': b'\n'}
+[0.971114] (publisher_subscriber) StderrLine: {'line': b'    eigen_conversionsConfig.cmake\n'}
+[0.971413] (publisher_subscriber) StderrLine: {'line': b'    eigen_conversions-config.cmake\n'}
+[0.971689] (publisher_subscriber) StderrLine: {'line': b'\n'}
+[0.971933] (publisher_subscriber) StderrLine: {'line': b'  Add the installation prefix of "eigen_conversions" to CMAKE_PREFIX_PATH or\n'}
+[0.972178] (publisher_subscriber) StderrLine: {'line': b'  set "eigen_conversions_DIR" to a directory containing one of the above\n'}
+[0.972468] (publisher_subscriber) StderrLine: {'line': b'  files.  If "eigen_conversions" provides a separate development package or\n'}
+[0.972843] (publisher_subscriber) StderrLine: {'line': b'  SDK, be sure it has been installed.\n'}
+[0.973100] (publisher_subscriber) StderrLine: {'line': b'\n'}
+[0.973345] (publisher_subscriber) StderrLine: {'line': b'\n'}
+[0.976450] (publisher_subscriber) StdoutLine: {'line': b'-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)\n'}
+[1.004606] (-) TimerEvent: {}
+[1.105545] (-) TimerEvent: {}
+[1.122712] (publisher_subscriber) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.159860] (publisher_subscriber) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[1.205775] (-) TimerEvent: {}
+[1.306678] (-) TimerEvent: {}
+[1.407581] (-) TimerEvent: {}
+[1.508574] (-) TimerEvent: {}
+[1.538398] (publisher_subscriber) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[1.608777] (-) TimerEvent: {}
+[1.653232] (publisher_subscriber) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[1.708997] (-) TimerEvent: {}
+[1.810040] (-) TimerEvent: {}
+[1.910965] (-) TimerEvent: {}
+[2.000737] (publisher_subscriber) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.011153] (-) TimerEvent: {}
+[2.111946] (-) TimerEvent: {}
+[2.212944] (-) TimerEvent: {}
+[2.313904] (-) TimerEvent: {}
+[2.408142] (publisher_subscriber) StdoutLine: {'line': b'-- Found mavros: 2.1.1 (/opt/ros/foxy/share/mavros/cmake)\n'}
+[2.414049] (-) TimerEvent: {}
+[2.446116] (publisher_subscriber) StdoutLine: {'line': b'-- Found mavros_extras: 2.1.1 (/opt/ros/foxy/share/mavros_extras/cmake)\n'}
+[2.487954] (publisher_subscriber) StderrLine: {'line': b'CMake Warning at CMakeLists.txt:26 (find_package):\n'}
+[2.489519] (publisher_subscriber) StderrLine: {'line': b'  By not providing "Findroscpp.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[2.489882] (publisher_subscriber) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "roscpp", but\n'}
+[2.490196] (publisher_subscriber) StderrLine: {'line': b'  CMake did not find one.\n'}
+[2.490535] (publisher_subscriber) StderrLine: {'line': b'\n'}
+[2.490818] (publisher_subscriber) StderrLine: {'line': b'  Could not find a package configuration file provided by "roscpp" with any\n'}
+[2.491082] (publisher_subscriber) StderrLine: {'line': b'  of the following names:\n'}
+[2.491368] (publisher_subscriber) StderrLine: {'line': b'\n'}
+[2.491700] (publisher_subscriber) StderrLine: {'line': b'    roscppConfig.cmake\n'}
+[2.491955] (publisher_subscriber) StderrLine: {'line': b'    roscpp-config.cmake\n'}
+[2.492202] (publisher_subscriber) StderrLine: {'line': b'\n'}
+[2.492616] (publisher_subscriber) StderrLine: {'line': b'  Add the installation prefix of "roscpp" to CMAKE_PREFIX_PATH or set\n'}
+[2.492927] (publisher_subscriber) StderrLine: {'line': b'  "roscpp_DIR" to a directory containing one of the above files.  If "roscpp"\n'}
+[2.493185] (publisher_subscriber) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[2.493432] (publisher_subscriber) StderrLine: {'line': b'  installed.\n'}
+[2.493736] (publisher_subscriber) StderrLine: {'line': b'\n'}
+[2.494011] (publisher_subscriber) StderrLine: {'line': b'\n'}
+[2.499017] (publisher_subscriber) StdoutLine: {'line': b'-- Found tf2_ros: 0.13.13 (/opt/ros/foxy/share/tf2_ros/cmake)\n'}
+[2.514270] (-) TimerEvent: {}
+[2.615116] (-) TimerEvent: {}
+[2.716022] (-) TimerEvent: {}
+[2.814485] (publisher_subscriber) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[2.816114] (-) TimerEvent: {}
+[2.824888] (publisher_subscriber) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[2.832362] (publisher_subscriber) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[2.916400] (-) TimerEvent: {}
+[3.017492] (-) TimerEvent: {}
+[3.118570] (-) TimerEvent: {}
+[3.161341] (publisher_subscriber) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[3.162829] (publisher_subscriber) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[3.218777] (-) TimerEvent: {}
+[3.319652] (-) TimerEvent: {}
+[3.420902] (-) TimerEvent: {}
+[3.491509] (publisher_subscriber) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[3.492956] (publisher_subscriber) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[3.521129] (-) TimerEvent: {}
+[3.622096] (-) TimerEvent: {}
+[3.723014] (-) TimerEvent: {}
+[3.770616] (publisher_subscriber) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[3.771724] (publisher_subscriber) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[3.823227] (-) TimerEvent: {}
+[3.924125] (-) TimerEvent: {}
+[4.025234] (-) TimerEvent: {}
+[4.082429] (publisher_subscriber) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[4.087749] (publisher_subscriber) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[4.125481] (-) TimerEvent: {}
+[4.226490] (-) TimerEvent: {}
+[4.327460] (-) TimerEvent: {}
+[4.428415] (-) TimerEvent: {}
+[4.529445] (-) TimerEvent: {}
+[4.630436] (-) TimerEvent: {}
+[4.731379] (-) TimerEvent: {}
+[4.832343] (-) TimerEvent: {}
+[4.933336] (-) TimerEvent: {}
+[5.034301] (-) TimerEvent: {}
+[5.135223] (-) TimerEvent: {}
+[5.236190] (-) TimerEvent: {}
+[5.337195] (-) TimerEvent: {}
+[5.438193] (-) TimerEvent: {}
+[5.539196] (-) TimerEvent: {}
+[5.640759] (-) TimerEvent: {}
+[5.741661] (-) TimerEvent: {}
+[5.815984] (publisher_subscriber) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[5.841857] (-) TimerEvent: {}
+[5.942600] (-) TimerEvent: {}
+[6.043390] (-) TimerEvent: {}
+[6.049067] (publisher_subscriber) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[6.060840] (publisher_subscriber) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[6.061620] (publisher_subscriber) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/lur/controller/publisher_subscriber/include>\n'}
+[6.061942] (publisher_subscriber) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[6.074497] (publisher_subscriber) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[6.075069] (publisher_subscriber) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[6.078192] (publisher_subscriber) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[6.083096] (publisher_subscriber) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[6.086140] (publisher_subscriber) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[6.098465] (publisher_subscriber) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[6.098986] (publisher_subscriber) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[6.101809] (publisher_subscriber) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[6.115440] (publisher_subscriber) StdoutLine: {'line': b'-- Configuring done\n'}
+[6.138388] (publisher_subscriber) StdoutLine: {'line': b'-- Generating done\n'}
+[6.143547] (-) TimerEvent: {}
+[6.148352] (publisher_subscriber) StdoutLine: {'line': b'-- Build files have been written to: /home/lur/controller/build/publisher_subscriber\n'}
+[6.243855] (-) TimerEvent: {}
+[6.276452] (publisher_subscriber) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/imu_data.dir/src/imu_data.cpp.o\x1b[0m\n'}
+[6.277133] (publisher_subscriber) StdoutLine: {'line': b'[ 75%] Built target publisher\n'}
+[6.316772] (publisher_subscriber) StderrLine: {'line': b'\x1b[01m\x1b[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:1:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kros/ros.h: No such file or directory\n'}
+[6.317404] (publisher_subscriber) StderrLine: {'line': b'    1 | #include \x1b[01;31m\x1b[K"ros/ros.h"\x1b[m\x1b[K\n'}
+[6.317684] (publisher_subscriber) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[6.317997] (publisher_subscriber) StderrLine: {'line': b'compilation terminated.\n'}
+[6.325885] (publisher_subscriber) StderrLine: {'line': b'make[2]: *** [CMakeFiles/imu_data.dir/build.make:63: CMakeFiles/imu_data.dir/src/imu_data.cpp.o] Error 1\n'}
+[6.326720] (publisher_subscriber) StderrLine: {'line': b'make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/imu_data.dir/all] Error 2\n'}
+[6.327436] (publisher_subscriber) StderrLine: {'line': b'make: *** [Makefile:141: all] Error 2\n'}
+[6.336056] (publisher_subscriber) CommandEnded: {'returncode': 2}
+[6.345021] (-) TimerEvent: {}
+[6.449521] (-) TimerEvent: {}
+[6.495209] (publisher_subscriber) JobEnded: {'identifier': 'publisher_subscriber', 'rc': 2}
+[6.507133] (-) EventReactorShutdown: {}

@@ -1,0 +1,10 @@
+/home/lur/controller/build/robosub/CMakeFiles/install/strip.dir
+/home/lur/controller/build/robosub/CMakeFiles/install/local.dir
+/home/lur/controller/build/robosub/CMakeFiles/install.dir
+/home/lur/controller/build/robosub/CMakeFiles/list_install_components.dir
+/home/lur/controller/build/robosub/CMakeFiles/rebuild_cache.dir
+/home/lur/controller/build/robosub/CMakeFiles/edit_cache.dir
+/home/lur/controller/build/robosub/CMakeFiles/test.dir
+/home/lur/controller/build/robosub/CMakeFiles/controller_node.dir
+/home/lur/controller/build/robosub/CMakeFiles/robosub_uninstall.dir
+/home/lur/controller/build/robosub/CMakeFiles/uninstall.dir

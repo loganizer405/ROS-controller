@@ -1,0 +1,27 @@
+[0.076s] Invoking command in '/home/lur/controller/build/robosub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/robosub -- -j4 -l4
+[0.173s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.258s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.910s] -- Found mavros: 2.1.1 (/opt/ros/foxy/share/mavros/cmake)
+[0.927s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.005s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.020s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.455s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.016s] CMake Error at CMakeLists.txt:33 (install):
+[2.016s]   install TARGETS given target "mavros" which does not exist.
+[2.016s] 
+[2.017s] 
+[2.017s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.247s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.250s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.251s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/lur/controller/src/robosub/include>
+[2.252s] -- Configured cppcheck exclude dirs and/or files: 
+[2.255s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.255s] -- Configured cpplint exclude dirs and/or files: 
+[2.257s] -- Added test 'lint_cmake' to check CMake code style
+[2.260s] -- Added test 'uncrustify' to check C / C++ code style
+[2.261s] -- Configured uncrustify additional arguments: 
+[2.262s] -- Added test 'xmllint' to check XML markup files
+[2.272s] -- Configuring incomplete, errors occurred!
+[2.272s] See also "/home/lur/controller/build/robosub/CMakeFiles/CMakeOutput.log".
+[2.296s] make: *** [Makefile:266: cmake_check_build_system] Error 1
+[2.305s] Invoked command in '/home/lur/controller/build/robosub' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/robosub -- -j4 -l4

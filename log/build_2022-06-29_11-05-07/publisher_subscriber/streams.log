@@ -1,0 +1,83 @@
+[0.061s] Invoking command in '/home/lur/controller/build/publisher_subscriber': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/publisher_subscriber -- -j4 -l4
+[0.152s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.231s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.872s] -- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.986s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.998s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.389s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.554s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.559s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.010s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[2.353s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.585s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.597s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.597s] -- Configured cppcheck include dirs: /home/lur/controller/publisher_subscriber/include
+[2.598s] -- Configured cppcheck exclude dirs and/or files: 
+[2.609s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.609s] -- Configured cpplint exclude dirs and/or files: 
+[2.611s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.615s] -- Added test 'lint_cmake' to check CMake code style
+[2.617s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[2.627s] -- Added test 'uncrustify' to check C / C++ code style
+[2.628s] -- Configured uncrustify additional arguments: 
+[2.630s] -- Added test 'xmllint' to check XML markup files
+[2.642s] -- Configuring done
+[2.689s] -- Generating done
+[2.696s] -- Build files have been written to: /home/lur/controller/build/publisher_subscriber
+[2.786s] [35m[1mScanning dependencies of target imu_data[0m
+[2.824s] [ 75%] [32mBuilding CXX object CMakeFiles/imu_data.dir/src/imu_data.cpp.o[0m
+[2.825s] [ 75%] Built target publisher
+[8.406s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:5:41:[m[K [01;31m[Kerror: [m[K‘[01m[KImu[m[K’ in namespace ‘[01m[Ksensor_msgs[m[K’ does not name a type
+[8.406s]     5 | void chatterCallback(const sensor_msgs::[01;31m[KImu[m[K::ConstPtr& msg){
+[8.406s]       |                                         [01;31m[K^~~[m[K
+[8.407s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:5:54:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K&[m[K’ token
+[8.407s]     5 | void chatterCallback(const sensor_msgs::Imu::ConstPtr[01;31m[K&[m[K msg){
+[8.408s]       |                                                      [01;31m[K^[m[K
+[8.408s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:5:54:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K&[m[K’ token
+[8.408s]     5 | void chatterCallback[34m[K([m[Kconst sensor_msgs::Imu::ConstPtr[01;31m[K&[m[K msg){
+[8.409s]       |                     [34m[K~[m[K                                [01;31m[K^[m[K
+[8.410s]       |                                                      [32m[K)[m[K
+[8.410s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:5:56:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kmsg[m[K’
+[8.410s]     5 | void chatterCallback(const sensor_msgs::Imu::ConstPtr& [01;31m[Kmsg[m[K){
+[8.410s]       |                                                        [01;31m[K^~~[m[K
+[8.411s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[8.411s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:12:30:[m[K [01;31m[Kerror: [m[Kinvalid initialization of reference of type ‘[01m[Kconst rclcpp::InitOptions&[m[K’ from expression of type ‘[01m[Kconst char [9][m[K’
+[8.411s]    12 |     rclcpp::init(argc, argv, [01;31m[K"imu_data"[m[K);
+[8.412s]       |                              [01;31m[K^~~~~~~~~~[m[K
+[8.412s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:36[m[K,
+[8.412s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[8.413s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[8.413s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[8.413s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[8.413s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[8.414s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[8.414s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[8.414s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[8.415s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[8.415s]                  from [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:2[m[K:
+[8.415s] [01m[K/opt/ros/foxy/include/rclcpp/utilities.hpp:56:63:[m[K [01;36m[Knote: [m[Kin passing argument 3 of ‘[01m[Kvoid rclcpp::init(int, const char* const*, const rclcpp::InitOptions&)[m[K’
+[8.416s]    56 | init(int argc, char const * const argv[], [01;36m[Kconst InitOptions & init_options = InitOptions()[m[K);
+[8.416s]       |                                           [01;36m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[8.416s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:13:13:[m[K [01;31m[Kerror: [m[K‘[01m[KNodeHandle[m[K’ is not a member of ‘[01m[Krclcpp[m[K’
+[8.417s]    13 |     rclcpp::[01;31m[KNodeHandle[m[K n;
+[8.417s]       |             [01;31m[K^~~~~~~~~~[m[K
+[8.417s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:14:13:[m[K [01;31m[Kerror: [m[K‘[01m[KSubscriber[m[K’ is not a member of ‘[01m[Krclcpp[m[K’
+[8.417s]    14 |     rclcpp::[01;31m[KSubscriber[m[K sub = n.subscribe("/mavros/imu/data", 1000, chatterCallback);
+[8.418s]       |             [01;31m[K^~~~~~~~~~[m[K
+[8.418s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:15:18:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kspin()[m[K’
+[8.418s]    15 |     rclcpp::spin([01;31m[K)[m[K;
+[8.418s]       |                  [01;31m[K^[m[K
+[8.419s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[8.419s]                  from [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:2[m[K:
+[8.419s] [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:45:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::spin(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr)[m[K’
+[8.420s]    45 | [01;36m[Kspin[m[K(rclcpp::node_interfaces::NodeBaseInterface::SharedPtr node_ptr);
+[8.420s]       | [01;36m[K^~~~[m[K
+[8.420s] [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:45:1:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[8.420s] [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:49:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rclcpp::spin(rclcpp::Node::SharedPtr)[m[K’
+[8.421s]    49 | [01;36m[Kspin[m[K(rclcpp::Node::SharedPtr node_ptr);
+[8.421s]       | [01;36m[K^~~~[m[K
+[8.421s] [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:49:1:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 0 provided
+[9.900s] make[2]: *** [CMakeFiles/imu_data.dir/build.make:63: CMakeFiles/imu_data.dir/src/imu_data.cpp.o] Error 1
+[9.901s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/imu_data.dir/all] Error 2
+[9.902s] make: *** [Makefile:141: all] Error 2
+[9.911s] Invoked command in '/home/lur/controller/build/publisher_subscriber' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/publisher_subscriber -- -j4 -l4

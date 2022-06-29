@@ -1,0 +1,101 @@
+[0.062s] Invoking command in '/home/lur/controller/build/publisher_subscriber': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/publisher_subscriber -- -j4 -l4
+[0.154s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.236s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.892s] -- Found angles: 1.12.3 (/opt/ros/foxy/share/angles/cmake)
+[0.932s] CMake Warning at CMakeLists.txt:21 (find_package):
+[0.932s]   By not providing "Findcontrol_toolbox.cmake" in CMAKE_MODULE_PATH this
+[0.933s]   project has asked CMake to find a package configuration file provided by
+[0.933s]   "control_toolbox", but CMake did not find one.
+[0.933s] 
+[0.934s]   Could not find a package configuration file provided by "control_toolbox"
+[0.934s]   with any of the following names:
+[0.934s] 
+[0.935s]     control_toolboxConfig.cmake
+[0.935s]     control_toolbox-config.cmake
+[0.935s] 
+[0.935s]   Add the installation prefix of "control_toolbox" to CMAKE_PREFIX_PATH or
+[0.936s]   set "control_toolbox_DIR" to a directory containing one of the above files.
+[0.936s]   If "control_toolbox" provides a separate development package or SDK, be
+[0.936s]   sure it has been installed.
+[0.936s] 
+[0.937s] 
+[0.961s] CMake Warning at CMakeLists.txt:22 (find_package):
+[0.961s]   By not providing "Findeigen_conversions.cmake" in CMAKE_MODULE_PATH this
+[0.962s]   project has asked CMake to find a package configuration file provided by
+[0.962s]   "eigen_conversions", but CMake did not find one.
+[0.962s] 
+[0.963s]   Could not find a package configuration file provided by "eigen_conversions"
+[0.963s]   with any of the following names:
+[0.963s] 
+[0.963s]     eigen_conversionsConfig.cmake
+[0.964s]     eigen_conversions-config.cmake
+[0.964s] 
+[0.964s]   Add the installation prefix of "eigen_conversions" to CMAKE_PREFIX_PATH or
+[0.964s]   set "eigen_conversions_DIR" to a directory containing one of the above
+[0.965s]   files.  If "eigen_conversions" provides a separate development package or
+[0.965s]   SDK, be sure it has been installed.
+[0.965s] 
+[0.966s] 
+[0.969s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[1.115s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.152s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.531s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.646s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.993s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.401s] -- Found mavros: 2.1.1 (/opt/ros/foxy/share/mavros/cmake)
+[2.439s] -- Found mavros_extras: 2.1.1 (/opt/ros/foxy/share/mavros_extras/cmake)
+[2.481s] CMake Warning at CMakeLists.txt:26 (find_package):
+[2.482s]   By not providing "Findroscpp.cmake" in CMAKE_MODULE_PATH this project has
+[2.482s]   asked CMake to find a package configuration file provided by "roscpp", but
+[2.482s]   CMake did not find one.
+[2.483s] 
+[2.483s]   Could not find a package configuration file provided by "roscpp" with any
+[2.483s]   of the following names:
+[2.484s] 
+[2.484s]     roscppConfig.cmake
+[2.484s]     roscpp-config.cmake
+[2.485s] 
+[2.485s]   Add the installation prefix of "roscpp" to CMAKE_PREFIX_PATH or set
+[2.485s]   "roscpp_DIR" to a directory containing one of the above files.  If "roscpp"
+[2.485s]   provides a separate development package or SDK, be sure it has been
+[2.486s]   installed.
+[2.486s] 
+[2.486s] 
+[2.491s] -- Found tf2_ros: 0.13.13 (/opt/ros/foxy/share/tf2_ros/cmake)
+[2.807s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[2.817s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.825s] -- Looking for pthread.h
+[3.154s] -- Looking for pthread.h - found
+[3.155s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[3.484s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[3.485s] -- Looking for pthread_create in pthreads
+[3.763s] -- Looking for pthread_create in pthreads - not found
+[3.764s] -- Looking for pthread_create in pthread
+[4.075s] -- Looking for pthread_create in pthread - found
+[4.080s] -- Found Threads: TRUE  
+[5.809s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[6.042s] -- Added test 'copyright' to check source files copyright and LICENSE
+[6.053s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[6.054s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/lur/controller/publisher_subscriber/include>
+[6.054s] -- Configured cppcheck exclude dirs and/or files: 
+[6.067s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[6.067s] -- Configured cpplint exclude dirs and/or files: 
+[6.071s] -- Added test 'flake8' to check Python code syntax and style conventions
+[6.075s] -- Added test 'lint_cmake' to check CMake code style
+[6.079s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[6.091s] -- Added test 'uncrustify' to check C / C++ code style
+[6.091s] -- Configured uncrustify additional arguments: 
+[6.094s] -- Added test 'xmllint' to check XML markup files
+[6.108s] -- Configuring done
+[6.131s] -- Generating done
+[6.141s] -- Build files have been written to: /home/lur/controller/build/publisher_subscriber
+[6.269s] [ 75%] [32mBuilding CXX object CMakeFiles/imu_data.dir/src/imu_data.cpp.o[0m
+[6.269s] [ 75%] Built target publisher
+[6.309s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kros/ros.h: No such file or directory
+[6.310s]     1 | #include [01;31m[K"ros/ros.h"[m[K
+[6.310s]       |          [01;31m[K^~~~~~~~~~~[m[K
+[6.310s] compilation terminated.
+[6.318s] make[2]: *** [CMakeFiles/imu_data.dir/build.make:63: CMakeFiles/imu_data.dir/src/imu_data.cpp.o] Error 1
+[6.319s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/imu_data.dir/all] Error 2
+[6.320s] make: *** [Makefile:141: all] Error 2
+[6.329s] Invoked command in '/home/lur/controller/build/publisher_subscriber' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/publisher_subscriber -- -j4 -l4

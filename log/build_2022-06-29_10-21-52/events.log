@@ -1,0 +1,26 @@
+[0.000000] (-) TimerEvent: {}
+[0.001047] (-) JobUnselected: {'identifier': 'examples_rclcpp_async_client'}
+[0.001705] (-) JobUnselected: {'identifier': 'examples_rclcpp_cbg_executor'}
+[0.001808] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_action_client'}
+[0.002030] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_action_server'}
+[0.002123] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_client'}
+[0.002250] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_composition'}
+[0.002565] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_publisher'}
+[0.003063] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_service'}
+[0.003225] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_subscriber'}
+[0.003309] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_timer'}
+[0.003386] (-) JobUnselected: {'identifier': 'examples_rclcpp_multithreaded_executor'}
+[0.003460] (-) JobUnselected: {'identifier': 'examples_rclcpp_wait_set'}
+[0.003533] (-) JobUnselected: {'identifier': 'examples_rclpy_executors'}
+[0.003607] (-) JobUnselected: {'identifier': 'examples_rclpy_guard_conditions'}
+[0.003692] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_action_client'}
+[0.003766] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_action_server'}
+[0.003859] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_client'}
+[0.003955] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_publisher'}
+[0.004027] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_service'}
+[0.004136] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_subscriber'}
+[0.004214] (-) JobUnselected: {'identifier': 'examples_rclpy_pointcloud_publisher'}
+[0.004289] (-) JobUnselected: {'identifier': 'launch_testing_examples'}
+[0.004363] (-) JobUnselected: {'identifier': 'publisher_subscriber'}
+[0.004435] (-) JobUnselected: {'identifier': 'robosub'}
+[0.004510] (-) EventReactorShutdown: {}

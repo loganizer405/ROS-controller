@@ -1,0 +1,46 @@
+[0.063s] Invoking command in '/home/lur/controller/build/publisher_subscriber': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/publisher_subscriber -- -j4 -l4
+[0.217s] [35m[1mScanning dependencies of target imu_data[0m
+[0.246s] [ 50%] Built target publisher
+[0.328s] [ 75%] [32mBuilding CXX object CMakeFiles/imu_data.dir/src/imu_data.cpp.o[0m
+[4.621s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:4:41:[m[K [01;31m[Kerror: [m[K‘[01m[KImu[m[K’ in namespace ‘[01m[Ksensor_msgs[m[K’ does not name a type
+[4.621s]     4 | void chatterCallbacl(const sensor_msgs::[01;31m[KImu[m[K/*::ConstPtr*/& msg);
+[4.622s]       |                                         [01;31m[K^~~[m[K
+[4.622s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:6:41:[m[K [01;31m[Kerror: [m[K‘[01m[KImu[m[K’ in namespace ‘[01m[Ksensor_msgs[m[K’ does not name a type
+[4.622s]     6 | void chatterCallback(const sensor_msgs::[01;31m[KImu[m[K/*::ConstPtr*/& msg){
+[4.623s]       |                                         [01;31m[K^~~[m[K
+[4.623s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:[m[K In function ‘[01m[Kvoid chatterCallback(const int&)[m[K’:
+[4.623s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:8:48:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+[4.624s]     8 |                 \nx: [%f]\ny:[%f]\nz:[%f]", msg[01;31m[K->[m[Klinear_acceleration.x,
+[4.624s]       |                                                [01;31m[K^~[m[K
+[4.624s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:9:20:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+[4.624s]     9 |                 msg[01;31m[K->[m[Klinear_acceleration.y, msg->linear_acceleration.z);
+[4.625s]       |                    [01;31m[K^~[m[K
+[4.625s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:9:48:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+[4.625s]     9 |                 msg->linear_acceleration.y, msg[01;31m[K->[m[Klinear_acceleration.z);
+[4.625s]       |                                                [01;31m[K^~[m[K
+[4.626s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:7:5:[m[K [01;31m[Kerror: [m[K‘[01m[KROS_INFO[m[K’ was not declared in this scope
+[4.626s]     7 |     [01;31m[KROS_INFO[m[K("\nlinear acceleration\
+[4.627s]       |     [01;31m[K^~~~~~~~[m[K
+[4.627s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[4.628s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:15:29:[m[K [01;31m[Kerror: [m[Kfound ‘[01m[K:[m[K’ in nested-name-specifier, expected ‘[01m[K::[m[K’
+[4.628s]    15 |     auto node = rclcpp::Node[01;31m[K:[m[Kmake_shared("imu_data");
+[4.628s]       |                             [01;31m[K^[m[K
+[4.628s]       |                             [32m[K::[m[K
+[4.630s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:17:78:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krclcpp::Node::create_subscription(const char [17], void (*)(const int&))[m[K’
+[4.630s]    17 |     auto sub = node->create_subscription("/mavros/imu/data", &chatterCallback[01;31m[K)[m[K;
+[4.630s]       |                                                                              [01;31m[K^[m[K
+[4.631s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[4.631s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[4.631s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[4.631s]                  from [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:2[m[K:
+[4.632s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:213:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class CallbackMessageT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<SubscriptionT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+[4.632s]   213 |   [01;36m[Kcreate_subscription[m[K(
+[4.632s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.633s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:213:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.633s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:17:78:[m[K [01;36m[Knote: [m[K  candidate expects 5 arguments, 2 provided
+[4.633s]    17 |     auto sub = node->create_subscription("/mavros/imu/data", &chatterCallback[01;36m[K)[m[K;
+[4.633s]       |                                                                              [01;36m[K^[m[K
+[5.959s] make[2]: *** [CMakeFiles/imu_data.dir/build.make:63: CMakeFiles/imu_data.dir/src/imu_data.cpp.o] Error 1
+[5.960s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/imu_data.dir/all] Error 2
+[5.960s] make: *** [Makefile:141: all] Error 2
+[5.971s] Invoked command in '/home/lur/controller/build/publisher_subscriber' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/publisher_subscriber -- -j4 -l4

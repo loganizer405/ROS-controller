@@ -1,0 +1,36 @@
+[0.061s] Invoking command in '/home/lur/controller/build/publisher_subscriber': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/publisher_subscriber -- -j4 -l4
+[0.154s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.236s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.874s] -- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.993s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.005s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.406s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.575s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.580s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[2.034s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[2.377s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.611s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.622s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.623s] -- Configured cppcheck include dirs: /home/lur/controller/publisher_subscriber/include;$<BUILD_INTERFACE:/home/lur/controller/publisher_subscriber/include>
+[2.623s] -- Configured cppcheck exclude dirs and/or files: 
+[2.634s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.634s] -- Configured cpplint exclude dirs and/or files: 
+[2.637s] -- Added test 'flake8' to check Python code syntax and style conventions
+[2.640s] -- Added test 'lint_cmake' to check CMake code style
+[2.643s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[2.653s] -- Added test 'uncrustify' to check C / C++ code style
+[2.654s] -- Configured uncrustify additional arguments: 
+[2.655s] -- Added test 'xmllint' to check XML markup files
+[2.667s] -- Configuring done
+[2.688s] -- Generating done
+[2.696s] -- Build files have been written to: /home/lur/controller/build/publisher_subscriber
+[2.822s] [ 75%] Built target publisher
+[2.822s] [ 75%] [32mBuilding CXX object CMakeFiles/imu_data.dir/src/imu_data.cpp.o[0m
+[2.863s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Krclcpp/rclcpp.hpp: No such file or directory
+[2.864s]     2 | #include [01;31m[K"rclcpp/rclcpp.hpp"[m[K
+[2.864s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[2.864s] compilation terminated.
+[2.871s] make[2]: *** [CMakeFiles/imu_data.dir/build.make:63: CMakeFiles/imu_data.dir/src/imu_data.cpp.o] Error 1
+[2.872s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/imu_data.dir/all] Error 2
+[2.873s] make: *** [Makefile:141: all] Error 2
+[2.884s] Invoked command in '/home/lur/controller/build/publisher_subscriber' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/publisher_subscriber -- -j4 -l4

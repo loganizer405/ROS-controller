@@ -1,0 +1,99 @@
+-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Found angles: 1.12.3 (/opt/ros/foxy/share/angles/cmake)
+CMake Warning at CMakeLists.txt:21 (find_package):
+  By not providing "Findcontrol_toolbox.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "control_toolbox", but CMake did not find one.
+
+  Could not find a package configuration file provided by "control_toolbox"
+  with any of the following names:
+
+    control_toolboxConfig.cmake
+    control_toolbox-config.cmake
+
+  Add the installation prefix of "control_toolbox" to CMAKE_PREFIX_PATH or
+  set "control_toolbox_DIR" to a directory containing one of the above files.
+  If "control_toolbox" provides a separate development package or SDK, be
+  sure it has been installed.
+
+
+CMake Warning at CMakeLists.txt:22 (find_package):
+  By not providing "Findeigen_conversions.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "eigen_conversions", but CMake did not find one.
+
+  Could not find a package configuration file provided by "eigen_conversions"
+  with any of the following names:
+
+    eigen_conversionsConfig.cmake
+    eigen_conversions-config.cmake
+
+  Add the installation prefix of "eigen_conversions" to CMAKE_PREFIX_PATH or
+  set "eigen_conversions_DIR" to a directory containing one of the above
+  files.  If "eigen_conversions" provides a separate development package or
+  SDK, be sure it has been installed.
+
+
+-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+-- Found FastRTPS: /opt/ros/foxy/include  
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found mavros: 2.1.1 (/opt/ros/foxy/share/mavros/cmake)
+-- Found mavros_extras: 2.1.1 (/opt/ros/foxy/share/mavros_extras/cmake)
+CMake Warning at CMakeLists.txt:26 (find_package):
+  By not providing "Findroscpp.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "roscpp", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "roscpp" with any
+  of the following names:
+
+    roscppConfig.cmake
+    roscpp-config.cmake
+
+  Add the installation prefix of "roscpp" to CMAKE_PREFIX_PATH or set
+  "roscpp_DIR" to a directory containing one of the above files.  If "roscpp"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+
+
+-- Found tf2_ros: 0.13.13 (/opt/ros/foxy/share/tf2_ros/cmake)
+-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+-- Added test 'copyright' to check source files copyright and LICENSE
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/lur/controller/publisher_subscriber/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'cpplint' to check C / C++ code against the Google style
+-- Configured cpplint exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/lur/controller/build/publisher_subscriber
+[ 75%] [32mBuilding CXX object CMakeFiles/imu_data.dir/src/imu_data.cpp.o[0m
+[ 75%] Built target publisher
+[01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kros/ros.h: No such file or directory
+    1 | #include [01;31m[K"ros/ros.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/imu_data.dir/build.make:63: CMakeFiles/imu_data.dir/src/imu_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/imu_data.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

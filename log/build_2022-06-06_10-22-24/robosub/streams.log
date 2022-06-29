@@ -1,0 +1,10 @@
+[0.070s] Invoking command in '/home/lur/controller/build/robosub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/robosub -- -j4 -l4
+[0.252s] [ 50%] [32mBuilding CXX object CMakeFiles/controller_node.dir/src/controller_node.cpp.o[0m
+[0.307s] [01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Ksensor_msgs/Imu.h: No such file or directory
+[0.308s]     2 | #include [01;31m[K"sensor_msgs/Imu.h"[m[K
+[0.308s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[0.309s] compilation terminated.
+[0.316s] make[2]: *** [CMakeFiles/controller_node.dir/build.make:63: CMakeFiles/controller_node.dir/src/controller_node.cpp.o] Error 1
+[0.317s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/controller_node.dir/all] Error 2
+[0.318s] make: *** [Makefile:141: all] Error 2
+[0.328s] Invoked command in '/home/lur/controller/build/robosub' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/robosub -- -j4 -l4

@@ -1,0 +1,4 @@
+[0.000000] (-) TimerEvent: {}
+[0.001058] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_publisher'}
+[0.001606] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_subscriber'}
+[0.002413] (-) EventReactorShutdown: {}

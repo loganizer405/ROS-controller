@@ -1,0 +1,16 @@
+/home/lur/controller/install/publisher_subscriber/lib/publisher_subscriber/publisher
+/home/lur/controller/install/publisher_subscriber/share/ament_index/resource_index/package_run_dependencies/publisher_subscriber
+/home/lur/controller/install/publisher_subscriber/share/ament_index/resource_index/parent_prefix_path/publisher_subscriber
+/home/lur/controller/install/publisher_subscriber/share/publisher_subscriber/environment/ament_prefix_path.sh
+/home/lur/controller/install/publisher_subscriber/share/publisher_subscriber/environment/ament_prefix_path.dsv
+/home/lur/controller/install/publisher_subscriber/share/publisher_subscriber/environment/path.sh
+/home/lur/controller/install/publisher_subscriber/share/publisher_subscriber/environment/path.dsv
+/home/lur/controller/install/publisher_subscriber/share/publisher_subscriber/local_setup.bash
+/home/lur/controller/install/publisher_subscriber/share/publisher_subscriber/local_setup.sh
+/home/lur/controller/install/publisher_subscriber/share/publisher_subscriber/local_setup.zsh
+/home/lur/controller/install/publisher_subscriber/share/publisher_subscriber/local_setup.dsv
+/home/lur/controller/install/publisher_subscriber/share/publisher_subscriber/package.dsv
+/home/lur/controller/install/publisher_subscriber/share/ament_index/resource_index/packages/publisher_subscriber
+/home/lur/controller/install/publisher_subscriber/share/publisher_subscriber/cmake/publisher_subscriberConfig.cmake
+/home/lur/controller/install/publisher_subscriber/share/publisher_subscriber/cmake/publisher_subscriberConfig-version.cmake
+/home/lur/controller/install/publisher_subscriber/share/publisher_subscriber/package.xml

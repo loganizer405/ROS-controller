@@ -1,0 +1,36 @@
+[01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:4:28:[m[K [01;31m[Kerror: [m[K‘[01m[Ksensor_msgs[m[K’ does not name a type
+    4 | void chatterCallback(const [01;31m[Ksensor_msgs[m[K::msg::Imu::ConstPtr& msg){
+      |                            [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:4:44:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K::[m[K’ token
+    4 | void chatterCallback(const sensor_msgs::msg[01;31m[K::[m[KImu::ConstPtr& msg){
+      |                                            [01;31m[K^~[m[K
+[01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:4:44:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K::[m[K’ token
+    4 | void chatterCallback[34m[K([m[Kconst sensor_msgs::msg[01;31m[K:[m[K[32m[K:[m[KImu::ConstPtr& msg){
+      |                     [34m[K~[m[K                      [01;31m[K^[m[K[32m[K~[m[K
+      |                                            [32m[K)[m[K
+[01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:4:44:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[K::[m[K’ token
+    4 | void chatterCallback(const sensor_msgs::msg[01;31m[K::[m[KImu::ConstPtr& msg){
+      |                                            [01;31m[K^~[m[K
+[01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:11:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+   11 |     [01;31m[Kros[m[K::init(argc, argv, "controller_node");
+      |     [01;31m[K^~~[m[K
+[01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:12:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+   12 |     [01;31m[Kros[m[K::NodeHandle n;
+      |     [01;31m[K^~~[m[K
+[01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:13:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+   13 |     [01;31m[Kros[m[K::Subscriber sub = n.subscribe("/mavros/imu/data", 1000, chatterCallback);
+      |     [01;31m[K^~~[m[K
+[01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:14:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+   14 |     [01;31m[Kros[m[K::spin();
+      |     [01;31m[K^~~[m[K
+[01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:[m[K At global scope:
+[01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:18:5:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kint main(int, char**)[m[K’
+   18 | int [01;31m[Kmain[m[K(int argc, char ** argv)
+      |     [01;31m[K^~~~[m[K
+[01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:10:5:[m[K [01;36m[Knote: [m[K‘[01m[Kint main(int, char**)[m[K’ previously defined here
+   10 | int [01;36m[Kmain[m[K(int argc, char **argv){
+      |     [01;36m[K^~~~[m[K
+make[2]: *** [CMakeFiles/controller_node.dir/build.make:63: CMakeFiles/controller_node.dir/src/controller_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/controller_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

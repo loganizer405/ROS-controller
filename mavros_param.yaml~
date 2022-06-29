@@ -1,0 +1,9 @@
+mavros:
+        ros__parameters: {}
+
+mavros_router:
+  ros__parameters: {}
+
+mavros_node:
+  ros__parameters:
+    fcu_url: /dev/ttyACM0:57600

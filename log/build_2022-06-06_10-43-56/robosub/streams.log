@@ -1,0 +1,9 @@
+[0.077s] Invoking command in '/home/lur/controller/build/robosub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/robosub -- -j4 -l4
+[0.157s] CMake Error at CMakeLists.txt:24:
+[0.158s]   Parse error.  Function missing ending ")".  End of file reached.
+[0.158s] 
+[0.159s] 
+[0.160s] -- Configuring incomplete, errors occurred!
+[0.161s] See also "/home/lur/controller/build/robosub/CMakeFiles/CMakeOutput.log".
+[0.165s] make: *** [Makefile:266: cmake_check_build_system] Error 1
+[0.174s] Invoked command in '/home/lur/controller/build/robosub' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/robosub -- -j4 -l4

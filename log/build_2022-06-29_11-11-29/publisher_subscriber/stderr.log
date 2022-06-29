@@ -1,0 +1,37 @@
+[01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:4:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu[m[K’ in namespace ‘[01m[Ksensor_msgs[m[K’ does not name a type
+    4 | void chatterCallbacl(const sensor_msgs::[01;31m[Kimu[m[K::ConstPtr& msg);
+      |                                         [01;31m[K^~~[m[K
+[01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:4:54:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K&[m[K’ token
+    4 | void chatterCallbacl(const sensor_msgs::imu::ConstPtr[01;31m[K&[m[K msg);
+      |                                                      [01;31m[K^[m[K
+[01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:4:54:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K&[m[K’ token
+    4 | void chatterCallbacl[34m[K([m[Kconst sensor_msgs::imu::ConstPtr[01;31m[K&[m[K msg);
+      |                     [34m[K~[m[K                                [01;31m[K^[m[K
+      |                                                      [32m[K)[m[K
+[01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:4:56:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kmsg[m[K’
+    4 | void chatterCallbacl(const sensor_msgs::imu::ConstPtr& [01;31m[Kmsg[m[K);
+      |                                                        [01;31m[K^~~[m[K
+[01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:6:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu[m[K’ in namespace ‘[01m[Ksensor_msgs[m[K’ does not name a type
+    6 | void chatterCallback(const sensor_msgs::[01;31m[Kimu[m[K::ConstPtr& msg){
+      |                                         [01;31m[K^~~[m[K
+[01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:6:54:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[K&[m[K’ token
+    6 | void chatterCallback(const sensor_msgs::imu::ConstPtr[01;31m[K&[m[K msg){
+      |                                                      [01;31m[K^[m[K
+[01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:6:54:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K&[m[K’ token
+    6 | void chatterCallback[34m[K([m[Kconst sensor_msgs::imu::ConstPtr[01;31m[K&[m[K msg){
+      |                     [34m[K~[m[K                                [01;31m[K^[m[K
+      |                                                      [32m[K)[m[K
+[01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:6:56:[m[K [01;31m[Kerror: [m[Kexpected initializer before ‘[01m[Kmsg[m[K’
+    6 | void chatterCallback(const sensor_msgs::imu::ConstPtr& [01;31m[Kmsg[m[K){
+      |                                                        [01;31m[K^~~[m[K
+[01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:15:29:[m[K [01;31m[Kerror: [m[Kfound ‘[01m[K:[m[K’ in nested-name-specifier, expected ‘[01m[K::[m[K’
+   15 |     auto node = rclcpp::Node[01;31m[K:[m[Kmake_shared("imu_data");
+      |                             [01;31m[K^[m[K
+      |                             [32m[K::[m[K
+[01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:17:63:[m[K [01;31m[Kerror: [m[K‘[01m[KchatterCallback[m[K’ was not declared in this scope
+   17 |     auto sub = node->create_subscription("/mavros/imu/data", &[01;31m[KchatterCallback[m[K);
+      |                                                               [01;31m[K^~~~~~~~~~~~~~~[m[K
+make[2]: *** [CMakeFiles/imu_data.dir/build.make:63: CMakeFiles/imu_data.dir/src/imu_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/imu_data.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

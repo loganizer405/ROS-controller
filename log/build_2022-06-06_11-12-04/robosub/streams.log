@@ -1,0 +1,32 @@
+[0.072s] Invoking command in '/home/lur/controller/build/robosub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/robosub -- -j4 -l4
+[0.173s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.253s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.044s] -- Found mavros: 2.1.1 (/opt/ros/foxy/share/mavros/cmake)
+[1.062s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.143s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.158s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.597s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[2.144s] -- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.429s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.434s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.435s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/lur/controller/src/robosub/include>
+[2.435s] -- Configured cppcheck exclude dirs and/or files: 
+[2.439s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.439s] -- Configured cpplint exclude dirs and/or files: 
+[2.441s] -- Added test 'lint_cmake' to check CMake code style
+[2.446s] -- Added test 'uncrustify' to check C / C++ code style
+[2.446s] -- Configured uncrustify additional arguments: 
+[2.448s] -- Added test 'xmllint' to check XML markup files
+[2.459s] -- Configuring done
+[2.494s] -- Generating done
+[2.502s] -- Build files have been written to: /home/lur/controller/build/robosub
+[2.603s] [35m[1mScanning dependencies of target controller_node[0m
+[2.649s] [ 50%] [32mBuilding CXX object CMakeFiles/controller_node.dir/src/controller_node.cpp.o[0m
+[2.714s] [01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Kros.h: No such file or directory
+[2.715s]     2 | #include [01;31m[K"ros.h"[m[K
+[2.715s]       |          [01;31m[K^~~~~~~[m[K
+[2.716s] compilation terminated.
+[2.722s] make[2]: *** [CMakeFiles/controller_node.dir/build.make:63: CMakeFiles/controller_node.dir/src/controller_node.cpp.o] Error 1
+[2.724s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/controller_node.dir/all] Error 2
+[2.725s] make: *** [Makefile:141: all] Error 2
+[2.732s] Invoked command in '/home/lur/controller/build/robosub' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/robosub -- -j4 -l4

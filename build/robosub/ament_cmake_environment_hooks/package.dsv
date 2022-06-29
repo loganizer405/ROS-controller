@@ -1,0 +1,4 @@
+source;share/robosub/local_setup.bash
+source;share/robosub/local_setup.dsv
+source;share/robosub/local_setup.sh
+source;share/robosub/local_setup.zsh

@@ -1,0 +1,12 @@
+[0.065s] Invoking command in '/home/lur/controller/build/publisher_subscriber': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/publisher_subscriber -- -j4 -l4
+[0.214s] [35m[1mScanning dependencies of target imu_data[0m
+[0.249s] [ 50%] Built target publisher
+[0.253s] [ 75%] [32mBuilding CXX object CMakeFiles/imu_data.dir/src/imu_data.cpp.o[0m
+[0.293s] [01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:2:10:[m[K [01;31m[Kfatal error: [m[Krclcpp/rclcpp.hpp: No such file or directory
+[0.293s]     2 | #include [01;31m[K"rclcpp/rclcpp.hpp"[m[K
+[0.294s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[0.294s] compilation terminated.
+[0.300s] make[2]: *** [CMakeFiles/imu_data.dir/build.make:63: CMakeFiles/imu_data.dir/src/imu_data.cpp.o] Error 1
+[0.301s] make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/imu_data.dir/all] Error 2
+[0.302s] make: *** [Makefile:141: all] Error 2
+[0.311s] Invoked command in '/home/lur/controller/build/publisher_subscriber' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/publisher_subscriber -- -j4 -l4

@@ -1,0 +1,26 @@
+[0.076s] Invoking command in '/home/lur/controller/build/robosub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/robosub -- -j4 -l4
+[0.236s] [35m[1mScanning dependencies of target controller_node[0m
+[0.364s] [ 50%] [32mBuilding CXX object CMakeFiles/controller_node.dir/src/controller_node.cpp.o[0m
+[17.943s] [100%] [32m[1mLinking CXX executable controller_node[0m
+[18.801s] [100%] Built target controller_node
+[18.848s] Invoked command in '/home/lur/controller/build/robosub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/robosub -- -j4 -l4
+[18.985s] Invoking command in '/home/lur/controller/build/robosub': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/lur/controller/build/robosub
+[19.012s] -- Install configuration: ""
+[19.013s] -- Installing: /home/lur/controller/install/robosub/lib/robosub/controller_node
+[19.028s] -- Set runtime path of "/home/lur/controller/install/robosub/lib/robosub/controller_node" to ""
+[19.028s] -- Up-to-date: /home/lur/controller/install/robosub/share/ament_index/resource_index/package_run_dependencies/robosub
+[19.029s] -- Up-to-date: /home/lur/controller/install/robosub/share/ament_index/resource_index/parent_prefix_path/robosub
+[19.029s] -- Up-to-date: /home/lur/controller/install/robosub/share/robosub/environment/ament_prefix_path.sh
+[19.030s] -- Up-to-date: /home/lur/controller/install/robosub/share/robosub/environment/ament_prefix_path.dsv
+[19.031s] -- Up-to-date: /home/lur/controller/install/robosub/share/robosub/environment/path.sh
+[19.031s] -- Up-to-date: /home/lur/controller/install/robosub/share/robosub/environment/path.dsv
+[19.032s] -- Up-to-date: /home/lur/controller/install/robosub/share/robosub/local_setup.bash
+[19.032s] -- Up-to-date: /home/lur/controller/install/robosub/share/robosub/local_setup.sh
+[19.032s] -- Up-to-date: /home/lur/controller/install/robosub/share/robosub/local_setup.zsh
+[19.033s] -- Up-to-date: /home/lur/controller/install/robosub/share/robosub/local_setup.dsv
+[19.033s] -- Installing: /home/lur/controller/install/robosub/share/robosub/package.dsv
+[19.033s] -- Up-to-date: /home/lur/controller/install/robosub/share/ament_index/resource_index/packages/robosub
+[19.034s] -- Up-to-date: /home/lur/controller/install/robosub/share/robosub/cmake/robosubConfig.cmake
+[19.034s] -- Up-to-date: /home/lur/controller/install/robosub/share/robosub/cmake/robosubConfig-version.cmake
+[19.034s] -- Up-to-date: /home/lur/controller/install/robosub/share/robosub/package.xml
+[19.044s] Invoked command in '/home/lur/controller/build/robosub' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy /usr/bin/cmake --install /home/lur/controller/build/robosub

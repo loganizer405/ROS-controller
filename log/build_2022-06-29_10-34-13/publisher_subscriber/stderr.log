@@ -1,0 +1,58 @@
+CMake Warning at CMakeLists.txt:21 (find_package):
+  By not providing "Findcontrol_toolbox.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "control_toolbox", but CMake did not find one.
+
+  Could not find a package configuration file provided by "control_toolbox"
+  with any of the following names:
+
+    control_toolboxConfig.cmake
+    control_toolbox-config.cmake
+
+  Add the installation prefix of "control_toolbox" to CMAKE_PREFIX_PATH or
+  set "control_toolbox_DIR" to a directory containing one of the above files.
+  If "control_toolbox" provides a separate development package or SDK, be
+  sure it has been installed.
+
+
+CMake Warning at CMakeLists.txt:22 (find_package):
+  By not providing "Findeigen_conversions.cmake" in CMAKE_MODULE_PATH this
+  project has asked CMake to find a package configuration file provided by
+  "eigen_conversions", but CMake did not find one.
+
+  Could not find a package configuration file provided by "eigen_conversions"
+  with any of the following names:
+
+    eigen_conversionsConfig.cmake
+    eigen_conversions-config.cmake
+
+  Add the installation prefix of "eigen_conversions" to CMAKE_PREFIX_PATH or
+  set "eigen_conversions_DIR" to a directory containing one of the above
+  files.  If "eigen_conversions" provides a separate development package or
+  SDK, be sure it has been installed.
+
+
+CMake Warning at CMakeLists.txt:26 (find_package):
+  By not providing "Findroscpp.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "roscpp", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "roscpp" with any
+  of the following names:
+
+    roscppConfig.cmake
+    roscpp-config.cmake
+
+  Add the installation prefix of "roscpp" to CMAKE_PREFIX_PATH or set
+  "roscpp_DIR" to a directory containing one of the above files.  If "roscpp"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+
+
+[01m[K/home/lur/controller/publisher_subscriber/src/imu_data.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kros/ros.h: No such file or directory
+    1 | #include [01;31m[K"ros/ros.h"[m[K
+      |          [01;31m[K^~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/imu_data.dir/build.make:63: CMakeFiles/imu_data.dir/src/imu_data.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:107: CMakeFiles/imu_data.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

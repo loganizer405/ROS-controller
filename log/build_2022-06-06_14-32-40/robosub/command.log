@@ -1,0 +1,2 @@
+Invoking command in '/home/lur/controller/build/robosub': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/robosub -- -j4 -l4
+Invoked command in '/home/lur/controller/build/robosub' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/lur/controller/build/robosub -- -j4 -l4

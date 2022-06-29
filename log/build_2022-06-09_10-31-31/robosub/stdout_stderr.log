@@ -1,0 +1,9 @@
+[35m[1mScanning dependencies of target controller_node[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/controller_node.dir/src/controller_node.cpp.o[0m
+[01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:[m[K In constructor ‘[01m[KMinimalSubscriberWithTopicStatistics::MinimalSubscriberWithTopicStatistics()[m[K’:
+[01m[K/home/lur/controller/src/robosub/src/controller_node.cpp:30:38:[m[K [01;31m[Kerror: [m[K‘[01m[Koptions[m[K’ was not declared in this scope
+   30 |       "/mavros/state", 10, callback, [01;31m[Koptions[m[K);
+      |                                      [01;31m[K^~~~~~~[m[K
+make[2]: *** [CMakeFiles/controller_node.dir/build.make:63: CMakeFiles/controller_node.dir/src/controller_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/controller_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2
