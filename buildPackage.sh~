@@ -1,2 +1,0 @@
-colcon build --packages-select publisher_subscriber
-. install/setup.bash
