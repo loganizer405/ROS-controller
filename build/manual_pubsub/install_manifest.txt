@@ -1,0 +1,17 @@
+/home/lur/controller/install/manual_pubsub/lib/manual_pubsub/talker
+/home/lur/controller/install/manual_pubsub/lib/manual_pubsub/listener
+/home/lur/controller/install/manual_pubsub/share/ament_index/resource_index/package_run_dependencies/manual_pubsub
+/home/lur/controller/install/manual_pubsub/share/ament_index/resource_index/parent_prefix_path/manual_pubsub
+/home/lur/controller/install/manual_pubsub/share/manual_pubsub/environment/ament_prefix_path.sh
+/home/lur/controller/install/manual_pubsub/share/manual_pubsub/environment/ament_prefix_path.dsv
+/home/lur/controller/install/manual_pubsub/share/manual_pubsub/environment/path.sh
+/home/lur/controller/install/manual_pubsub/share/manual_pubsub/environment/path.dsv
+/home/lur/controller/install/manual_pubsub/share/manual_pubsub/local_setup.bash
+/home/lur/controller/install/manual_pubsub/share/manual_pubsub/local_setup.sh
+/home/lur/controller/install/manual_pubsub/share/manual_pubsub/local_setup.zsh
+/home/lur/controller/install/manual_pubsub/share/manual_pubsub/local_setup.dsv
+/home/lur/controller/install/manual_pubsub/share/manual_pubsub/package.dsv
+/home/lur/controller/install/manual_pubsub/share/ament_index/resource_index/packages/manual_pubsub
+/home/lur/controller/install/manual_pubsub/share/manual_pubsub/cmake/manual_pubsubConfig.cmake
+/home/lur/controller/install/manual_pubsub/share/manual_pubsub/cmake/manual_pubsubConfig-version.cmake
+/home/lur/controller/install/manual_pubsub/share/manual_pubsub/package.xml
