@@ -10,5 +10,5 @@ mavros_node:
     gcs_url: tcp-l://:5670
     tgt_system: 1
     tgt_component : 1
-    system_id: 255
+    system_id: 1
     component_id: 240

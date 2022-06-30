@@ -1,0 +1,176 @@
+[0.000000] (-) TimerEvent: {}
+[0.001660] (-) JobUnselected: {'identifier': 'cpp_pubsub'}
+[0.002207] (-) JobUnselected: {'identifier': 'examples_rclcpp_async_client'}
+[0.002337] (-) JobUnselected: {'identifier': 'examples_rclcpp_cbg_executor'}
+[0.002430] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_action_client'}
+[0.002515] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_action_server'}
+[0.003466] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_client'}
+[0.003567] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_composition'}
+[0.003796] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_publisher'}
+[0.003900] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_service'}
+[0.004052] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_subscriber'}
+[0.004211] (-) JobUnselected: {'identifier': 'examples_rclcpp_minimal_timer'}
+[0.006701] (-) JobUnselected: {'identifier': 'examples_rclcpp_multithreaded_executor'}
+[0.007255] (-) JobUnselected: {'identifier': 'examples_rclcpp_wait_set'}
+[0.007369] (-) JobUnselected: {'identifier': 'examples_rclpy_executors'}
+[0.007498] (-) JobUnselected: {'identifier': 'examples_rclpy_guard_conditions'}
+[0.007626] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_action_client'}
+[0.007717] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_action_server'}
+[0.008119] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_client'}
+[0.008244] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_publisher'}
+[0.008383] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_service'}
+[0.008507] (-) JobUnselected: {'identifier': 'examples_rclpy_minimal_subscriber'}
+[0.008717] (-) JobUnselected: {'identifier': 'examples_rclpy_pointcloud_publisher'}
+[0.009031] (-) JobUnselected: {'identifier': 'launch_testing_examples'}
+[0.009164] (-) JobUnselected: {'identifier': 'publisher_subscriber'}
+[0.009304] (-) JobUnselected: {'identifier': 'robosub'}
+[0.009648] (manual_pubsub) JobQueued: {'identifier': 'manual_pubsub', 'dependencies': OrderedDict()}
+[0.009763] (manual_pubsub) JobStarted: {'identifier': 'manual_pubsub'}
+[0.049240] (manual_pubsub) JobProgress: {'identifier': 'manual_pubsub', 'progress': 'cmake'}
+[0.052712] (manual_pubsub) JobProgress: {'identifier': 'manual_pubsub', 'progress': 'build'}
+[0.055322] (manual_pubsub) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/lur/controller/build/manual_pubsub', '--', '-j4', '-l4'], 'cwd': '/home/lur/controller/build/manual_pubsub', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lur'), ('SSH_CLIENT', '192.168.55.100 52004 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/lur'), ('OLDPWD', '/home/lur'), ('SSH_TTY', '/dev/pts/2'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'lur'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/lur/.local/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/lur/.local/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:12.0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/lur/controller/build/manual_pubsub'), ('SSH_CONNECTION', '192.168.55.100 52004 192.168.55.1 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.098336] (-) TimerEvent: {}
+[0.199740] (-) TimerEvent: {}
+[0.221873] (manual_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target talker\x1b[0m\n'}
+[0.295369] (manual_pubsub) StdoutLine: {'line': b'[ 50%] Built target listener\n'}
+[0.299958] (-) TimerEvent: {}
+[0.349471] (manual_pubsub) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o\x1b[0m\n'}
+[0.400192] (-) TimerEvent: {}
+[0.501149] (-) TimerEvent: {}
+[0.602144] (-) TimerEvent: {}
+[0.703171] (-) TimerEvent: {}
+[0.804214] (-) TimerEvent: {}
+[0.905187] (-) TimerEvent: {}
+[1.006207] (-) TimerEvent: {}
+[1.107300] (-) TimerEvent: {}
+[1.208299] (-) TimerEvent: {}
+[1.309329] (-) TimerEvent: {}
+[1.410329] (-) TimerEvent: {}
+[1.511420] (-) TimerEvent: {}
+[1.612441] (-) TimerEvent: {}
+[1.713439] (-) TimerEvent: {}
+[1.814421] (-) TimerEvent: {}
+[1.915462] (-) TimerEvent: {}
+[2.016449] (-) TimerEvent: {}
+[2.117424] (-) TimerEvent: {}
+[2.218388] (-) TimerEvent: {}
+[2.319453] (-) TimerEvent: {}
+[2.420433] (-) TimerEvent: {}
+[2.521428] (-) TimerEvent: {}
+[2.622416] (-) TimerEvent: {}
+[2.723458] (-) TimerEvent: {}
+[2.824419] (-) TimerEvent: {}
+[2.925385] (-) TimerEvent: {}
+[3.026418] (-) TimerEvent: {}
+[3.127631] (-) TimerEvent: {}
+[3.228626] (-) TimerEvent: {}
+[3.329594] (-) TimerEvent: {}
+[3.430615] (-) TimerEvent: {}
+[3.531603] (-) TimerEvent: {}
+[3.632591] (-) TimerEvent: {}
+[3.733558] (-) TimerEvent: {}
+[3.834514] (-) TimerEvent: {}
+[3.935531] (-) TimerEvent: {}
+[4.036493] (-) TimerEvent: {}
+[4.137459] (-) TimerEvent: {}
+[4.238848] (-) TimerEvent: {}
+[4.339807] (-) TimerEvent: {}
+[4.440761] (-) TimerEvent: {}
+[4.541727] (-) TimerEvent: {}
+[4.642781] (-) TimerEvent: {}
+[4.743758] (-) TimerEvent: {}
+[4.844755] (-) TimerEvent: {}
+[4.945739] (-) TimerEvent: {}
+[5.047295] (-) TimerEvent: {}
+[5.148269] (-) TimerEvent: {}
+[5.249295] (-) TimerEvent: {}
+[5.350285] (-) TimerEvent: {}
+[5.451326] (-) TimerEvent: {}
+[5.552312] (-) TimerEvent: {}
+[5.653312] (-) TimerEvent: {}
+[5.754278] (-) TimerEvent: {}
+[5.855287] (-) TimerEvent: {}
+[5.956265] (-) TimerEvent: {}
+[6.057282] (-) TimerEvent: {}
+[6.158255] (-) TimerEvent: {}
+[6.259302] (-) TimerEvent: {}
+[6.360255] (-) TimerEvent: {}
+[6.461231] (-) TimerEvent: {}
+[6.562238] (-) TimerEvent: {}
+[6.663272] (-) TimerEvent: {}
+[6.764261] (-) TimerEvent: {}
+[6.865254] (-) TimerEvent: {}
+[6.966265] (-) TimerEvent: {}
+[7.067292] (-) TimerEvent: {}
+[7.168287] (-) TimerEvent: {}
+[7.269224] (-) TimerEvent: {}
+[7.370214] (-) TimerEvent: {}
+[7.471233] (-) TimerEvent: {}
+[7.572209] (-) TimerEvent: {}
+[7.673219] (-) TimerEvent: {}
+[7.774207] (-) TimerEvent: {}
+[7.875286] (-) TimerEvent: {}
+[7.976320] (-) TimerEvent: {}
+[8.077321] (-) TimerEvent: {}
+[8.178374] (-) TimerEvent: {}
+[8.279384] (-) TimerEvent: {}
+[8.380330] (-) TimerEvent: {}
+[8.481300] (-) TimerEvent: {}
+[8.582281] (-) TimerEvent: {}
+[8.683367] (-) TimerEvent: {}
+[8.784378] (-) TimerEvent: {}
+[8.885394] (-) TimerEvent: {}
+[8.986376] (-) TimerEvent: {}
+[9.087353] (-) TimerEvent: {}
+[9.188318] (-) TimerEvent: {}
+[9.289275] (-) TimerEvent: {}
+[9.390233] (-) TimerEvent: {}
+[9.491220] (-) TimerEvent: {}
+[9.592155] (-) TimerEvent: {}
+[9.693145] (-) TimerEvent: {}
+[9.794091] (-) TimerEvent: {}
+[9.895167] (-) TimerEvent: {}
+[9.996110] (-) TimerEvent: {}
+[10.097113] (-) TimerEvent: {}
+[10.198937] (-) TimerEvent: {}
+[10.300636] (-) TimerEvent: {}
+[10.402339] (-) TimerEvent: {}
+[10.504126] (-) TimerEvent: {}
+[10.605897] (-) TimerEvent: {}
+[10.650838] (manual_pubsub) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable talker\x1b[0m\n'}
+[10.706142] (-) TimerEvent: {}
+[10.807121] (-) TimerEvent: {}
+[10.908072] (-) TimerEvent: {}
+[11.009073] (-) TimerEvent: {}
+[11.110080] (-) TimerEvent: {}
+[11.211186] (-) TimerEvent: {}
+[11.259032] (manual_pubsub) StdoutLine: {'line': b'[100%] Built target talker\n'}
+[11.300180] (manual_pubsub) CommandEnded: {'returncode': 0}
+[11.312200] (-) TimerEvent: {}
+[11.394607] (manual_pubsub) JobProgress: {'identifier': 'manual_pubsub', 'progress': 'install'}
+[11.412698] (-) TimerEvent: {}
+[11.434434] (manual_pubsub) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/lur/controller/build/manual_pubsub'], 'cwd': '/home/lur/controller/build/manual_pubsub', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'lur'), ('SSH_CLIENT', '192.168.55.100 52004 22'), ('XDG_SESSION_TYPE', 'tty'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('MOTD_SHOWN', 'pam'), ('HOME', '/home/lur'), ('OLDPWD', '/home/lur'), ('SSH_TTY', '/dev/pts/2'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'lur'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('TERM', 'xterm'), ('XDG_SESSION_ID', '5'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/home/lur/.local/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/lur/.local/bin'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', 'localhost:12.0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/lur/controller/build/manual_pubsub'), ('SSH_CONNECTION', '192.168.55.100 52004 192.168.55.1 22'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[11.469181] (manual_pubsub) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[11.470207] (manual_pubsub) StdoutLine: {'line': b'-- Installing: /home/lur/controller/install/manual_pubsub/lib/manual_pubsub/talker\n'}
+[11.477591] (manual_pubsub) StdoutLine: {'line': b'-- Set runtime path of "/home/lur/controller/install/manual_pubsub/lib/manual_pubsub/talker" to ""\n'}
+[11.478708] (manual_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/manual_pubsub/lib/manual_pubsub/listener\n'}
+[11.479849] (manual_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/manual_pubsub/share/ament_index/resource_index/package_run_dependencies/manual_pubsub\n'}
+[11.480506] (manual_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/manual_pubsub/share/ament_index/resource_index/parent_prefix_path/manual_pubsub\n'}
+[11.481050] (manual_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/environment/ament_prefix_path.sh\n'}
+[11.481714] (manual_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/environment/ament_prefix_path.dsv\n'}
+[11.482205] (manual_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/environment/path.sh\n'}
+[11.482683] (manual_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/environment/path.dsv\n'}
+[11.483079] (manual_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/local_setup.bash\n'}
+[11.483366] (manual_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/local_setup.sh\n'}
+[11.483976] (manual_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/local_setup.zsh\n'}
+[11.484438] (manual_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/local_setup.dsv\n'}
+[11.484738] (manual_pubsub) StdoutLine: {'line': b'-- Installing: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/package.dsv\n'}
+[11.485011] (manual_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/manual_pubsub/share/ament_index/resource_index/packages/manual_pubsub\n'}
+[11.485330] (manual_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/cmake/manual_pubsubConfig.cmake\n'}
+[11.485612] (manual_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/cmake/manual_pubsubConfig-version.cmake\n'}
+[11.485939] (manual_pubsub) StdoutLine: {'line': b'-- Up-to-date: /home/lur/controller/install/manual_pubsub/share/manual_pubsub/package.xml\n'}
+[11.492018] (manual_pubsub) CommandEnded: {'returncode': 0}
+[11.519321] (-) TimerEvent: {}
+[11.623266] (-) TimerEvent: {}
+[11.688642] (manual_pubsub) JobEnded: {'identifier': 'manual_pubsub', 'rc': 0}
+[11.692158] (-) EventReactorShutdown: {}

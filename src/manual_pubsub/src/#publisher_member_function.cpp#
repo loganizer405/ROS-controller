@@ -56,7 +56,7 @@ public:
     //    manualMsg msg;
     //    msg.x = 1000; msg.y = 1000; msg.z = 1000;
     //    msg.r = 0; msg.buttons = 0;
-    publisher_ = this->create_publisher<manualMsg>("/mavros/manual_control/control", 10);
+    publisher_ = this->create_publisher<manualMsg>("/mavros/manual_control/send", 10);
     timer_ = this->create_wall_timer(
       500ms, std::bind(&MinimalPublisher::timer_callback, this));
   }

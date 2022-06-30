@@ -1,7 +1,7 @@
-k
 #arm vehicle
 ros2 run mavros mav safety arm
-#set to stabilize mode
-ros2 run mavros mav sys mode -b 15
-#print status
-ros2 topic echo /mavros/state
+#set to stablize mode (manual = 0, stablilize = 15)
+ros2 run mavros mav sys mode -c GUIDED
+#make sure workspace is set up then start publisher
+. install/setup.bash
+ros2 run manual_pubsub talker
