@@ -56,7 +56,7 @@ class ManPublisher : public rclcpp::Node {
   public:
     ManPublisher() : Node("ManPublisher"), count_(0)
     {
-      publisher_ = this->create_publisher<manualMsg>("/mavros/manual_control/control", 10);
+      publisher_ = this->create_publisher<manualMsg>("/mavros/manual_control/send", 10);
       timer_ = this->create_wall_timer(500ms, std::bind(&ManPublisher::timer_callback, this));
       q_ = queue<manualMsg>();
     }
