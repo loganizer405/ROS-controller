@@ -43,6 +43,9 @@ using namespace std::chrono_literals;
  * } mavros_msgs__msg__ManualControl;
  */
 typedef mavros_msgs::msg::ManualControl manualMsg;
+typedef std_msgs::msg::Header head;
+manualMsg returnMsg(int x, int y, int z, int r, int buttons);
+
 class MinimalPublisher : public rclcpp::Node
 {
 public:
@@ -56,7 +59,7 @@ public:
     //    manualMsg msg;
     //    msg.x = 1000; msg.y = 1000; msg.z = 1000;
     //    msg.r = 0; msg.buttons = 0;
-    publisher_ = this->create_publisher<manualMsg>("/mavros/manual_control/control", 10);
+    publisher_ = this->create_publisher<manualMsg>("/mavros/manual_control/send", 10);
     timer_ = this->create_wall_timer(
       500ms, std::bind(&MinimalPublisher::timer_callback, this));
   }
@@ -65,8 +68,32 @@ private:
   void timer_callback()
   {
     manualMsg msg;
-    msg.x = 500; msg.y = 500; msg.z = 800;
-    msg.r = 0; msg.buttons = 0;
+    
+
+
+    if(count_ > 0 && count_ <= 20){ //first ten seconds
+      //      msg = returnMsg(0,0,200, 0, 0);
+      msg = returnMsg(750, 0,500,0,0);
+    }
+    else if(count_ > 20 && count_ <= 40){ //10 to 20 seconds
+      msg = returnMsg(-750,0,500,0,0);
+    }
+    else if(count_ > 40 && count_ <= 60){ //20 to 30 seconds
+      msg = returnMsg(0,750,500,0,0);
+    }
+    else if(count_ > 60 && count_ <= 80){ //30 to 40 seconds
+      msg = returnMsg(0,-750,500,0,0);
+    }
+    else if(count_ > 80 && count_ <= 100){ //40 to 50 seconds
+      msg = returnMsg(0,0,500,750,0);
+    }
+    else if(count_ > 100 && count_ <= 120){ //50 to 60 seconds
+      msg = returnMsg(0,0,500,-750,0);
+    }
+    else{
+      msg = returnMsg(0,0,500,0,0);
+      
+    }
     auto message = std_msgs::msg::String();
     message.data = "Message " + std::to_string(count_++);// + " (x,y,z,r,b): (" + msg.x + "," + msg.y + "," + msg.z + "," + msg.r + "," + msg.buttons + ")";
     RCLCPP_INFO(this->get_logger(), "Publishing: '%s'", message.data.c_str());
@@ -83,4 +110,20 @@ int main(int argc, char * argv[])
   rclcpp::spin(std::make_shared<MinimalPublisher>());
   rclcpp::shutdown();
   return 0;
+}
+
+manualMsg returnMsg(int x, int y, int z, int r, int buttons){
+   manualMsg msg;
+   msg.x = x; msg.y = y; msg.z = z;
+   msg.r = r; msg.buttons = buttons;
+
+   //set header
+   head newHeader;
+    newHeader.frame_id = "VECTORED_6DOF";
+    //newHeader.seq = count_;
+    
+    msg.header = newHeader;
+    //msg.header.frame_id = "VECTORED_6DOF";
+
+   return msg;
 }
