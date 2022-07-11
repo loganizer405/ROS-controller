@@ -1,0 +1,10 @@
+[Unit]
+Description = Lehigh Robosub Startup Script
+
+[Service]
+Type = idle
+ExecStart = /home/lur/turn_your_brain_on.sh
+User = lur
+
+[Install]
+WantedBy = multi-user.target 
