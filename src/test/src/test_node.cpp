@@ -1,3 +1,4 @@
+#include <iostream>
 #include <cstdio>
 #include <array>
 #include <queue>
@@ -14,8 +15,13 @@
 #include "mavros_msgs/msg/rc_out.hpp"
 #include "mavros_msgs/msg/override_rc_in.hpp"
 
+//#include <opencv2/opencv.hpp>
+#include "opencv2/core.hpp"
+#include "opencv2/opencv.hpp"
+
 using namespace std::chrono_literals;
 using namespace std;
+using namespace cv;
  
 typedef mavros_msgs::msg::ManualControl manualMsg;
 typedef mavros_msgs::msg::OverrideRCIn rcMsg;
@@ -88,10 +94,20 @@ class ManPublisher : public rclcpp::Node {
 
 int main(int argc, char ** argv)
 {
-  (void) argc;
-  (void) argv;
-
   printf("starting test\n");
+
+  VideoCapture cap;
+  if(!cap.open(1)) return 0;
+  
+  Mat frame;
+  for (int i = 0; i < 1; ++i) {
+    cap >> frame;
+    if (frame.empty()) break;
+    cout << frame << "\n";
+    printf("%dx%d\n", frame.rows, frame.cols);
+    printf("%d channels\n", frame.channels());
+  }
+
   rclcpp::init(argc, argv);
 
   //auto man_pub = std::make_shared<ManPublisher>();
@@ -127,41 +143,41 @@ int main(int argc, char ** argv)
   //man_pub->enq(man_msg);
   //rclcpp::spin(man_pub);
 
-  auto rc_pub = std::make_shared<RCPublisher>();
-  rcMsg rc_msg;
-  printf("%d\n", rc_msg.channels.size());
-  rc_msg.channels[0] = 0; rc_msg.channels[1] = 0; rc_msg.channels[2] = 0; rc_msg.channels[3] = 0;
-  rc_msg.channels[4] = 0; rc_msg.channels[5] = 0; rc_msg.channels[6] = 0; rc_msg.channels[7] = 0;
-  for (int i = 8; i < 18; ++i) {
-    rc_msg.channels[i] = 0;
-  }
-  rc_pub->enq(rc_msg);
-  ifstream rc_file("test/src/rc_test.txt");
-  if (rc_file.is_open())
-  {
-    string line;
-    array<int, 8> arr;
-    int index = 0;
-    while ( getline (rc_file, line) )
-    {
-      stringstream ss(line);
-      string word;
-      index = 0;
-      while (ss >> word) {
-        arr[index++] = stoi(word);
-      }
-      rc_msg.channels[0] = arr[0]; rc_msg.channels[1] = arr[1]; rc_msg.channels[2] = arr[2]; rc_msg.channels[3] = arr[3];
-      rc_msg.channels[4] = arr[4]; rc_msg.channels[5] = arr[5]; rc_msg.channels[6] = arr[6]; rc_msg.channels[7] = arr[7];
-      rc_pub->enq(rc_msg);
-    }
-    rc_file.close();
-  }
-  else printf("Unable to open file: `rc_test.txt`\n");
+  //auto rc_pub = std::make_shared<RCPublisher>();
+  //rcMsg rc_msg;
+  //printf("%d\n", rc_msg.channels.size());
+  //rc_msg.channels[0] = 0; rc_msg.channels[1] = 0; rc_msg.channels[2] = 0; rc_msg.channels[3] = 0;
+  //rc_msg.channels[4] = 0; rc_msg.channels[5] = 0; rc_msg.channels[6] = 0; rc_msg.channels[7] = 0;
+  //for (int i = 8; i < 18; ++i) {
+  //  rc_msg.channels[i] = 0;
+  //}
+  //rc_pub->enq(rc_msg);
+  //ifstream rc_file("test/src/rc_test.txt");
+  //if (rc_file.is_open())
+  //{
+  //  string line;
+  //  array<int, 8> arr;
+  //  int index = 0;
+  //  while ( getline (rc_file, line) )
+  //  {
+  //    stringstream ss(line);
+  //    string word;
+  //    index = 0;
+  //    while (ss >> word) {
+  //      arr[index++] = stoi(word);
+  //    }
+  //    rc_msg.channels[0] = arr[0]; rc_msg.channels[1] = arr[1]; rc_msg.channels[2] = arr[2]; rc_msg.channels[3] = arr[3];
+  //    rc_msg.channels[4] = arr[4]; rc_msg.channels[5] = arr[5]; rc_msg.channels[6] = arr[6]; rc_msg.channels[7] = arr[7];
+  //    rc_pub->enq(rc_msg);
+  //  }
+  //  rc_file.close();
+  //}
+  //else printf("Unable to open file: `rc_test.txt`\n");
 
-  rc_msg.channels[0] = 0; rc_msg.channels[1] = 0; rc_msg.channels[2] = 0; rc_msg.channels[3] = 0;
-  rc_msg.channels[4] = 0; rc_msg.channels[5] = 0; rc_msg.channels[6] = 0; rc_msg.channels[7] = 0;
-  rc_pub->enq(rc_msg);
-  rclcpp::spin(rc_pub);
+  //rc_msg.channels[0] = 0; rc_msg.channels[1] = 0; rc_msg.channels[2] = 0; rc_msg.channels[3] = 0;
+  //rc_msg.channels[4] = 0; rc_msg.channels[5] = 0; rc_msg.channels[6] = 0; rc_msg.channels[7] = 0;
+  //rc_pub->enq(rc_msg);
+  //rclcpp::spin(rc_pub);
 
   rclcpp::shutdown();
   return 0;
