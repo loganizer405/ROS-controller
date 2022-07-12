@@ -97,7 +97,7 @@ int main(int argc, char ** argv)
   printf("starting test\n");
 
   VideoCapture cap;
-  if(!cap.open(1)) return 0;
+  if(!cap.open(0)) return 0;
   
   Mat frame;
   for (int i = 0; i < 1; ++i) {
